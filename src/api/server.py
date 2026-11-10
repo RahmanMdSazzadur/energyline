@@ -11,6 +11,7 @@ import platform
 import re
 import sqlite3
 import statistics
+import subprocess
 import sys
 import threading
 import uuid
@@ -29,6 +30,17 @@ from finite_buffers import FIELDS, simulate
 from parallel_manual import simulate as simulate_parallel
 from variability_experiments import percentile, wilson_interval
 from s3_demo import run_demo, DEMOS
+from public_limits import (
+    BoundedHTTPServer,
+    JobBudget,
+    MAX_SHIFTS,
+    JOB_TIMEOUT,
+    REQUEST_TIMEOUT,
+    run_isolated,
+    prune_public_results,
+    WorkerConflictError,
+    read_public_body,
+)
 
 SCENARIOS = {
     "manual": ("Manual baseline", "configs/variable_times.json"),
@@ -49,7 +61,11 @@ class ConflictError(ValueError):
 
 class ExperimentService:
     def __init__(self, directory=None):
-        self.directory = Path(directory or os.environ.get("ENERGYLINE_DATA_DIR") or ROOT / "results/experiments")
+        self.directory = Path(
+            directory
+            or os.environ.get("ENERGYLINE_DATA_DIR")
+            or ROOT / "results/experiments"
+        )
         self.directory.mkdir(parents=True, exist_ok=True)
         self.database = self.directory / "experiments.sqlite3"
         self.lock = threading.Lock()
@@ -399,22 +415,65 @@ def byte_range(header, size):
     return start, end, True
 
 
-def handler_for(service):
+def execute_job(service, path, request):
+    if path == "/api/experiments":
+        return service.run(request)
+    if path == "/api/cell/commission":
+        return service.commission(request)
+    if (
+        path != "/api/cell/demo"
+        or not isinstance(request, dict)
+        or set(request) != {"demo"}
+    ):
+        raise ValueError("Cell request must contain only a demo name")
+    if not isinstance(request["demo"], str) or request["demo"] not in DEMOS:
+        raise ValueError("Choose a known cell demo")
+    result = run_demo(request["demo"])
+    result.update(
+        id=str(uuid.uuid4()), created_at=datetime.now(timezone.utc).isoformat()
+    )
+    result["artifact"] = f"/api/cell/runs/{result['id']}"
+    folder = service.directory / "cell"
+    folder.mkdir(exist_ok=True)
+    (folder / f"{result['id']}.json").write_text(json.dumps(result, indent=2) + "\n")
+    return result
+
+
+def handler_for(service, *, budget=None, runner=run_isolated):
     public_demo = os.environ.get("ENERGYLINE_PUBLIC_DEMO") == "1"
     release_url = os.environ.get("ENERGYLINE_RELEASE_URL", "")
     job_slot = threading.BoundedSemaphore(1)
+    budget = budget if budget is not None else JobBudget()
 
     class Handler(BaseHTTPRequestHandler):
-        def send_data(self, status, value, mime="application/json"):
+        def setup(self):
+            if public_demo:
+                self.request.settimeout(REQUEST_TIMEOUT)
+            super().setup()
+
+        def retry(self, message, seconds=2):
+            self.send_data(
+                429,
+                {"error": message, "retry_after_seconds": seconds},
+                extra_headers={"Retry-After": str(seconds)},
+            )
+
+        def send_data(self, status, value, mime="application/json", extra_headers=None):
             data = json.dumps(value).encode() if mime == "application/json" else value
             if public_demo and mime.startswith("text/html"):
-                notice = b'<aside role="note" style="padding:12px 24px;background:#fff3d1;color:#453817;font:14px/1.5 system-ui">Public demo: experiments are shared and temporary. Saved runs may disappear when the free service sleeps or restarts. Download results you want to keep.</aside>'
+                notice = b'<aside role="note" style="padding:12px 24px;background:#fff3d1;color:#453817;font:14px/1.5 system-ui">Public demo: experiments are shared and temporary. Saved runs may disappear when the free service sleeps or restarts. Download results you want to keep. Limits: 30 shifts per run; 10 starts/minute and 60/hour shared by all visitors. Old results are cleared as new runs arrive; download any you want to keep.</aside>'
                 data = data.replace(b"<body>", b"<body>" + notice, 1)
+                data = data.replace(
+                    b'id="replications" type="number" min="1" max="100"',
+                    b'id="replications" type="number" min="1" max="30"',
+                )
             self.send_response(status)
             self.send_header("Content-Type", mime)
             self.send_header("Content-Length", str(len(data)))
             self.send_header("X-Content-Type-Options", "nosniff")
             self.send_header("Cache-Control", "no-store")
+            for key, value in (extra_headers or {}).items():
+                self.send_header(key, value)
             self.end_headers()
             self.wfile.write(data)
 
@@ -447,6 +506,17 @@ def handler_for(service):
                     remaining -= len(data)
 
         def do_GET(self):
+            try:
+                self.get_route()
+            except FileNotFoundError:
+                self.send_data(
+                    404,
+                    {
+                        "error": "This temporary result has expired. Please run it again."
+                    },
+                )
+
+        def get_route(self):
             path = urlparse(self.path).path
             if path == "/downloads/release.zip" and public_demo and release_url:
                 self.send_response(302)
@@ -487,7 +557,24 @@ def handler_for(service):
                 file, mime = artifacts[path]
                 return self.send_file(ROOT / file, mime)
             if path == "/api/health":
-                return self.send_data(200, {"status": "ok", "service": "EnergyLine", "public_demo": public_demo})
+                return self.send_data(
+                    200,
+                    {
+                        "status": "ok",
+                        "service": "EnergyLine",
+                        "public_demo": public_demo,
+                        "usage_limits": (
+                            {
+                                "job_timeout_seconds": JOB_TIMEOUT,
+                                "max_shifts": MAX_SHIFTS,
+                                "starts_per_minute": 10,
+                                "starts_per_hour": 60,
+                            }
+                            if public_demo
+                            else None
+                        ),
+                    },
+                )
             if path == "/api/costs":
                 report = ROOT / "results/economics/comparison.json"
                 if not report.exists():
@@ -537,7 +624,10 @@ def handler_for(service):
                     return self.send_data(200, data, "text/csv; charset=utf-8")
                 return self.send_data(200, result)
             static = {
-                "/circuit-simulation": ("circuit_simulation.html", "text/html; charset=utf-8"),
+                "/circuit-simulation": (
+                    "circuit_simulation.html",
+                    "text/html; charset=utf-8",
+                ),
                 "/review": ("engineering_review.html", "text/html; charset=utf-8"),
                 "/portfolio": ("portfolio.html", "text/html; charset=utf-8"),
                 "/case-study": ("case_study.html", "text/html; charset=utf-8"),
@@ -573,41 +663,79 @@ def handler_for(service):
             if self.headers.get("Content-Type", "").split(";")[0] != "application/json":
                 return self.send_data(415, {"error": "Send application/json"})
             if public_demo and not job_slot.acquire(blocking=False):
-                return self.send_data(429, {"error": "The public demo is running another job. Please try again shortly."})
+                return self.retry(
+                    "The public demo is running another job. Please try again in 2 seconds."
+                )
+            cleanup_needed = False
+            status, response_headers = 200, {}
             try:
                 length = int(self.headers.get("Content-Length", "0"))
                 if not 0 < length <= 4096:
                     raise ValueError("Request body must be 1–4096 bytes")
-                request = json.loads(self.rfile.read(length))
-                if path == "/api/cell/commission":
-                    result = service.commission(request)
-                elif path == "/api/cell/demo":
-                    if not isinstance(request, dict) or set(request) != {"demo"}:
-                        raise ValueError("Cell request must contain only a demo name")
-                    result = run_demo(request["demo"])
-                    result.update(
-                        id=str(uuid.uuid4()),
-                        created_at=datetime.now(timezone.utc).isoformat(),
-                    )
-                    result["artifact"] = f"/api/cell/runs/{result['id']}"
-                    folder = service.directory / "cell"
-                    folder.mkdir(exist_ok=True)
-                    (folder / f"{result['id']}.json").write_text(
-                        json.dumps(result, indent=2) + "\n"
-                    )
+                if self.headers.get("Transfer-Encoding"):
+                    raise ValueError("Transfer-Encoding is not supported")
+                data = (
+                    read_public_body(self.rfile, self.connection, length)
+                    if public_demo
+                    else self.rfile.read(length)
+                )
+                if len(data) != length:
+                    raise ValueError("Incomplete request body")
+                request = json.loads(data)
+                if public_demo:
+                    if path == "/api/experiments":
+                        params, *_ = service.prepare(request)
+                        if params["replications"] > MAX_SHIFTS:
+                            raise ValueError(
+                                "The public demo allows up to 30 shifts per run. Use the local app for larger studies."
+                            )
+                    elif path == "/api/cell/demo":
+                        if (
+                            not isinstance(request, dict)
+                            or set(request) != {"demo"}
+                            or not isinstance(request["demo"], str)
+                            or request["demo"] not in DEMOS
+                        ):
+                            raise ValueError("Choose a known cell demo")
+                    wait = budget.reserve()
+                    if wait:
+                        status = 429
+                        result = {
+                            "error": f"The shared demo usage limit has been reached. Please try again in {wait} seconds.",
+                            "retry_after_seconds": wait,
+                        }
+                        response_headers = {"Retry-After": str(wait)}
+                    else:
+                        cleanup_needed = True
+                        prune_public_results(service.directory)
+                        result = runner(service, path, request)
                 else:
-                    result = service.run(request)
-                self.send_data(200, result)
-            except ConflictError as error:
-                self.send_data(409, {"error": str(error)})
+                    result = execute_job(service, path, request)
+            except subprocess.TimeoutExpired:
+                status, result = 504, {
+                    "error": "The simulation reached the 30-second demo limit. Try fewer shifts or use the local app."
+                }
+            except TimeoutError:
+                status, result = 408, {
+                    "error": "The request took too long to upload. Please try again."
+                }
+            except (ConflictError, WorkerConflictError) as error:
+                status, result = 409, {"error": str(error)}
             except (ValueError, TypeError) as error:
-                self.send_data(400, {"error": str(error)})
+                status, result = 400, {"error": str(error)}
             except Exception:
                 self.log_error("Experiment failed")
-                self.send_data(500, {"error": "Experiment failed; inspect server logs"})
+                status, result = 500, {
+                    "error": "Experiment failed; inspect server logs"
+                }
             finally:
                 if public_demo:
-                    job_slot.release()
+                    try:
+                        if cleanup_needed:
+                            prune_public_results(service.directory)
+                    finally:
+                        job_slot.release()
+            self.send_data(status, result, extra_headers=response_headers)
 
     return Handler
 
@@ -616,11 +744,34 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--host", default="127.0.0.1")
     parser.add_argument("--port", type=int, default=int(os.environ.get("PORT", "8787")))
-    args = parser.parse_args()
-    server = ThreadingHTTPServer(
-        (args.host, args.port), handler_for(ExperimentService())
+    parser.add_argument(
+        "--public-job",
+        choices=("/api/experiments", "/api/cell/demo", "/api/cell/commission"),
     )
-    print(f"EnergyLine dashboard listening on {args.host}:{server.server_address[1]}", flush=True)
+    parser.add_argument("--data-dir")
+    args = parser.parse_args()
+    if args.public_job:
+        try:
+            result = execute_job(
+                ExperimentService(args.data_dir), args.public_job, json.load(sys.stdin)
+            )
+            envelope = {"status": "ok", "result": result}
+        except ConflictError as error:
+            envelope = {"status": "conflict", "error": str(error)}
+        except (ValueError, TypeError) as error:
+            envelope = {"status": "invalid", "error": str(error)}
+        print(json.dumps(envelope))
+        return
+    public_demo = os.environ.get("ENERGYLINE_PUBLIC_DEMO") == "1"
+    service = ExperimentService()
+    if public_demo:
+        prune_public_results(service.directory)
+    server_class = BoundedHTTPServer if public_demo else ThreadingHTTPServer
+    server = server_class((args.host, args.port), handler_for(service))
+    print(
+        f"EnergyLine dashboard listening on {args.host}:{server.server_address[1]}",
+        flush=True,
+    )
     try:
         server.serve_forever()
     except KeyboardInterrupt:

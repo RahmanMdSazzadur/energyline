@@ -42,3 +42,43 @@ Provider references checked 10 November 2026:
 - https://render.com/docs/free
 - https://render.com/docs/python-version
 - https://render.com/docs/blueprint-spec
+
+
+## Public usage protection
+
+When `ENERGYLINE_PUBLIC_DEMO=1`, all three compute endpoints share these
+single-instance limits:
+
+- One active job, with no waiting job queue.
+- At most 10 job starts in a rolling minute and 60 in a rolling hour across all
+  visitors. No IP addresses or visitor cookies are used for this budget, so
+  changing a forwarded-IP header does not bypass it. Counters reset on restart.
+- At most 30 simulated shifts per experiment. Larger studies can use the local app.
+- Each job runs in a separate Python process. After 30 seconds that process is
+  killed and reaped before another compute job is admitted. Partial files from a
+  timed-out job are removed.
+- HTTP reads have a 10-second socket timeout and the server admits at most 24
+  connection-handler threads. Additional connections are closed without starting
+  another handler. The existing 4 KiB request-body limit remains in place.
+- Cleanup runs at startup and before/after compute jobs. It keeps at most 50
+  experiments, 20 commissioning suites and 250 cell traces, removes artifacts
+  older than 24 hours when cleanup runs, and trims generated artifact files to
+  80 MiB. Database rows are bounded by those counts and vacuumed after eviction;
+  the database itself is additional to the artifact-file budget. Expired or
+  partially evicted records are removed with their files. This acts only on the
+  dedicated runtime data directory, not source files or tagged release archives.
+
+Busy/limited requests return HTTP 429, `Retry-After` and an error message with the
+wait time. Overlong jobs return HTTP 504. Ordinary page and evidence reads do not
+consume the compute budget. Public mode exposes the configured compute limits in
+`/api/health` and the page notice. Local mode retains the original 100-shift limit
+and does not use public quotas, subprocess deadlines or automatic deletion.
+
+These are resource bounds for a free demonstration, not a guarantee of immunity
+to denial-of-service attacks. A visitor can consume the shared quota; large
+traffic floods still depend on Render's edge protection. Multiple app processes
+or instances would need a shared/distributed limiter instead of this in-memory
+budget. No additional paid service is required.
+
+Render's explanation of edge versus application-level protection:
+https://render.com/articles/how-render-handles-ddos-attacks
