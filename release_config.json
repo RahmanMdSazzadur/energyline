@@ -1,6 +1,6 @@
 {
-  "version": "1.1.0",
-  "archive": "EnergyLine-v1.1.0-final.zip",
+  "version": "1.1.1",
+  "archive": "EnergyLine-v1.1.1-final.zip",
   "scope": "Assembly-line simulation, virtual S3 cell, PCB engineering prototype and standalone Wokwi controller demonstration",
   "wokwi_url": "https://wokwi.com/projects/480261288480719873",
   "repository_url": "https://github.com/RahmanMdSazzadur/energyline",

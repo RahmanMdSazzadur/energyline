@@ -1,5 +1,5 @@
 {
-  "release": "1.1.0",
+  "release": "1.1.1",
   "scope": "Assembly simulation, PCB engineering prototype and standalone Wokwi demonstration",
   "pcb_revision": "A",
   "wokwi_controller_assertions": 26,

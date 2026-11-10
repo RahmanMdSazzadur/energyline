@@ -457,7 +457,7 @@ def handler_for(service):
                     "text/markdown; charset=utf-8",
                 ),
                 "/downloads/release.zip": (
-                    "release/EnergyLine-v1.1.0-final.zip",
+                    "release/EnergyLine-v1.1.1-final.zip",
                     "application/zip",
                 ),
                 "/api/portfolio": (

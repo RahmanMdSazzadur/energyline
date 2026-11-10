@@ -8,7 +8,7 @@ Before submitting software changes, run:
 python3 -m unittest discover -s tests -q
 python3 wokwi/test_controller.py
 python3 scripts/package_release.py
-python3 scripts/verify_release.py release/EnergyLine-v1.1.0-final.zip
+python3 scripts/verify_release.py release/EnergyLine-v1.1.1-final.zip
 ```
 
 The Arduino controller tests require a C++11 compiler named `c++`. The complete sketch must also be compiled in Wokwi or an Arduino toolchain after firmware changes. Run KiCad DRC/ERC/parity checks and ngspice again after electrical changes; refresh fabrication outputs after copper or drill changes. Consult the component-specific READMEs.

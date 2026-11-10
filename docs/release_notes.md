@@ -1,4 +1,4 @@
-# EnergyLine 1.1.0 — combined prototype release
+# EnergyLine 1.1.1 — combined prototype release
 
 Released 10 November 2026. This is the first single package containing the reviewed software study and the later electrical and Arduino demonstrations. The earlier software-only v1.0.1 archive remains a historical release; its content has not been re-labeled as a hardware build.
 
@@ -34,3 +34,7 @@ The package is ready to share as a documented simulation and prototype-design pr
 ## Public access
 
 The repository includes an MIT license for original work, third-party notices, contribution instructions, a static GitHub Pages overview and a read-only GitHub Actions check workflow. Versioned release assets contain the complete reviewed package. The static site does not host the Python API or n8n.
+
+## 1.1.1 publication fix
+
+GitHub Actions uses Ubuntu 24.04, which provides the project's pinned Python 3.13.7 runtime. The initial public 1.1.0 workflow used ubuntu-latest and could not install that runtime on Ubuntu 26.04. This patch changes publication configuration and links, not the numerical model or electrical design.

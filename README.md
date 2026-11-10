@@ -2,7 +2,7 @@
 
 Assembly-line simulation, a virtual fastening cell, n8n workflows, a routed PCB prototype and a standalone Arduino demonstration.
 
-Start with `START_HERE.md` or open `RELEASE_INDEX.html` from the extracted folder. Version 1.1.0 combines all current deliverables in `EnergyLine-v1.1.0-final.zip`.
+Start with `START_HERE.md` or open `RELEASE_INDEX.html` from the extracted folder. Version 1.1.1 combines all current deliverables in `EnergyLine-v1.1.1-final.zip`.
 
 EnergyLine studies how a five-station mock energy-module assembly line could meet a demand of 240 good units per shift. The model compares staffing, finite buffers, a second manual fixture and selective automation. Process times, failure rates, quality inputs and prices are assumptions. No physical production data is used.
 
@@ -10,7 +10,7 @@ EnergyLine studies how a five-station mock energy-module assembly line could mee
 
 - Public repository: https://github.com/RahmanMdSazzadur/energyline
 - Online project overview: https://rahmanmdsazzadur.github.io/energyline/
-- Download the reviewed package: https://github.com/RahmanMdSazzadur/energyline/releases/tag/v1.1.0
+- Download the reviewed package: https://github.com/RahmanMdSazzadur/energyline/releases/tag/v1.1.1
 - Interactive Arduino demonstration: https://wokwi.com/projects/480261288480719873
 
 The project page serves static documentation, video, drawings and saved circuit results. It does not run the Python app or n8n in the browser. To run the full app, clone this repository, enter its folder, and follow the local setup below. GitHub Actions checks the software tests, Arduino controller core and archive contents; it does not run physical hardware tests.
@@ -73,4 +73,4 @@ The cell and line adapter run in software. Cell timings are scaled to an assumed
 
 Mechanical CAD is conceptual and has not been compiled or qualified for manufacture. The electrical PCB has passed configured KiCad DRC, ERC and schematic parity checks, but has not been manufactured or physically tested. The Wokwi LED controller is a standalone demonstration, not a full port of the virtual S3 controller or a connection to n8n. No measured assembly times, real machine operation, supplier quotations or certified safety functions are claimed. The model omits separate walking/unloading tasks, inspection errors, constrained repair labor, replenishment and shift carryover. Good-unit materials and general overhead are excluded from the reported conversion cost.
 
-Version 1.1.0 is a combined simulation and engineering-prototype release. PCB Revision A and the Wokwi demonstration retain their own validation limits; see `docs/scope_and_validation.md`.
+Version 1.1.1 is a combined simulation and engineering-prototype release. PCB Revision A and the Wokwi demonstration retain their own validation limits; see `docs/scope_and_validation.md`.

@@ -1,6 +1,6 @@
 # EnergyLine — complete prototype release
 
-Version 1.1.0 · PCB Revision A · 10 November 2026
+Version 1.1.1 · PCB Revision A · 10 November 2026
 
 This package combines the assembly-line study, virtual S3 cell, n8n workflow definitions, mechanical concepts, routed PCB, circuit simulation, Wokwi Arduino demo, documentation and software video. Extract the ZIP before opening files. For a clickable offline contents page, open `RELEASE_INDEX.html`.
 
@@ -8,7 +8,7 @@ This package combines the assembly-line study, virtual S3 cell, n8n workflow def
 
 - Repository and source: https://github.com/RahmanMdSazzadur/energyline
 - Static project overview: https://rahmanmdsazzadur.github.io/energyline/
-- Versioned download: https://github.com/RahmanMdSazzadur/energyline/releases/tag/v1.1.0
+- Versioned download: https://github.com/RahmanMdSazzadur/energyline/releases/tag/v1.1.1
 - Arduino simulator: https://wokwi.com/projects/480261288480719873
 
 The static site displays project material and saved results. The Python application and n8n workflows still require local setup. Original work uses the MIT license; third-party notices are retained.
@@ -41,8 +41,8 @@ Run commands from the extracted `energyline` folder.
 3. Run `python3 wokwi/test_controller.py` for the Arduino controller core tests. A C++11 compiler named `c++` is required. This does not compile the Arduino GPIO adapter; the complete sketch was compiled and tested in Wokwi.
 4. Run `python3 scripts/reproduce.py` to regenerate the software study. This does not rerun KiCad/ngspice or Wokwi. Optional video regeneration uses `--with-media` and requires the media dependencies plus ffmpeg.
 5. Follow `electrical/README.md` to reproduce circuit and PCB checks. KiCad 10.0.3 and ngspice 46 were used. Docker may download the specified KiCad image, and ngspice installation requires network access. Standard KiCad library models are external tool dependencies; the local fuse envelope is included.
-6. Rebuild the combined archive with `python3 scripts/package_release.py`. This creates `release/EnergyLine-v1.1.0-final.zip`, its manifest and `SHA256SUMS.txt`. The application's `/downloads/release.zip` route requires this generated archive; the ZIP does not contain a nested copy of itself.
-7. Verify any extracted release with `python3 scripts/verify_release.py /path/to/EnergyLine-v1.1.0-final.zip`. The script verifies its archive contents and per-file checksums; the separately delivered SHA256 file verifies the whole archive.
+6. Rebuild the combined archive with `python3 scripts/package_release.py`. This creates `release/EnergyLine-v1.1.1-final.zip`, its manifest and `SHA256SUMS.txt`. The application's `/downloads/release.zip` route requires this generated archive; the ZIP does not contain a nested copy of itself.
+7. Verify any extracted release with `python3 scripts/verify_release.py /path/to/EnergyLine-v1.1.1-final.zip`. The script verifies its archive contents and per-file checksums; the separately delivered SHA256 file verifies the whole archive.
 
 The main Docker compose setup expects an existing `n8n_default` network. Running the application directly with Python does not require Docker or n8n. The KiCad browser container is optional and configured separately by `electrical/compose.yaml`. KiCad can also open the native files on a local installation.
 
