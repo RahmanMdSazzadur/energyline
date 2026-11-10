@@ -1,0 +1,44 @@
+{
+  "model_version": "0.1.2",
+  "scenario": "manual_shared_3_operators",
+  "input_source": "synthetic_assumption",
+  "shift_duration_s": 28800,
+  "planned_nonproduction_s": 3600,
+  "target_good_units": 240,
+  "start_condition": "empty",
+  "count_overtime": false,
+  "stations": [
+    {
+      "id": "S1",
+      "operation": "Identify and load tray",
+      "mean_process_s": 45
+    },
+    {
+      "id": "S2",
+      "operation": "Load four inserts",
+      "mean_process_s": 120
+    },
+    {
+      "id": "S3",
+      "operation": "Fit cover and fasten",
+      "mean_process_s": 150
+    },
+    {
+      "id": "S4",
+      "operation": "Inspect and mock test",
+      "mean_process_s": 90
+    },
+    {
+      "id": "S5",
+      "operation": "Label and release",
+      "mean_process_s": 60
+    }
+  ],
+  "buffer_capacities": [
+    2,
+    2,
+    2,
+    2
+  ],
+  "operator_count": 3
+}

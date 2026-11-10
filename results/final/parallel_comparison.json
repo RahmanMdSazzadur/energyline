@@ -1,0 +1,22 @@
+[
+  {
+    "s3_resources": 1,
+    "production_operators": 4,
+    "rework_operators": 1,
+    "mean_good_units": 163.43,
+    "minimum": 158,
+    "maximum": 168,
+    "target_240_successes": 0,
+    "replications": 200
+  },
+  {
+    "s3_resources": 2,
+    "production_operators": 4,
+    "rework_operators": 1,
+    "mean_good_units": 200.505,
+    "minimum": 193,
+    "maximum": 205,
+    "target_240_successes": 0,
+    "replications": 200
+  }
+]

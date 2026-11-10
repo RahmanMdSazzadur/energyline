@@ -1,0 +1,66 @@
+[
+  {
+    "scenario": "A_manual_ops_3",
+    "baseline": "A_manual_ops_3",
+    "paired_shifts": 30,
+    "mean_output_difference": 0,
+    "minimum_difference": 0,
+    "maximum_difference": 0
+  },
+  {
+    "scenario": "A_manual_ops_5",
+    "baseline": "A_manual_ops_5",
+    "paired_shifts": 30,
+    "mean_output_difference": 0,
+    "minimum_difference": 0,
+    "maximum_difference": 0
+  },
+  {
+    "scenario": "B_fixture_s3_ops_3",
+    "baseline": "A_manual_ops_3",
+    "paired_shifts": 30,
+    "mean_output_difference": 17.2,
+    "minimum_difference": 16,
+    "maximum_difference": 19
+  },
+  {
+    "scenario": "B_fixture_s3_ops_5",
+    "baseline": "A_manual_ops_5",
+    "paired_shifts": 30,
+    "mean_output_difference": 40.93333333333333,
+    "minimum_difference": 37,
+    "maximum_difference": 45
+  },
+  {
+    "scenario": "C_faster_s3_ops_3",
+    "baseline": "A_manual_ops_3",
+    "paired_shifts": 30,
+    "mean_output_difference": 32.96666666666667,
+    "minimum_difference": 31,
+    "maximum_difference": 35
+  },
+  {
+    "scenario": "C_faster_s3_ops_5",
+    "baseline": "A_manual_ops_5",
+    "paired_shifts": 30,
+    "mean_output_difference": 41.333333333333336,
+    "minimum_difference": 37,
+    "maximum_difference": 45
+  },
+  {
+    "scenario": "D_faster_s2_s3_ops_3",
+    "baseline": "A_manual_ops_3",
+    "paired_shifts": 30,
+    "mean_output_difference": 68.6,
+    "minimum_difference": 67,
+    "maximum_difference": 70
+  },
+  {
+    "scenario": "D_faster_s2_s3_ops_5",
+    "baseline": "A_manual_ops_5",
+    "paired_shifts": 30,
+    "mean_output_difference": 111.43333333333334,
+    "minimum_difference": 107,
+    "maximum_difference": 114
+  }
+]

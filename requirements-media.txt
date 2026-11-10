@@ -1,0 +1,2 @@
+# Optional demo-video generation only. ffmpeg must also be installed.
+Pillow==13.0.0

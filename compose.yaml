@@ -1,0 +1,26 @@
+name: energyline
+services:
+  energyline:
+    image: python:3.13.7-slim
+    working_dir: /app
+    command: ["python3", "src/api/server.py", "--host", "0.0.0.0"]
+    ports:
+      - "127.0.0.1:8787:8787"
+    volumes:
+      - ./src:/app/src:ro
+      - ./configs:/app/configs:ro
+      - ./web:/app/web:ro
+      - ./results/experiments:/app/results/experiments
+      - ./results/economics:/app/results/economics:ro
+      - ./results/final:/app/results/final:ro
+      - ./cad:/app/cad:ro
+      - ./media:/app/media:ro
+      - ./docs:/app/docs:ro
+      - ./release:/app/release:ro
+    networks:
+      - existing_n8n
+    restart: unless-stopped
+networks:
+  existing_n8n:
+    external: true
+    name: n8n_default

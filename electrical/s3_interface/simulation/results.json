@@ -1,0 +1,97 @@
+{
+  "engine": "ngspice 46",
+  "analysis": "Transient, 0-40ms, maximum step 2us",
+  "schematic": "S3_interface.kicad_sch",
+  "netlist": "S3_interface.net.xml",
+  "topology_checked_against_export": true,
+  "samples": 20201,
+  "checks": [
+    {
+      "name": "Command low keeps LED off",
+      "passed": true,
+      "value": 8.25474590643e-12,
+      "unit": "A"
+    },
+    {
+      "name": "Command and permit high turn LED on",
+      "passed": true,
+      "value": 0.004148551494332,
+      "unit": "A"
+    },
+    {
+      "name": "Permit removal inhibits output while command stays high",
+      "passed": true,
+      "value": -1.801330667092e-14,
+      "unit": "A"
+    },
+    {
+      "name": "Restored permit and command turn LED on again",
+      "passed": true,
+      "value": 0.004149967056272,
+      "unit": "A"
+    },
+    {
+      "name": "Open contacts read high",
+      "passed": true,
+      "value": 4.999500049967,
+      "unit": "V"
+    },
+    {
+      "name": "Part contact closure reads low",
+      "passed": true,
+      "value": 0.0004994352848364,
+      "unit": "V"
+    },
+    {
+      "name": "Cover contact closure reads low",
+      "passed": true,
+      "value": 0.0004993854321715,
+      "unit": "V"
+    },
+    {
+      "name": "Part release returns high",
+      "passed": true,
+      "value": 4.999272159965,
+      "unit": "V"
+    },
+    {
+      "name": "Cover release returns high",
+      "passed": true,
+      "value": 4.999772037052,
+      "unit": "V"
+    },
+    {
+      "name": "Q1 saturates under LED load",
+      "passed": true,
+      "value": 0.049439452913,
+      "unit": "V"
+    },
+    {
+      "name": "Fused supply stays above 4.9V for modeled load",
+      "passed": true,
+      "value": 4.994353707023,
+      "unit": "V"
+    },
+    {
+      "name": "Input 10-90% rise agrees with 10k/10n RC within 10%",
+      "passed": true,
+      "value": 219.82568901596917,
+      "unit": "us"
+    }
+  ],
+  "passed": true,
+  "led_on_ma": 4.1485514943320005,
+  "led_inhibited_ua": -1.801330667092e-08,
+  "collector_on_v": 0.049439452913,
+  "part_rise_10_90_us": 219.82568901596917,
+  "expected_rc_rise_us": 219.72245773362198,
+  "models": "Generic NPN and red LED; BC547B manufacturer behavior is not calibrated",
+  "limitations": [
+    "External controller represented by ideal 0/5V source; controller power draw omitted",
+    "Permit and dry contacts use ideal controlled switch models",
+    "F1 represented as 1 ohm; fuse opening not simulated",
+    "Input thresholds assumed 1.5/3.5V for this 5V demonstration",
+    "No mechanical switch bounce, EMC, ESD, component tolerance or thermal analysis",
+    "LED mock load only; no motor, solenoid or certified safety function"
+  ]
+}

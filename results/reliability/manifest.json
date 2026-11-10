@@ -1,0 +1,591 @@
+{
+  "model_version": "0.1.6",
+  "cases": [
+    {
+      "model_version": "0.1.6",
+      "scenario": "no_failures_ops_3",
+      "input_source": "synthetic_assumption",
+      "shift_duration_s": 28800,
+      "planned_nonproduction_s": 3600,
+      "target_good_units": 240,
+      "start_condition": "empty",
+      "count_overtime": false,
+      "stations": [
+        {
+          "id": "S1",
+          "operation": "Identify and load tray",
+          "mean_process_s": 45
+        },
+        {
+          "id": "S2",
+          "operation": "Load four inserts",
+          "mean_process_s": 65,
+          "operator_attended_fraction": 0.5
+        },
+        {
+          "id": "S3",
+          "operation": "Fit cover and fasten",
+          "mean_process_s": 70,
+          "operator_attended_fraction": 0.5
+        },
+        {
+          "id": "S4",
+          "operation": "Inspect and mock test",
+          "mean_process_s": 90
+        },
+        {
+          "id": "S5",
+          "operation": "Label and release",
+          "mean_process_s": 60
+        }
+      ],
+      "buffer_capacities": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "operator_count": 3,
+      "seed": 20261109,
+      "processing_time": {
+        "distribution": "triangular",
+        "relative_half_width": 0.2
+      },
+      "scenario_description": "Estimated faster S2 and S3; S4 unchanged",
+      "timing_evidence": "Unvalidated synthetic estimates; no supplier or measured evidence"
+    },
+    {
+      "model_version": "0.1.6",
+      "scenario": "no_failures_ops_4",
+      "input_source": "synthetic_assumption",
+      "shift_duration_s": 28800,
+      "planned_nonproduction_s": 3600,
+      "target_good_units": 240,
+      "start_condition": "empty",
+      "count_overtime": false,
+      "stations": [
+        {
+          "id": "S1",
+          "operation": "Identify and load tray",
+          "mean_process_s": 45
+        },
+        {
+          "id": "S2",
+          "operation": "Load four inserts",
+          "mean_process_s": 65,
+          "operator_attended_fraction": 0.5
+        },
+        {
+          "id": "S3",
+          "operation": "Fit cover and fasten",
+          "mean_process_s": 70,
+          "operator_attended_fraction": 0.5
+        },
+        {
+          "id": "S4",
+          "operation": "Inspect and mock test",
+          "mean_process_s": 90
+        },
+        {
+          "id": "S5",
+          "operation": "Label and release",
+          "mean_process_s": 60
+        }
+      ],
+      "buffer_capacities": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "operator_count": 4,
+      "seed": 20261109,
+      "processing_time": {
+        "distribution": "triangular",
+        "relative_half_width": 0.2
+      },
+      "scenario_description": "Estimated faster S2 and S3; S4 unchanged",
+      "timing_evidence": "Unvalidated synthetic estimates; no supplier or measured evidence"
+    },
+    {
+      "model_version": "0.1.6",
+      "scenario": "mild_ops_3",
+      "input_source": "synthetic_assumption",
+      "shift_duration_s": 28800,
+      "planned_nonproduction_s": 3600,
+      "target_good_units": 240,
+      "start_condition": "empty",
+      "count_overtime": false,
+      "stations": [
+        {
+          "id": "S1",
+          "operation": "Identify and load tray",
+          "mean_process_s": 45
+        },
+        {
+          "id": "S2",
+          "operation": "Load four inserts",
+          "mean_process_s": 65,
+          "operator_attended_fraction": 0.5,
+          "reliability": {
+            "mtbf_s": 3600,
+            "repair_mean_s": 120
+          }
+        },
+        {
+          "id": "S3",
+          "operation": "Fit cover and fasten",
+          "mean_process_s": 70,
+          "operator_attended_fraction": 0.5,
+          "reliability": {
+            "mtbf_s": 3600,
+            "repair_mean_s": 120
+          }
+        },
+        {
+          "id": "S4",
+          "operation": "Inspect and mock test",
+          "mean_process_s": 90
+        },
+        {
+          "id": "S5",
+          "operation": "Label and release",
+          "mean_process_s": 60
+        }
+      ],
+      "buffer_capacities": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "operator_count": 3,
+      "seed": 20261109,
+      "processing_time": {
+        "distribution": "triangular",
+        "relative_half_width": 0.2
+      },
+      "scenario_description": "Estimated faster S2 and S3; S4 unchanged",
+      "timing_evidence": "Unvalidated synthetic estimates; no supplier or measured evidence"
+    },
+    {
+      "model_version": "0.1.6",
+      "scenario": "mild_ops_4",
+      "input_source": "synthetic_assumption",
+      "shift_duration_s": 28800,
+      "planned_nonproduction_s": 3600,
+      "target_good_units": 240,
+      "start_condition": "empty",
+      "count_overtime": false,
+      "stations": [
+        {
+          "id": "S1",
+          "operation": "Identify and load tray",
+          "mean_process_s": 45
+        },
+        {
+          "id": "S2",
+          "operation": "Load four inserts",
+          "mean_process_s": 65,
+          "operator_attended_fraction": 0.5,
+          "reliability": {
+            "mtbf_s": 3600,
+            "repair_mean_s": 120
+          }
+        },
+        {
+          "id": "S3",
+          "operation": "Fit cover and fasten",
+          "mean_process_s": 70,
+          "operator_attended_fraction": 0.5,
+          "reliability": {
+            "mtbf_s": 3600,
+            "repair_mean_s": 120
+          }
+        },
+        {
+          "id": "S4",
+          "operation": "Inspect and mock test",
+          "mean_process_s": 90
+        },
+        {
+          "id": "S5",
+          "operation": "Label and release",
+          "mean_process_s": 60
+        }
+      ],
+      "buffer_capacities": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "operator_count": 4,
+      "seed": 20261109,
+      "processing_time": {
+        "distribution": "triangular",
+        "relative_half_width": 0.2
+      },
+      "scenario_description": "Estimated faster S2 and S3; S4 unchanged",
+      "timing_evidence": "Unvalidated synthetic estimates; no supplier or measured evidence"
+    },
+    {
+      "model_version": "0.1.6",
+      "scenario": "moderate_ops_3",
+      "input_source": "synthetic_assumption",
+      "shift_duration_s": 28800,
+      "planned_nonproduction_s": 3600,
+      "target_good_units": 240,
+      "start_condition": "empty",
+      "count_overtime": false,
+      "stations": [
+        {
+          "id": "S1",
+          "operation": "Identify and load tray",
+          "mean_process_s": 45
+        },
+        {
+          "id": "S2",
+          "operation": "Load four inserts",
+          "mean_process_s": 65,
+          "operator_attended_fraction": 0.5,
+          "reliability": {
+            "mtbf_s": 1800,
+            "repair_mean_s": 180
+          }
+        },
+        {
+          "id": "S3",
+          "operation": "Fit cover and fasten",
+          "mean_process_s": 70,
+          "operator_attended_fraction": 0.5,
+          "reliability": {
+            "mtbf_s": 1800,
+            "repair_mean_s": 180
+          }
+        },
+        {
+          "id": "S4",
+          "operation": "Inspect and mock test",
+          "mean_process_s": 90
+        },
+        {
+          "id": "S5",
+          "operation": "Label and release",
+          "mean_process_s": 60
+        }
+      ],
+      "buffer_capacities": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "operator_count": 3,
+      "seed": 20261109,
+      "processing_time": {
+        "distribution": "triangular",
+        "relative_half_width": 0.2
+      },
+      "scenario_description": "Estimated faster S2 and S3; S4 unchanged",
+      "timing_evidence": "Unvalidated synthetic estimates; no supplier or measured evidence"
+    },
+    {
+      "model_version": "0.1.6",
+      "scenario": "moderate_ops_4",
+      "input_source": "synthetic_assumption",
+      "shift_duration_s": 28800,
+      "planned_nonproduction_s": 3600,
+      "target_good_units": 240,
+      "start_condition": "empty",
+      "count_overtime": false,
+      "stations": [
+        {
+          "id": "S1",
+          "operation": "Identify and load tray",
+          "mean_process_s": 45
+        },
+        {
+          "id": "S2",
+          "operation": "Load four inserts",
+          "mean_process_s": 65,
+          "operator_attended_fraction": 0.5,
+          "reliability": {
+            "mtbf_s": 1800,
+            "repair_mean_s": 180
+          }
+        },
+        {
+          "id": "S3",
+          "operation": "Fit cover and fasten",
+          "mean_process_s": 70,
+          "operator_attended_fraction": 0.5,
+          "reliability": {
+            "mtbf_s": 1800,
+            "repair_mean_s": 180
+          }
+        },
+        {
+          "id": "S4",
+          "operation": "Inspect and mock test",
+          "mean_process_s": 90
+        },
+        {
+          "id": "S5",
+          "operation": "Label and release",
+          "mean_process_s": 60
+        }
+      ],
+      "buffer_capacities": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "operator_count": 4,
+      "seed": 20261109,
+      "processing_time": {
+        "distribution": "triangular",
+        "relative_half_width": 0.2
+      },
+      "scenario_description": "Estimated faster S2 and S3; S4 unchanged",
+      "timing_evidence": "Unvalidated synthetic estimates; no supplier or measured evidence"
+    },
+    {
+      "model_version": "0.1.6",
+      "scenario": "severe_ops_3",
+      "input_source": "synthetic_assumption",
+      "shift_duration_s": 28800,
+      "planned_nonproduction_s": 3600,
+      "target_good_units": 240,
+      "start_condition": "empty",
+      "count_overtime": false,
+      "stations": [
+        {
+          "id": "S1",
+          "operation": "Identify and load tray",
+          "mean_process_s": 45
+        },
+        {
+          "id": "S2",
+          "operation": "Load four inserts",
+          "mean_process_s": 65,
+          "operator_attended_fraction": 0.5,
+          "reliability": {
+            "mtbf_s": 900,
+            "repair_mean_s": 300
+          }
+        },
+        {
+          "id": "S3",
+          "operation": "Fit cover and fasten",
+          "mean_process_s": 70,
+          "operator_attended_fraction": 0.5,
+          "reliability": {
+            "mtbf_s": 900,
+            "repair_mean_s": 300
+          }
+        },
+        {
+          "id": "S4",
+          "operation": "Inspect and mock test",
+          "mean_process_s": 90
+        },
+        {
+          "id": "S5",
+          "operation": "Label and release",
+          "mean_process_s": 60
+        }
+      ],
+      "buffer_capacities": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "operator_count": 3,
+      "seed": 20261109,
+      "processing_time": {
+        "distribution": "triangular",
+        "relative_half_width": 0.2
+      },
+      "scenario_description": "Estimated faster S2 and S3; S4 unchanged",
+      "timing_evidence": "Unvalidated synthetic estimates; no supplier or measured evidence"
+    },
+    {
+      "model_version": "0.1.6",
+      "scenario": "severe_ops_4",
+      "input_source": "synthetic_assumption",
+      "shift_duration_s": 28800,
+      "planned_nonproduction_s": 3600,
+      "target_good_units": 240,
+      "start_condition": "empty",
+      "count_overtime": false,
+      "stations": [
+        {
+          "id": "S1",
+          "operation": "Identify and load tray",
+          "mean_process_s": 45
+        },
+        {
+          "id": "S2",
+          "operation": "Load four inserts",
+          "mean_process_s": 65,
+          "operator_attended_fraction": 0.5,
+          "reliability": {
+            "mtbf_s": 900,
+            "repair_mean_s": 300
+          }
+        },
+        {
+          "id": "S3",
+          "operation": "Fit cover and fasten",
+          "mean_process_s": 70,
+          "operator_attended_fraction": 0.5,
+          "reliability": {
+            "mtbf_s": 900,
+            "repair_mean_s": 300
+          }
+        },
+        {
+          "id": "S4",
+          "operation": "Inspect and mock test",
+          "mean_process_s": 90
+        },
+        {
+          "id": "S5",
+          "operation": "Label and release",
+          "mean_process_s": 60
+        }
+      ],
+      "buffer_capacities": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "operator_count": 4,
+      "seed": 20261109,
+      "processing_time": {
+        "distribution": "triangular",
+        "relative_half_width": 0.2
+      },
+      "scenario_description": "Estimated faster S2 and S3; S4 unchanged",
+      "timing_evidence": "Unvalidated synthetic estimates; no supplier or measured evidence"
+    }
+  ],
+  "replications_per_case": 100,
+  "seeds": [
+    20261209,
+    20261210,
+    20261211,
+    20261212,
+    20261213,
+    20261214,
+    20261215,
+    20261216,
+    20261217,
+    20261218,
+    20261219,
+    20261220,
+    20261221,
+    20261222,
+    20261223,
+    20261224,
+    20261225,
+    20261226,
+    20261227,
+    20261228,
+    20261229,
+    20261230,
+    20261231,
+    20261232,
+    20261233,
+    20261234,
+    20261235,
+    20261236,
+    20261237,
+    20261238,
+    20261239,
+    20261240,
+    20261241,
+    20261242,
+    20261243,
+    20261244,
+    20261245,
+    20261246,
+    20261247,
+    20261248,
+    20261249,
+    20261250,
+    20261251,
+    20261252,
+    20261253,
+    20261254,
+    20261255,
+    20261256,
+    20261257,
+    20261258,
+    20261259,
+    20261260,
+    20261261,
+    20261262,
+    20261263,
+    20261264,
+    20261265,
+    20261266,
+    20261267,
+    20261268,
+    20261269,
+    20261270,
+    20261271,
+    20261272,
+    20261273,
+    20261274,
+    20261275,
+    20261276,
+    20261277,
+    20261278,
+    20261279,
+    20261280,
+    20261281,
+    20261282,
+    20261283,
+    20261284,
+    20261285,
+    20261286,
+    20261287,
+    20261288,
+    20261289,
+    20261290,
+    20261291,
+    20261292,
+    20261293,
+    20261294,
+    20261295,
+    20261296,
+    20261297,
+    20261298,
+    20261299,
+    20261300,
+    20261301,
+    20261302,
+    20261303,
+    20261304,
+    20261305,
+    20261306,
+    20261307,
+    20261308
+  ],
+  "clock": "Cumulative station processing time only; paused during idle, blocking, repair and operator waits",
+  "distributions": "Exponential uptime and repair; independent namespaces from process times",
+  "interruption": "Resume remaining process and attendance; operator released on failure and reacquired if needed",
+  "limitations": [
+    "All reliability values are synthetic sensitivity inputs, not equipment specifications",
+    "Only S2 and S3 fail; all other stations remain failure-free",
+    "Repair has unlimited external maintenance resources and needs no production operator",
+    "No scrap, quality loss, rework, walking or unloading tasks",
+    "Summed station fault time can overlap; it is not line downtime",
+    "Confidence intervals quantify simulation sampling uncertainty, not input/model validity"
+  ]
+}

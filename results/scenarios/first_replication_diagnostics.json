@@ -1,0 +1,762 @@
+[
+  {
+    "scenario": "A_manual_ops_3",
+    "seed": 20261109,
+    "stations": [
+      {
+        "station_id": "S1",
+        "productive_time_s": 7433.293182395209,
+        "blocked_time_s": 508.25909312304657,
+        "starved_time_s": 0.0,
+        "waiting_for_operator_time_s": 17258.447724481743,
+        "fault_time_s": 0.0,
+        "failure_count": 0,
+        "utilization": 0.2949719516823496,
+        "blocking_fraction": 0.020169011631866927
+      },
+      {
+        "station_id": "S2",
+        "productive_time_s": 19417.301302705666,
+        "blocked_time_s": 2091.418381265472,
+        "starved_time_s": 635.1291621912537,
+        "waiting_for_operator_time_s": 3056.1511538376094,
+        "fault_time_s": 0.0,
+        "failure_count": 0,
+        "utilization": 0.770527829472447,
+        "blocking_fraction": 0.08299279290736
+      },
+      {
+        "station_id": "S3",
+        "productive_time_s": 23880.248783220777,
+        "blocked_time_s": 0.0,
+        "starved_time_s": 173.13827593237352,
+        "waiting_for_operator_time_s": 1146.6129408468514,
+        "fault_time_s": 0.0,
+        "failure_count": 0,
+        "utilization": 0.9476289199690785,
+        "blocking_fraction": 0.0
+      },
+      {
+        "station_id": "S4",
+        "productive_time_s": 14170.065910026526,
+        "blocked_time_s": 0.0,
+        "starved_time_s": 11029.934089973474,
+        "waiting_for_operator_time_s": 0.0,
+        "fault_time_s": 0.0,
+        "failure_count": 0,
+        "utilization": 0.5623042027788304,
+        "blocking_fraction": 0.0
+      },
+      {
+        "station_id": "S5",
+        "productive_time_s": 9542.765155777075,
+        "blocked_time_s": 0.0,
+        "starved_time_s": 15657.234844222923,
+        "waiting_for_operator_time_s": 0.0,
+        "fault_time_s": 0.0,
+        "failure_count": 0,
+        "utilization": 0.37868115697528076,
+        "blocking_fraction": 0.0
+      }
+    ],
+    "buffers": [
+      {
+        "from_station": "S1",
+        "to_station": "S2",
+        "capacity": 2,
+        "peak_waiting_units": 2,
+        "final_waiting_units": 2,
+        "time_weighted_mean_waiting_units": 1.4958327843393258
+      },
+      {
+        "from_station": "S2",
+        "to_station": "S3",
+        "capacity": 2,
+        "peak_waiting_units": 2,
+        "final_waiting_units": 2,
+        "time_weighted_mean_waiting_units": 1.8954649167321584
+      },
+      {
+        "from_station": "S3",
+        "to_station": "S4",
+        "capacity": 2,
+        "peak_waiting_units": 0,
+        "final_waiting_units": 0,
+        "time_weighted_mean_waiting_units": 0.0
+      },
+      {
+        "from_station": "S4",
+        "to_station": "S5",
+        "capacity": 2,
+        "peak_waiting_units": 0,
+        "final_waiting_units": 0,
+        "time_weighted_mean_waiting_units": 0.0
+      }
+    ]
+  },
+  {
+    "scenario": "A_manual_ops_5",
+    "seed": 20261109,
+    "stations": [
+      {
+        "station_id": "S1",
+        "productive_time_s": 7818.1827551960505,
+        "blocked_time_s": 17381.81724480395,
+        "starved_time_s": 0.0,
+        "waiting_for_operator_time_s": 0.0,
+        "fault_time_s": 0.0,
+        "failure_count": 0,
+        "utilization": 0.3102453474284147,
+        "blocking_fraction": 0.6897546525715854
+      },
+      {
+        "station_id": "S2",
+        "productive_time_s": 20290.25831181466,
+        "blocked_time_s": 4863.022755539324,
+        "starved_time_s": 46.718932646015936,
+        "waiting_for_operator_time_s": 0.0,
+        "fault_time_s": 0.0,
+        "failure_count": 0,
+        "utilization": 0.8051689806275659,
+        "blocking_fraction": 0.1929770934737827
+      },
+      {
+        "station_id": "S3",
+        "productive_time_s": 25026.861724067625,
+        "blocked_time_s": 0.0,
+        "starved_time_s": 173.13827593237338,
+        "waiting_for_operator_time_s": 0.0,
+        "fault_time_s": 0.0,
+        "failure_count": 0,
+        "utilization": 0.993129433494747,
+        "blocking_fraction": 0.0
+      },
+      {
+        "station_id": "S4",
+        "productive_time_s": 14818.17800093297,
+        "blocked_time_s": 0.0,
+        "starved_time_s": 10381.82199906703,
+        "waiting_for_operator_time_s": 0.0,
+        "fault_time_s": 0.0,
+        "failure_count": 0,
+        "utilization": 0.5880229365449592,
+        "blocking_fraction": 0.0
+      },
+      {
+        "station_id": "S5",
+        "productive_time_s": 10011.697215715973,
+        "blocked_time_s": 0.0,
+        "starved_time_s": 15188.30278428403,
+        "waiting_for_operator_time_s": 0.0,
+        "fault_time_s": 0.0,
+        "failure_count": 0,
+        "utilization": 0.39728957205222115,
+        "blocking_fraction": 0.0
+      }
+    ],
+    "buffers": [
+      {
+        "from_station": "S1",
+        "to_station": "S2",
+        "capacity": 2,
+        "peak_waiting_units": 2,
+        "final_waiting_units": 2,
+        "time_weighted_mean_waiting_units": 1.9912808243751967
+      },
+      {
+        "from_station": "S2",
+        "to_station": "S3",
+        "capacity": 2,
+        "peak_waiting_units": 2,
+        "final_waiting_units": 2,
+        "time_weighted_mean_waiting_units": 1.9305665528837277
+      },
+      {
+        "from_station": "S3",
+        "to_station": "S4",
+        "capacity": 2,
+        "peak_waiting_units": 0,
+        "final_waiting_units": 0,
+        "time_weighted_mean_waiting_units": 0.0
+      },
+      {
+        "from_station": "S4",
+        "to_station": "S5",
+        "capacity": 2,
+        "peak_waiting_units": 0,
+        "final_waiting_units": 0,
+        "time_weighted_mean_waiting_units": 0.0
+      }
+    ]
+  },
+  {
+    "scenario": "B_fixture_s3_ops_3",
+    "seed": 20261109,
+    "stations": [
+      {
+        "station_id": "S1",
+        "productive_time_s": 8133.2283610752,
+        "blocked_time_s": 268.9890835934042,
+        "starved_time_s": 0.0,
+        "waiting_for_operator_time_s": 16797.782555331396,
+        "fault_time_s": 0.0,
+        "failure_count": 0,
+        "utilization": 0.3227471571855238,
+        "blocking_fraction": 0.010674169983865245
+      },
+      {
+        "station_id": "S2",
+        "productive_time_s": 21242.316155965662,
+        "blocked_time_s": 0.0,
+        "starved_time_s": 1252.268314604008,
+        "waiting_for_operator_time_s": 2705.4155294303323,
+        "fault_time_s": 0.0,
+        "failure_count": 0,
+        "utilization": 0.8429490538081612,
+        "blocking_fraction": 0.0
+      },
+      {
+        "station_id": "S3",
+        "productive_time_s": 19416.931705459607,
+        "blocked_time_s": 0.0,
+        "starved_time_s": 5594.264638034711,
+        "waiting_for_operator_time_s": 188.80365650568092,
+        "fault_time_s": 0.0,
+        "failure_count": 0,
+        "utilization": 0.7705131629150638,
+        "blocking_fraction": 0.0
+      },
+      {
+        "station_id": "S4",
+        "productive_time_s": 15667.334165580582,
+        "blocked_time_s": 0.0,
+        "starved_time_s": 9532.665834419418,
+        "waiting_for_operator_time_s": 0.0,
+        "fault_time_s": 0.0,
+        "failure_count": 0,
+        "utilization": 0.6217196097452612,
+        "blocking_fraction": 0.0
+      },
+      {
+        "station_id": "S5",
+        "productive_time_s": 10618.100951362598,
+        "blocked_time_s": 0.0,
+        "starved_time_s": 14581.899048637402,
+        "waiting_for_operator_time_s": 0.0,
+        "fault_time_s": 0.0,
+        "failure_count": 0,
+        "utilization": 0.42135321235565865,
+        "blocking_fraction": 0.0
+      }
+    ],
+    "buffers": [
+      {
+        "from_station": "S1",
+        "to_station": "S2",
+        "capacity": 2,
+        "peak_waiting_units": 2,
+        "final_waiting_units": 2,
+        "time_weighted_mean_waiting_units": 1.2208489724832108
+      },
+      {
+        "from_station": "S2",
+        "to_station": "S3",
+        "capacity": 2,
+        "peak_waiting_units": 1,
+        "final_waiting_units": 0,
+        "time_weighted_mean_waiting_units": 0.013375803594345438
+      },
+      {
+        "from_station": "S3",
+        "to_station": "S4",
+        "capacity": 2,
+        "peak_waiting_units": 0,
+        "final_waiting_units": 0,
+        "time_weighted_mean_waiting_units": 0.0
+      },
+      {
+        "from_station": "S4",
+        "to_station": "S5",
+        "capacity": 2,
+        "peak_waiting_units": 0,
+        "final_waiting_units": 0,
+        "time_weighted_mean_waiting_units": 0.0
+      }
+    ]
+  },
+  {
+    "scenario": "B_fixture_s3_ops_5",
+    "seed": 20261109,
+    "stations": [
+      {
+        "station_id": "S1",
+        "productive_time_s": 9691.949947192177,
+        "blocked_time_s": 15508.050052807821,
+        "starved_time_s": 0.0,
+        "waiting_for_operator_time_s": 0.0,
+        "fault_time_s": 0.0,
+        "failure_count": 0,
+        "utilization": 0.38460118838064195,
+        "blocking_fraction": 0.6153988116193579
+      },
+      {
+        "station_id": "S2",
+        "productive_time_s": 25153.281067353986,
+        "blocked_time_s": 0.0,
+        "starved_time_s": 46.718932646015936,
+        "waiting_for_operator_time_s": 0.0,
+        "fault_time_s": 0.0,
+        "failure_count": 0,
+        "utilization": 0.9981460741013487,
+        "blocking_fraction": 0.0
+      },
+      {
+        "station_id": "S3",
+        "productive_time_s": 23015.340951066424,
+        "blocked_time_s": 0.0,
+        "starved_time_s": 2184.6590489335754,
+        "waiting_for_operator_time_s": 0.0,
+        "fault_time_s": 0.0,
+        "failure_count": 0,
+        "utilization": 0.913307180597874,
+        "blocking_fraction": 0.0
+      },
+      {
+        "station_id": "S4",
+        "productive_time_s": 18575.708607486067,
+        "blocked_time_s": 0.0,
+        "starved_time_s": 6624.291392513934,
+        "waiting_for_operator_time_s": 0.0,
+        "fault_time_s": 0.0,
+        "failure_count": 0,
+        "utilization": 0.7371312939478598,
+        "blocking_fraction": 0.0
+      },
+      {
+        "station_id": "S5",
+        "productive_time_s": 12561.41161910771,
+        "blocked_time_s": 0.0,
+        "starved_time_s": 12638.58838089229,
+        "waiting_for_operator_time_s": 0.0,
+        "fault_time_s": 0.0,
+        "failure_count": 0,
+        "utilization": 0.49846871504395673,
+        "blocking_fraction": 0.0
+      }
+    ],
+    "buffers": [
+      {
+        "from_station": "S1",
+        "to_station": "S2",
+        "capacity": 2,
+        "peak_waiting_units": 2,
+        "final_waiting_units": 2,
+        "time_weighted_mean_waiting_units": 1.9912808243751967
+      },
+      {
+        "from_station": "S2",
+        "to_station": "S3",
+        "capacity": 2,
+        "peak_waiting_units": 1,
+        "final_waiting_units": 0,
+        "time_weighted_mean_waiting_units": 0.02964956631195453
+      },
+      {
+        "from_station": "S3",
+        "to_station": "S4",
+        "capacity": 2,
+        "peak_waiting_units": 1,
+        "final_waiting_units": 0,
+        "time_weighted_mean_waiting_units": 0.00033492321986426443
+      },
+      {
+        "from_station": "S4",
+        "to_station": "S5",
+        "capacity": 2,
+        "peak_waiting_units": 0,
+        "final_waiting_units": 0,
+        "time_weighted_mean_waiting_units": 0.0
+      }
+    ]
+  },
+  {
+    "scenario": "C_faster_s3_ops_3",
+    "seed": 20261109,
+    "stations": [
+      {
+        "station_id": "S1",
+        "productive_time_s": 8886.887062773221,
+        "blocked_time_s": 1314.6288279527653,
+        "starved_time_s": 0.0,
+        "waiting_for_operator_time_s": 14998.484109274013,
+        "fault_time_s": 0.0,
+        "failure_count": 0,
+        "utilization": 0.35265424852274685,
+        "blocking_fraction": 0.05216781063304624
+      },
+      {
+        "station_id": "S2",
+        "productive_time_s": 23078.43753868353,
+        "blocked_time_s": 0.0,
+        "starved_time_s": 46.71893264601613,
+        "waiting_for_operator_time_s": 2074.843528670453,
+        "fault_time_s": 0.0,
+        "failure_count": 0,
+        "utilization": 0.9158110134398226,
+        "blocking_fraction": 0.0
+      },
+      {
+        "station_id": "S3",
+        "productive_time_s": 13462.652278243855,
+        "blocked_time_s": 0.0,
+        "starved_time_s": 11737.347721756145,
+        "waiting_for_operator_time_s": 0.0,
+        "fault_time_s": 0.0,
+        "failure_count": 0,
+        "utilization": 0.534232233263645,
+        "blocking_fraction": 0.0
+      },
+      {
+        "station_id": "S4",
+        "productive_time_s": 17104.286452433204,
+        "blocked_time_s": 0.0,
+        "starved_time_s": 8051.7333162884315,
+        "waiting_for_operator_time_s": 43.98023127836677,
+        "fault_time_s": 0.0,
+        "failure_count": 0,
+        "utilization": 0.6787415258902065,
+        "blocking_fraction": 0.0
+      },
+      {
+        "station_id": "S5",
+        "productive_time_s": 11553.610852633014,
+        "blocked_time_s": 0.0,
+        "starved_time_s": 13646.389147366988,
+        "waiting_for_operator_time_s": 0.0,
+        "fault_time_s": 0.0,
+        "failure_count": 0,
+        "utilization": 0.4584766211362307,
+        "blocking_fraction": 0.0
+      }
+    ],
+    "buffers": [
+      {
+        "from_station": "S1",
+        "to_station": "S2",
+        "capacity": 2,
+        "peak_waiting_units": 2,
+        "final_waiting_units": 2,
+        "time_weighted_mean_waiting_units": 1.94543240497098
+      },
+      {
+        "from_station": "S2",
+        "to_station": "S3",
+        "capacity": 2,
+        "peak_waiting_units": 0,
+        "final_waiting_units": 0,
+        "time_weighted_mean_waiting_units": 0.0
+      },
+      {
+        "from_station": "S3",
+        "to_station": "S4",
+        "capacity": 2,
+        "peak_waiting_units": 1,
+        "final_waiting_units": 0,
+        "time_weighted_mean_waiting_units": 0.0019602828658697845
+      },
+      {
+        "from_station": "S4",
+        "to_station": "S5",
+        "capacity": 2,
+        "peak_waiting_units": 0,
+        "final_waiting_units": 0,
+        "time_weighted_mean_waiting_units": 0.0
+      }
+    ]
+  },
+  {
+    "scenario": "C_faster_s3_ops_5",
+    "seed": 20261109,
+    "stations": [
+      {
+        "station_id": "S1",
+        "productive_time_s": 9691.949947192177,
+        "blocked_time_s": 15508.050052807823,
+        "starved_time_s": 0.0,
+        "waiting_for_operator_time_s": 0.0,
+        "fault_time_s": 0.0,
+        "failure_count": 0,
+        "utilization": 0.38460118838064195,
+        "blocking_fraction": 0.615398811619358
+      },
+      {
+        "station_id": "S2",
+        "productive_time_s": 25153.281067353983,
+        "blocked_time_s": 0.0,
+        "starved_time_s": 46.718932646015936,
+        "waiting_for_operator_time_s": 0.0,
+        "fault_time_s": 0.0,
+        "failure_count": 0,
+        "utilization": 0.9981460741013485,
+        "blocking_fraction": 0.0
+      },
+      {
+        "station_id": "S3",
+        "productive_time_s": 14664.592085184735,
+        "blocked_time_s": 0.0,
+        "starved_time_s": 10535.407914815265,
+        "waiting_for_operator_time_s": 0.0,
+        "fault_time_s": 0.0,
+        "failure_count": 0,
+        "utilization": 0.5819282573486005,
+        "blocking_fraction": 0.0
+      },
+      {
+        "station_id": "S4",
+        "productive_time_s": 18607.680653722444,
+        "blocked_time_s": 0.0,
+        "starved_time_s": 6592.319346277558,
+        "waiting_for_operator_time_s": 0.0,
+        "fault_time_s": 0.0,
+        "failure_count": 0,
+        "utilization": 0.7384000259413668,
+        "blocking_fraction": 0.0
+      },
+      {
+        "station_id": "S5",
+        "productive_time_s": 12581.019361933882,
+        "blocked_time_s": 0.0,
+        "starved_time_s": 12618.980638066118,
+        "waiting_for_operator_time_s": 0.0,
+        "fault_time_s": 0.0,
+        "failure_count": 0,
+        "utilization": 0.4992468000767414,
+        "blocking_fraction": 0.0
+      }
+    ],
+    "buffers": [
+      {
+        "from_station": "S1",
+        "to_station": "S2",
+        "capacity": 2,
+        "peak_waiting_units": 2,
+        "final_waiting_units": 2,
+        "time_weighted_mean_waiting_units": 1.9912808243751963
+      },
+      {
+        "from_station": "S2",
+        "to_station": "S3",
+        "capacity": 2,
+        "peak_waiting_units": 0,
+        "final_waiting_units": 0,
+        "time_weighted_mean_waiting_units": 0.0
+      },
+      {
+        "from_station": "S3",
+        "to_station": "S4",
+        "capacity": 2,
+        "peak_waiting_units": 1,
+        "final_waiting_units": 0,
+        "time_weighted_mean_waiting_units": 0.00031884338967193754
+      },
+      {
+        "from_station": "S4",
+        "to_station": "S5",
+        "capacity": 2,
+        "peak_waiting_units": 0,
+        "final_waiting_units": 0,
+        "time_weighted_mean_waiting_units": 0.0
+      }
+    ]
+  },
+  {
+    "scenario": "D_faster_s2_s3_ops_3",
+    "seed": 20261109,
+    "stations": [
+      {
+        "station_id": "S1",
+        "productive_time_s": 10388.17517534544,
+        "blocked_time_s": 439.6091703031248,
+        "starved_time_s": 0.0,
+        "waiting_for_operator_time_s": 14372.215654351436,
+        "fault_time_s": 0.0,
+        "failure_count": 0,
+        "utilization": 0.41222917362481903,
+        "blocking_fraction": 0.017444808345362096
+      },
+      {
+        "station_id": "S2",
+        "productive_time_s": 14865.703050742673,
+        "blocked_time_s": 0.0,
+        "starved_time_s": 6974.162542902689,
+        "waiting_for_operator_time_s": 3360.1344063546376,
+        "fault_time_s": 0.0,
+        "failure_count": 0,
+        "utilization": 0.5899088512199474,
+        "blocking_fraction": 0.0
+      },
+      {
+        "station_id": "S3",
+        "productive_time_s": 15946.533611530567,
+        "blocked_time_s": 0.0,
+        "starved_time_s": 8112.90268939972,
+        "waiting_for_operator_time_s": 1140.5636990697117,
+        "fault_time_s": 0.0,
+        "failure_count": 0,
+        "utilization": 0.6327989528385146,
+        "blocking_fraction": 0.0
+      },
+      {
+        "station_id": "S4",
+        "productive_time_s": 20250.804195521963,
+        "blocked_time_s": 0.0,
+        "starved_time_s": 2999.8146325784674,
+        "waiting_for_operator_time_s": 1949.3811718995714,
+        "fault_time_s": 0.0,
+        "failure_count": 0,
+        "utilization": 0.8036033410921414,
+        "blocking_fraction": 0.0
+      },
+      {
+        "station_id": "S5",
+        "productive_time_s": 13691.987299430144,
+        "blocked_time_s": 0.0,
+        "starved_time_s": 11508.012700569856,
+        "waiting_for_operator_time_s": 0.0,
+        "fault_time_s": 0.0,
+        "failure_count": 0,
+        "utilization": 0.5433328293424661,
+        "blocking_fraction": 0.0
+      }
+    ],
+    "buffers": [
+      {
+        "from_station": "S1",
+        "to_station": "S2",
+        "capacity": 2,
+        "peak_waiting_units": 2,
+        "final_waiting_units": 0,
+        "time_weighted_mean_waiting_units": 0.34581473368266025
+      },
+      {
+        "from_station": "S2",
+        "to_station": "S3",
+        "capacity": 2,
+        "peak_waiting_units": 1,
+        "final_waiting_units": 0,
+        "time_weighted_mean_waiting_units": 0.048419518667534855
+      },
+      {
+        "from_station": "S3",
+        "to_station": "S4",
+        "capacity": 2,
+        "peak_waiting_units": 2,
+        "final_waiting_units": 0,
+        "time_weighted_mean_waiting_units": 0.19682572938238613
+      },
+      {
+        "from_station": "S4",
+        "to_station": "S5",
+        "capacity": 2,
+        "peak_waiting_units": 0,
+        "final_waiting_units": 0,
+        "time_weighted_mean_waiting_units": 0.0
+      }
+    ]
+  },
+  {
+    "scenario": "D_faster_s2_s3_ops_5",
+    "seed": 20261109,
+    "stations": [
+      {
+        "station_id": "S1",
+        "productive_time_s": 13118.434941958247,
+        "blocked_time_s": 12081.565058041753,
+        "starved_time_s": 0.0,
+        "waiting_for_operator_time_s": 0.0,
+        "fault_time_s": 0.0,
+        "failure_count": 0,
+        "utilization": 0.5205728151570733,
+        "blocking_fraction": 0.47942718484292673
+      },
+      {
+        "station_id": "S2",
+        "productive_time_s": 18562.38637488978,
+        "blocked_time_s": 6590.894692464206,
+        "starved_time_s": 46.718932646015936,
+        "waiting_for_operator_time_s": 0.0,
+        "fault_time_s": 0.0,
+        "failure_count": 0,
+        "utilization": 0.7366026339241976,
+        "blocking_fraction": 0.26154344017715103
+      },
+      {
+        "station_id": "S3",
+        "productive_time_s": 19840.05446562157,
+        "blocked_time_s": 5244.7494574523025,
+        "starved_time_s": 115.19607692612621,
+        "waiting_for_operator_time_s": 0.0,
+        "fault_time_s": 0.0,
+        "failure_count": 0,
+        "utilization": 0.7873037486357767,
+        "blocking_fraction": 0.20812497847032946
+      },
+      {
+        "station_id": "S4",
+        "productive_time_s": 25007.760369283125,
+        "blocked_time_s": 0.0,
+        "starved_time_s": 192.23963071687476,
+        "waiting_for_operator_time_s": 0.0,
+        "fault_time_s": 0.0,
+        "failure_count": 0,
+        "utilization": 0.9923714432255208,
+        "blocking_fraction": 0.0
+      },
+      {
+        "station_id": "S5",
+        "productive_time_s": 16867.320899500424,
+        "blocked_time_s": 0.0,
+        "starved_time_s": 8332.679100499574,
+        "waiting_for_operator_time_s": 0.0,
+        "fault_time_s": 0.0,
+        "failure_count": 0,
+        "utilization": 0.6693381309325566,
+        "blocking_fraction": 0.0
+      }
+    ],
+    "buffers": [
+      {
+        "from_station": "S1",
+        "to_station": "S2",
+        "capacity": 2,
+        "peak_waiting_units": 2,
+        "final_waiting_units": 2,
+        "time_weighted_mean_waiting_units": 1.9862966393898351
+      },
+      {
+        "from_station": "S2",
+        "to_station": "S3",
+        "capacity": 2,
+        "peak_waiting_units": 2,
+        "final_waiting_units": 2,
+        "time_weighted_mean_waiting_units": 1.932084206102563
+      },
+      {
+        "from_station": "S3",
+        "to_station": "S4",
+        "capacity": 2,
+        "peak_waiting_units": 2,
+        "final_waiting_units": 2,
+        "time_weighted_mean_waiting_units": 1.9592868487460584
+      },
+      {
+        "from_station": "S4",
+        "to_station": "S5",
+        "capacity": 2,
+        "peak_waiting_units": 0,
+        "final_waiting_units": 0,
+        "time_weighted_mean_waiting_units": 0.0
+      }
+    ]
+  }
+]

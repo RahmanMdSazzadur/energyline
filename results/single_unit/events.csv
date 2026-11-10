@@ -1,0 +1,17 @@
+run_id,model_version,scenario,unit_id,station_id,timestamp_s,event_type,state,result,fault_code,cycle_number
+single_unit_reference,0.1.0,manual_baseline,UNIT-000001,S1,0,entered,READY,pending,,1
+single_unit_reference,0.1.0,manual_baseline,UNIT-000001,S1,0,started,PROCESSING,pending,,1
+single_unit_reference,0.1.0,manual_baseline,UNIT-000001,S1,45,completed,DONE,pass,,1
+single_unit_reference,0.1.0,manual_baseline,UNIT-000001,S2,45,entered,READY,pending,,1
+single_unit_reference,0.1.0,manual_baseline,UNIT-000001,S2,45,started,PROCESSING,pending,,1
+single_unit_reference,0.1.0,manual_baseline,UNIT-000001,S2,165,completed,DONE,pass,,1
+single_unit_reference,0.1.0,manual_baseline,UNIT-000001,S3,165,entered,READY,pending,,1
+single_unit_reference,0.1.0,manual_baseline,UNIT-000001,S3,165,started,PROCESSING,pending,,1
+single_unit_reference,0.1.0,manual_baseline,UNIT-000001,S3,315,completed,DONE,pass,,1
+single_unit_reference,0.1.0,manual_baseline,UNIT-000001,S4,315,entered,READY,pending,,1
+single_unit_reference,0.1.0,manual_baseline,UNIT-000001,S4,315,started,PROCESSING,pending,,1
+single_unit_reference,0.1.0,manual_baseline,UNIT-000001,S4,405,completed,DONE,pass,,1
+single_unit_reference,0.1.0,manual_baseline,UNIT-000001,S5,405,entered,READY,pending,,1
+single_unit_reference,0.1.0,manual_baseline,UNIT-000001,S5,405,started,PROCESSING,pending,,1
+single_unit_reference,0.1.0,manual_baseline,UNIT-000001,S5,465,completed,DONE,pass,,1
+single_unit_reference,0.1.0,manual_baseline,UNIT-000001,S5,465,accepted,RELEASED,pass,,1

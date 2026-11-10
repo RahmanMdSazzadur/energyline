@@ -1,0 +1,27 @@
+1
+00:00:00,000 --> 00:00:15,000
+Define the system — software simulation with synthetic inputs
+
+2
+00:00:15,000 --> 00:00:30,000
+Find the constraint — software simulation with synthetic inputs
+
+3
+00:00:30,000 --> 00:00:48,000
+Compare alternatives — software simulation with synthetic inputs
+
+4
+00:00:48,000 --> 00:01:05,000
+Commission a normal cycle — software simulation with synthetic inputs
+
+5
+00:01:05,000 --> 00:01:30,000
+Fault, reset and recovery — software simulation with synthetic inputs
+
+6
+00:01:30,000 --> 00:01:48,000
+Balance cost and reliability — software simulation with synthetic inputs
+
+7
+00:01:48,000 --> 00:02:00,000
+State the evidence boundary — software simulation with synthetic inputs

@@ -1,0 +1,24 @@
+signal,direction_relative_to_controller,purpose
+part_present,input,Tray present at fixture
+cover_present,input,Cover detected
+clamp_closed,input,Clamp fully closed
+clamp_open,input,Clamp fully open
+process_done,input,Latched completion from mock fastening
+process_pass,input,Boolean process result; nullable until done
+downstream_ready,input,Permission to transfer
+safety_permit,input,Simulated permit; not certified safety
+communication_ok,input,Simulated communications health
+transfer_confirmed,input,Equipment reports unit left fixture
+unit_id,input,Scanned unit identifier
+fault_cause_active,input,Simulated unresolved jam indication
+start_request,operator command,Rising-edge cycle request
+reset_request,operator command,Acknowledge resolved fault without motion
+recover_request,operator command,Explicit recovery motion and unit reconciliation
+clamp_command,output,Requested clamp position; held during fault
+motion_enable,output,Permit simulated clamp/transfer motion
+process_start,output,One-tick process-start pulse
+process_enable,output,Permit process advancement
+transfer_request,output,Request modeled unit transfer
+transfer_route,output,accepted or rework result routing
+station_ready,output,Ready state indicator
+station_fault,output,Active controller fault

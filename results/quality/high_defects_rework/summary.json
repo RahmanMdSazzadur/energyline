@@ -1,0 +1,1919 @@
+{
+  "model": "stochastic_shared_operators",
+  "input_source": "synthetic_assumption",
+  "run_id": "high_defects_rework_rep_001",
+  "model_version": "0.1.7",
+  "scenario": "high_defects_rework",
+  "processing_time": {
+    "distribution": "triangular",
+    "relative_half_width": 0.2
+  },
+  "seed": 20261209,
+  "reliability_enabled": true,
+  "failure_clock": "processing_time_only",
+  "interruption_policy": "resume remaining work; release operator on fault; reacquire if attendance remains",
+  "reliability": {
+    "S1": null,
+    "S2": {
+      "mtbf_s": 1800,
+      "repair_mean_s": 180
+    },
+    "S3": {
+      "mtbf_s": 1800,
+      "repair_mean_s": 180
+    },
+    "S4": null,
+    "S5": null
+  },
+  "production_window_s": 25200,
+  "target_good_units": 240,
+  "released_units": 268,
+  "accepted_units": 248,
+  "scrapped_units": 9,
+  "unfinished_units": 11,
+  "demand_met": true,
+  "first_completion_s": 337.1209117355794,
+  "mean_accepted_lead_time_s": 900.6977810813518,
+  "time_weighted_mean_wip": 9.495533671907697,
+  "staffing_mode": "shared_pool",
+  "operator_count": 3,
+  "paid_labor_hours": 32.0,
+  "good_units_per_paid_labor_hour": 7.75,
+  "operators": [
+    {
+      "operator_id": 0,
+      "productive_time_s": 23327.72672791155,
+      "utilization_of_production_window": 0.9257034415837917
+    },
+    {
+      "operator_id": 1,
+      "productive_time_s": 23137.13909097103,
+      "utilization_of_production_window": 0.9181404401178981
+    },
+    {
+      "operator_id": 2,
+      "productive_time_s": 21786.366745206902,
+      "utilization_of_production_window": 0.8645383629050358
+    }
+  ],
+  "stations": [
+    {
+      "station_id": "S1",
+      "productive_time_s": 12077.094341498683,
+      "blocked_time_s": 7590.824088798524,
+      "starved_time_s": 0.0,
+      "waiting_for_operator_time_s": 5532.081569702792,
+      "fault_time_s": 0.0,
+      "failure_count": 0,
+      "utilization": 0.47924977545629693,
+      "blocking_fraction": 0.30122317812692556
+    },
+    {
+      "station_id": "S2",
+      "productive_time_s": 17307.443923236788,
+      "blocked_time_s": 2204.5418114816484,
+      "starved_time_s": 43.743715272983536,
+      "waiting_for_operator_time_s": 4430.772327789043,
+      "fault_time_s": 1213.4982222195376,
+      "failure_count": 10,
+      "utilization": 0.6868033302871741,
+      "blocking_fraction": 0.08748181791593843
+    },
+    {
+      "station_id": "S3",
+      "productive_time_s": 18602.39969663311,
+      "blocked_time_s": 1425.8984005364537,
+      "starved_time_s": 1224.298577871536,
+      "waiting_for_operator_time_s": 2198.8827176192053,
+      "fault_time_s": 1748.5206073396948,
+      "failure_count": 10,
+      "utilization": 0.7381904641521075,
+      "blocking_fraction": 0.056583269862557684
+    },
+    {
+      "station_id": "S4",
+      "productive_time_s": 23380.379242997857,
+      "blocked_time_s": 0.0,
+      "starved_time_s": 1187.1101686874058,
+      "waiting_for_operator_time_s": 632.510588314735,
+      "fault_time_s": 0.0,
+      "failure_count": 0,
+      "utilization": 0.9277928271030895,
+      "blocking_fraction": 0.0
+    },
+    {
+      "station_id": "S5",
+      "productive_time_s": 14819.514767147439,
+      "blocked_time_s": 0.0,
+      "starved_time_s": 8895.527248162136,
+      "waiting_for_operator_time_s": 1484.9579846904244,
+      "fault_time_s": 0.0,
+      "failure_count": 0,
+      "utilization": 0.5880759828233111,
+      "blocking_fraction": 0.0
+    }
+  ],
+  "cell_integration": {
+    "enabled": false,
+    "cycles": [],
+    "interpretation": "Independent per-unit cell execution; explicitly scaled cycle duration; not a real-time PLC connection"
+  },
+  "quality": {
+    "inspection_station": "S4",
+    "defect_probabilities": {
+      "S2": 0.08,
+      "S3": 0.1
+    },
+    "rework": {
+      "duration_s": 180,
+      "success_probability": 0.8
+    }
+  },
+  "first_inspections": 259,
+  "first_pass_units": 206,
+  "first_pass_yield": 0.7953667953667953,
+  "rework_started_units": 53,
+  "rework_passed_units": 44,
+  "accepted_after_rework": 43,
+  "rework_resource": {
+    "dedicated_operators": 1,
+    "processing_time_s": 9539.999999999998,
+    "blocked_time_s": 0.0,
+    "queued_at_shift_end": 0,
+    "unit_at_shift_end": null
+  },
+  "unit_records": [
+    {
+      "unit_id": "UNIT-000001",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000002",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000003",
+      "defect_origins": [
+        "S3"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000004",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000005",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000006",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000007",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000008",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000009",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000010",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000011",
+      "defect_origins": [
+        "S3"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000012",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000013",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000014",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000015",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000016",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000017",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000018",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000019",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000020",
+      "defect_origins": [
+        "S2"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000021",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000022",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000023",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000024",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000025",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000026",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000027",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000028",
+      "defect_origins": [
+        "S2"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000029",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000030",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000031",
+      "defect_origins": [
+        "S3"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000032",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000033",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000034",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000035",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000036",
+      "defect_origins": [
+        "S2"
+      ],
+      "rework_count": 1,
+      "disposition": "scrapped"
+    },
+    {
+      "unit_id": "UNIT-000037",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000038",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000039",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000040",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000041",
+      "defect_origins": [
+        "S2"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000042",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000043",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000044",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000045",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000046",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000047",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000048",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000049",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000050",
+      "defect_origins": [
+        "S3"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000051",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000052",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000053",
+      "defect_origins": [
+        "S3"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000054",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000055",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000056",
+      "defect_origins": [
+        "S2"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000057",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000058",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000059",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000060",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000061",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000062",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000063",
+      "defect_origins": [
+        "S2"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000064",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000065",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000066",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000067",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000068",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000069",
+      "defect_origins": [
+        "S2"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000070",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000071",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000072",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000073",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000074",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000075",
+      "defect_origins": [
+        "S2",
+        "S3"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000076",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000077",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000078",
+      "defect_origins": [
+        "S2"
+      ],
+      "rework_count": 1,
+      "disposition": "scrapped"
+    },
+    {
+      "unit_id": "UNIT-000079",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000080",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000081",
+      "defect_origins": [
+        "S2"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000082",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000083",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000084",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000085",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000086",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000087",
+      "defect_origins": [
+        "S3"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000088",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000089",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000090",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000091",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000092",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000093",
+      "defect_origins": [
+        "S3"
+      ],
+      "rework_count": 1,
+      "disposition": "scrapped"
+    },
+    {
+      "unit_id": "UNIT-000094",
+      "defect_origins": [
+        "S3"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000095",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000096",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000097",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000098",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000099",
+      "defect_origins": [
+        "S3"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000100",
+      "defect_origins": [
+        "S3"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000101",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000102",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000103",
+      "defect_origins": [
+        "S2"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000104",
+      "defect_origins": [
+        "S2"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000105",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000106",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000107",
+      "defect_origins": [
+        "S2"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000108",
+      "defect_origins": [
+        "S2"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000109",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000110",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000111",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000112",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000113",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000114",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000115",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000116",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000117",
+      "defect_origins": [
+        "S2"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000118",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000119",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000120",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000121",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000122",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000123",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000124",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000125",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000126",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000127",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000128",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000129",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000130",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000131",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000132",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000133",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000134",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000135",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000136",
+      "defect_origins": [
+        "S2",
+        "S3"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000137",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000138",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000139",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000140",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000141",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000142",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000143",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000144",
+      "defect_origins": [
+        "S3"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000145",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000146",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000147",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000148",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000149",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000150",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000151",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000152",
+      "defect_origins": [
+        "S2"
+      ],
+      "rework_count": 1,
+      "disposition": "scrapped"
+    },
+    {
+      "unit_id": "UNIT-000153",
+      "defect_origins": [
+        "S2"
+      ],
+      "rework_count": 1,
+      "disposition": "scrapped"
+    },
+    {
+      "unit_id": "UNIT-000154",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000155",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000156",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000157",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000158",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000159",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000160",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000161",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000162",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000163",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000164",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000165",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000166",
+      "defect_origins": [
+        "S3"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000167",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000168",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000169",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000170",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000171",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000172",
+      "defect_origins": [
+        "S3"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000173",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000174",
+      "defect_origins": [
+        "S3"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000175",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000176",
+      "defect_origins": [
+        "S2"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000177",
+      "defect_origins": [
+        "S2"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000178",
+      "defect_origins": [
+        "S3"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000179",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000180",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000181",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000182",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000183",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000184",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000185",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000186",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000187",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000188",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000189",
+      "defect_origins": [
+        "S3"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000190",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000191",
+      "defect_origins": [
+        "S3"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000192",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000193",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000194",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000195",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000196",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000197",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000198",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000199",
+      "defect_origins": [
+        "S2",
+        "S3"
+      ],
+      "rework_count": 1,
+      "disposition": "scrapped"
+    },
+    {
+      "unit_id": "UNIT-000200",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000201",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000202",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000203",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000204",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000205",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000206",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000207",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000208",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000209",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000210",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000211",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000212",
+      "defect_origins": [
+        "S2"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000213",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000214",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000215",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000216",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000217",
+      "defect_origins": [
+        "S2"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000218",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000219",
+      "defect_origins": [
+        "S2"
+      ],
+      "rework_count": 1,
+      "disposition": "scrapped"
+    },
+    {
+      "unit_id": "UNIT-000220",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000221",
+      "defect_origins": [
+        "S3"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000222",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000223",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000224",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000225",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000226",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000227",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000228",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000229",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000230",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000231",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000232",
+      "defect_origins": [
+        "S3"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000233",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000234",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000235",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000236",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000237",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000238",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000239",
+      "defect_origins": [
+        "S2"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000240",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000241",
+      "defect_origins": [
+        "S2",
+        "S3"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000242",
+      "defect_origins": [
+        "S2"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000243",
+      "defect_origins": [
+        "S2",
+        "S3"
+      ],
+      "rework_count": 1,
+      "disposition": "scrapped"
+    },
+    {
+      "unit_id": "UNIT-000244",
+      "defect_origins": [
+        "S2"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000245",
+      "defect_origins": [
+        "S2"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000246",
+      "defect_origins": [
+        "S2"
+      ],
+      "rework_count": 1,
+      "disposition": "scrapped"
+    },
+    {
+      "unit_id": "UNIT-000247",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000248",
+      "defect_origins": [
+        "S3"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000249",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000250",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000251",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000252",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000253",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000254",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000255",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000256",
+      "defect_origins": [
+        "S3"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000257",
+      "defect_origins": [
+        "S3"
+      ],
+      "rework_count": 1,
+      "disposition": "unfinished"
+    },
+    {
+      "unit_id": "UNIT-000258",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000259",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "unfinished"
+    },
+    {
+      "unit_id": "UNIT-000260",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "unfinished"
+    },
+    {
+      "unit_id": "UNIT-000261",
+      "defect_origins": [
+        "S3"
+      ],
+      "rework_count": 0,
+      "disposition": "unfinished"
+    },
+    {
+      "unit_id": "UNIT-000262",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "unfinished"
+    },
+    {
+      "unit_id": "UNIT-000263",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "unfinished"
+    },
+    {
+      "unit_id": "UNIT-000264",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "unfinished"
+    },
+    {
+      "unit_id": "UNIT-000265",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "unfinished"
+    },
+    {
+      "unit_id": "UNIT-000266",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "unfinished"
+    },
+    {
+      "unit_id": "UNIT-000267",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "unfinished"
+    },
+    {
+      "unit_id": "UNIT-000268",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "unfinished"
+    }
+  ],
+  "buffers": [
+    {
+      "from_station": "S1",
+      "to_station": "S2",
+      "capacity": 2,
+      "peak_waiting_units": 2,
+      "final_waiting_units": 2,
+      "time_weighted_mean_waiting_units": 1.9282555007116597
+    },
+    {
+      "from_station": "S2",
+      "to_station": "S3",
+      "capacity": 2,
+      "peak_waiting_units": 2,
+      "final_waiting_units": 2,
+      "time_weighted_mean_waiting_units": 1.4676601562352978
+    },
+    {
+      "from_station": "S3",
+      "to_station": "S4",
+      "capacity": 2,
+      "peak_waiting_units": 2,
+      "final_waiting_units": 2,
+      "time_weighted_mean_waiting_units": 1.4155985759284475
+    },
+    {
+      "from_station": "S4",
+      "to_station": "S5",
+      "capacity": 2,
+      "peak_waiting_units": 2,
+      "final_waiting_units": 1,
+      "time_weighted_mean_waiting_units": 0.21566204145365486
+    }
+  ],
+  "assumptions": [
+    "Synthetic symmetric triangular times around assumed means",
+    "Empty start; no overtime",
+    "FIFO finite buffers exclude units held at stations",
+    "Blocking after service; zero transfer time",
+    "Zero capacity means direct handoff; completed unit stays upstream until downstream ready",
+    "Shared operator pool; downstream-first nonpreemptive allocation",
+    "Operator attends initial configured fraction of each cycle; remainder is unattended",
+    "No separate unload or transfer labor; operator released before blocking",
+    "All operators skilled at all tasks; no walking or transfer labor",
+    "Unlimited input supply; release only when S1 is free",
+    "Synthetic processing-time failure clocks; independent repairs; no repair labor resource",
+    "Perfect inspection at penultimate station; one offline rework attempt; successful units rejoin final labeling",
+    "When enabled, rework uses one separate paid operator and an unlimited FIFO input queue",
+    "Breaks removed into one contiguous production window",
+    "Completions at shift end count; no new operation starts at shift end"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "programs": [],
+  "stream_groups": [],
+  "streams": [
+    {
+      "codec_name": "h264",
+      "width": 1280,
+      "height": 720,
+      "r_frame_rate": "12/1"
+    }
+  ],
+  "format": {
+    "duration": "120.000000"
+  },
+  "visual_review": "Six-frame contact sheet reviewed; encoded fault frame extracted; labels, margins and caption readability checked."
+}

@@ -1,0 +1,38 @@
+S3 5V mock clamp and dry-contact input test
+* Generated from S3_interface.net.xml. Generic models, not manufacturer-calibrated.
+VIN vin 0 DC 5
+* F1 uses 1 ohm series resistance; fuse opening is not modeled.
+RF1 vin v5 1
+R1 permit_ok led_anode 680
+R2 cmd base 4.7k
+R3 base 0 100k
+R4 v5 part_n 10k
+R5 v5 cover_n 10k
+R6 permit_ok 0 10k
+C1 v5 0 100n
+C2 part_n 0 10n
+C3 cover_n 0 10n
+D1 led_anode collector LED_DEMO
+Q1 collector base 0 NPN_DEMO
+SPERMIT v5 permit_ok permit_ctrl 0 CONTACT
+SPART part_n 0 part_ctrl 0 CONTACT
+SCOVER cover_n 0 cover_ctrl 0 CONTACT
+VCMD cmd 0 PWL(0 0 1.999m 0 2m 5 17.999m 5 18m 0 24.999m 0 25m 5 40m 5)
+VPERMIT permit_ctrl 0 PWL(0 5 9.999m 5 10m 0 24.999m 0 25m 5 40m 5)
+VPART part_ctrl 0 PWL(0 0 4.999m 0 5m 5 14.999m 5 15m 0 40m 0)
+VCOVER cover_ctrl 0 PWL(0 0 7.999m 0 8m 5 19.999m 5 20m 0 40m 0)
+.model CONTACT SW(RON=1 ROFF=1e12 VT=2.5 VH=0.1)
+.model NPN_DEMO NPN(IS=1e-14 BF=200 VAF=100 CJE=10p CJC=4p TF=0.3n)
+.model LED_DEMO D(IS=1e-20 N=2 RS=5)
+.control
+set noaskquit
+set numdgt=12
+set wr_singlescale
+set wr_vecnames
+tran 2u 40m
+let led_current=(v(permit_ok)-v(led_anode))/680
+let base_current=(v(cmd)-v(base))/4700
+wrdata waveforms.txt v(cmd) v(permit_ok) v(part_n) v(cover_n) v(collector) led_current base_current v(v5)
+quit
+.endc
+.end

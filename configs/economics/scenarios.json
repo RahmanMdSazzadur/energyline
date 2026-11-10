@@ -1,0 +1,502 @@
+[
+  {
+    "id": "manual",
+    "label": "Manual line",
+    "config": {
+      "model_version": "0.2.1",
+      "scenario": "manual",
+      "input_source": "synthetic_assumption",
+      "shift_duration_s": 28800,
+      "planned_nonproduction_s": 3600,
+      "target_good_units": 240,
+      "start_condition": "empty",
+      "count_overtime": false,
+      "stations": [
+        {
+          "id": "S1",
+          "operation": "Identify and load tray",
+          "mean_process_s": 45
+        },
+        {
+          "id": "S2",
+          "operation": "Load four inserts",
+          "mean_process_s": 120
+        },
+        {
+          "id": "S3",
+          "operation": "Fit cover and fasten",
+          "mean_process_s": 150
+        },
+        {
+          "id": "S4",
+          "operation": "Inspect and mock test",
+          "mean_process_s": 90
+        },
+        {
+          "id": "S5",
+          "operation": "Label and release",
+          "mean_process_s": 60
+        }
+      ],
+      "buffer_capacities": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "operator_count": 3,
+      "seed": 20261109,
+      "processing_time": {
+        "distribution": "triangular",
+        "relative_half_width": 0.2
+      },
+      "scenario_description": "Estimated faster S2 and S3; S4 unchanged",
+      "timing_evidence": "Unvalidated synthetic estimates; no supplier or measured evidence",
+      "quality": {
+        "inspection_station": "S4",
+        "defect_probabilities": {
+          "S2": 0.02,
+          "S3": 0.03
+        },
+        "rework": {
+          "duration_s": 180,
+          "success_probability": 0.8
+        }
+      }
+    },
+    "deployment": {
+      "components_eur": {
+        "equipment": 0,
+        "fixtures": 1500,
+        "controls": 0,
+        "integration": 0,
+        "commissioning": 200,
+        "training": 100,
+        "installation": 0
+      },
+      "power_kw": 1
+    }
+  },
+  {
+    "id": "fixture",
+    "label": "Improved S3 fixture",
+    "config": {
+      "model_version": "0.2.1",
+      "scenario": "fixture",
+      "input_source": "synthetic_assumption",
+      "shift_duration_s": 28800,
+      "planned_nonproduction_s": 3600,
+      "target_good_units": 240,
+      "start_condition": "empty",
+      "count_overtime": false,
+      "stations": [
+        {
+          "id": "S1",
+          "operation": "Identify and load tray",
+          "mean_process_s": 45
+        },
+        {
+          "id": "S2",
+          "operation": "Load four inserts",
+          "mean_process_s": 120
+        },
+        {
+          "id": "S3",
+          "operation": "Fit cover and fasten",
+          "mean_process_s": 110
+        },
+        {
+          "id": "S4",
+          "operation": "Inspect and mock test",
+          "mean_process_s": 90
+        },
+        {
+          "id": "S5",
+          "operation": "Label and release",
+          "mean_process_s": 60
+        }
+      ],
+      "buffer_capacities": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "operator_count": 3,
+      "seed": 20261109,
+      "processing_time": {
+        "distribution": "triangular",
+        "relative_half_width": 0.2
+      },
+      "scenario_description": "Estimated faster S2 and S3; S4 unchanged",
+      "timing_evidence": "Unvalidated synthetic estimates; no supplier or measured evidence",
+      "quality": {
+        "inspection_station": "S4",
+        "defect_probabilities": {
+          "S2": 0.02,
+          "S3": 0.03
+        },
+        "rework": {
+          "duration_s": 180,
+          "success_probability": 0.8
+        }
+      }
+    },
+    "deployment": {
+      "components_eur": {
+        "equipment": 0,
+        "fixtures": 5000,
+        "controls": 0,
+        "integration": 500,
+        "commissioning": 400,
+        "training": 200,
+        "installation": 200
+      },
+      "power_kw": 1.2
+    }
+  },
+  {
+    "id": "parallel_s3",
+    "label": "Two manual S3 fixtures",
+    "config": {
+      "model_version": "0.2.1",
+      "scenario": "parallel_s3",
+      "input_source": "synthetic_assumption",
+      "shift_duration_s": 28800,
+      "planned_nonproduction_s": 3600,
+      "target_good_units": 240,
+      "start_condition": "empty",
+      "count_overtime": false,
+      "stations": [
+        {
+          "id": "S1",
+          "operation": "Identify and load tray",
+          "mean_process_s": 45
+        },
+        {
+          "id": "S2",
+          "operation": "Load four inserts",
+          "mean_process_s": 120
+        },
+        {
+          "id": "S3",
+          "operation": "Fit cover and fasten",
+          "mean_process_s": 150
+        },
+        {
+          "id": "S4",
+          "operation": "Inspect and mock test",
+          "mean_process_s": 90
+        },
+        {
+          "id": "S5",
+          "operation": "Label and release",
+          "mean_process_s": 60
+        }
+      ],
+      "buffer_capacities": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "operator_count": 4,
+      "seed": 20261109,
+      "processing_time": {
+        "distribution": "triangular",
+        "relative_half_width": 0.2
+      },
+      "scenario_description": "Estimated faster S2 and S3; S4 unchanged",
+      "timing_evidence": "Unvalidated synthetic estimates; no supplier or measured evidence",
+      "quality": {
+        "inspection_station": "S4",
+        "defect_probabilities": {
+          "S2": 0.02,
+          "S3": 0.03
+        },
+        "rework": {
+          "duration_s": 180,
+          "success_probability": 0.8
+        }
+      },
+      "parallel_servers": [
+        1,
+        1,
+        2,
+        1,
+        1
+      ]
+    },
+    "deployment": {
+      "components_eur": {
+        "equipment": 0,
+        "fixtures": 3000,
+        "controls": 0,
+        "integration": 200,
+        "commissioning": 300,
+        "training": 150,
+        "installation": 200
+      },
+      "power_kw": 1.4
+    }
+  },
+  {
+    "id": "s3",
+    "label": "Faster S3",
+    "config": {
+      "model_version": "0.2.1",
+      "scenario": "s3",
+      "input_source": "synthetic_assumption",
+      "shift_duration_s": 28800,
+      "planned_nonproduction_s": 3600,
+      "target_good_units": 240,
+      "start_condition": "empty",
+      "count_overtime": false,
+      "stations": [
+        {
+          "id": "S1",
+          "operation": "Identify and load tray",
+          "mean_process_s": 45
+        },
+        {
+          "id": "S2",
+          "operation": "Load four inserts",
+          "mean_process_s": 120
+        },
+        {
+          "id": "S3",
+          "operation": "Fit cover and fasten",
+          "mean_process_s": 70,
+          "operator_attended_fraction": 0.5,
+          "reliability": {
+            "mtbf_s": 1800,
+            "repair_mean_s": 180
+          }
+        },
+        {
+          "id": "S4",
+          "operation": "Inspect and mock test",
+          "mean_process_s": 90
+        },
+        {
+          "id": "S5",
+          "operation": "Label and release",
+          "mean_process_s": 60
+        }
+      ],
+      "buffer_capacities": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "operator_count": 3,
+      "seed": 20261109,
+      "processing_time": {
+        "distribution": "triangular",
+        "relative_half_width": 0.2
+      },
+      "scenario_description": "Estimated faster S2 and S3; S4 unchanged",
+      "timing_evidence": "Unvalidated synthetic estimates; no supplier or measured evidence",
+      "quality": {
+        "inspection_station": "S4",
+        "defect_probabilities": {
+          "S2": 0.02,
+          "S3": 0.03
+        },
+        "rework": {
+          "duration_s": 180,
+          "success_probability": 0.8
+        }
+      }
+    },
+    "deployment": {
+      "components_eur": {
+        "equipment": 18000,
+        "fixtures": 2500,
+        "controls": 3000,
+        "integration": 4000,
+        "commissioning": 2000,
+        "training": 700,
+        "installation": 1200
+      },
+      "power_kw": 3
+    }
+  },
+  {
+    "id": "s2_s3_3",
+    "label": "Faster S2/S3 \u00b7 3 operators",
+    "config": {
+      "model_version": "0.2.1",
+      "scenario": "s2_s3_3",
+      "input_source": "synthetic_assumption",
+      "shift_duration_s": 28800,
+      "planned_nonproduction_s": 3600,
+      "target_good_units": 240,
+      "start_condition": "empty",
+      "count_overtime": false,
+      "stations": [
+        {
+          "id": "S1",
+          "operation": "Identify and load tray",
+          "mean_process_s": 45
+        },
+        {
+          "id": "S2",
+          "operation": "Load four inserts",
+          "mean_process_s": 65,
+          "operator_attended_fraction": 0.5,
+          "reliability": {
+            "mtbf_s": 1800,
+            "repair_mean_s": 180
+          }
+        },
+        {
+          "id": "S3",
+          "operation": "Fit cover and fasten",
+          "mean_process_s": 70,
+          "operator_attended_fraction": 0.5,
+          "reliability": {
+            "mtbf_s": 1800,
+            "repair_mean_s": 180
+          }
+        },
+        {
+          "id": "S4",
+          "operation": "Inspect and mock test",
+          "mean_process_s": 90
+        },
+        {
+          "id": "S5",
+          "operation": "Label and release",
+          "mean_process_s": 60
+        }
+      ],
+      "buffer_capacities": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "operator_count": 3,
+      "seed": 20261109,
+      "processing_time": {
+        "distribution": "triangular",
+        "relative_half_width": 0.2
+      },
+      "scenario_description": "Estimated faster S2 and S3; S4 unchanged",
+      "timing_evidence": "Unvalidated synthetic estimates; no supplier or measured evidence",
+      "quality": {
+        "inspection_station": "S4",
+        "defect_probabilities": {
+          "S2": 0.02,
+          "S3": 0.03
+        },
+        "rework": {
+          "duration_s": 180,
+          "success_probability": 0.8
+        }
+      }
+    },
+    "deployment": {
+      "components_eur": {
+        "equipment": 44000,
+        "fixtures": 4500,
+        "controls": 6000,
+        "integration": 9000,
+        "commissioning": 4000,
+        "training": 1200,
+        "installation": 2500
+      },
+      "power_kw": 5
+    }
+  },
+  {
+    "id": "s2_s3_4",
+    "label": "Faster S2/S3 \u00b7 4 operators",
+    "config": {
+      "model_version": "0.2.1",
+      "scenario": "s2_s3_4",
+      "input_source": "synthetic_assumption",
+      "shift_duration_s": 28800,
+      "planned_nonproduction_s": 3600,
+      "target_good_units": 240,
+      "start_condition": "empty",
+      "count_overtime": false,
+      "stations": [
+        {
+          "id": "S1",
+          "operation": "Identify and load tray",
+          "mean_process_s": 45
+        },
+        {
+          "id": "S2",
+          "operation": "Load four inserts",
+          "mean_process_s": 65,
+          "operator_attended_fraction": 0.5,
+          "reliability": {
+            "mtbf_s": 1800,
+            "repair_mean_s": 180
+          }
+        },
+        {
+          "id": "S3",
+          "operation": "Fit cover and fasten",
+          "mean_process_s": 70,
+          "operator_attended_fraction": 0.5,
+          "reliability": {
+            "mtbf_s": 1800,
+            "repair_mean_s": 180
+          }
+        },
+        {
+          "id": "S4",
+          "operation": "Inspect and mock test",
+          "mean_process_s": 90
+        },
+        {
+          "id": "S5",
+          "operation": "Label and release",
+          "mean_process_s": 60
+        }
+      ],
+      "buffer_capacities": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "operator_count": 4,
+      "seed": 20261109,
+      "processing_time": {
+        "distribution": "triangular",
+        "relative_half_width": 0.2
+      },
+      "scenario_description": "Estimated faster S2 and S3; S4 unchanged",
+      "timing_evidence": "Unvalidated synthetic estimates; no supplier or measured evidence",
+      "quality": {
+        "inspection_station": "S4",
+        "defect_probabilities": {
+          "S2": 0.02,
+          "S3": 0.03
+        },
+        "rework": {
+          "duration_s": 180,
+          "success_probability": 0.8
+        }
+      }
+    },
+    "deployment": {
+      "components_eur": {
+        "equipment": 44000,
+        "fixtures": 4500,
+        "controls": 6000,
+        "integration": 9000,
+        "commissioning": 4000,
+        "training": 1200,
+        "installation": 2500
+      },
+      "power_kw": 5
+    }
+  }
+]

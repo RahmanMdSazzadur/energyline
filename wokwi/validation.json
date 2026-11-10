@@ -1,0 +1,16 @@
+{
+  "diagram_ids_unique": true,
+  "connection_part_ids_valid": true,
+  "controller_assertions": 26,
+  "arduino_compilation": "passed in Wokwi",
+  "live_cases": [
+    "normal cycle",
+    "permit loss",
+    "occupied reset blocked",
+    "unloaded reset",
+    "cover loss",
+    "part loss"
+  ],
+  "persistent_wokwi_save": "saved public project with user approval",
+  "project_url": "https://wokwi.com/projects/480261288480719873"
+}

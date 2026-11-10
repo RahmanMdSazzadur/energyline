@@ -1,0 +1,1 @@
+(sym_lib_table (version 7) (lib (name "EnergyLine") (type "KiCad") (uri "${KIPRJMOD}/EnergyLine.kicad_sym") (options "") (descr "S3 bench interface symbols")))

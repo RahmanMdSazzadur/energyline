@@ -1,0 +1,20 @@
+{
+  "currency": "EUR",
+  "input_source": "synthetic_planning_assumptions",
+  "useful_life_years": 5,
+  "operating_days_per_year": 250,
+  "shifts_per_day": 2,
+  "maintenance_fraction_of_equipment_per_year": 0.04,
+  "consumables_per_released_unit_eur": 0.25,
+  "rework_consumables_per_attempt_eur": 0.15,
+  "incremental_material_loss_per_scrapped_unit_eur": 4.0,
+  "contingency_fraction": 0.15,
+  "cost_cases": {
+    "low": {"labor_rate_eur_per_hour": 20, "capital_multiplier": 0.7, "electricity_eur_per_kwh": 0.15},
+    "base": {"labor_rate_eur_per_hour": 25, "capital_multiplier": 1.0, "electricity_eur_per_kwh": 0.20},
+    "high": {"labor_rate_eur_per_hour": 35, "capital_multiplier": 1.4, "electricity_eur_per_kwh": 0.30}
+  },
+  "exclusions": ["Good-unit bill of materials", "Building, rent and general overhead", "Taxes, financing and discounting", "Revenue and capacity sale value"],
+  "replications_per_scenario": 200,
+  "starting_seed": 20262000
+}

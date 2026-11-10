@@ -1,0 +1,12 @@
+test_id,expected_response,observed_faults,passed,evidence_file
+normal,Single completion; correct routing,,True,normal.json
+missing_tray,MISSING_TRAY,MISSING_TRAY,True,missing_tray.json
+missing_cover,MISSING_COVER,MISSING_COVER,True,missing_cover.json
+clamp_timeout,CLAMP_TIMEOUT,CLAMP_TIMEOUT,True,clamp_timeout.json
+process_timeout,PROCESS_TIMEOUT,PROCESS_TIMEOUT,True,process_timeout.json
+failed_process,Single completion; correct routing,,True,failed_process.json
+downstream_blocked,Single completion; correct routing,,True,downstream_blocked.json
+permit_removed,PERMIT_REMOVED,PERMIT_REMOVED,True,permit_removed.json
+communication_loss,COMMUNICATION_LOSS,COMMUNICATION_LOSS,True,communication_loss.json
+restart_occupied,RESTART_OCCUPIED,RESTART_OCCUPIED,True,restart_occupied.json
+duplicate_signals,Single completion; correct routing,,True,duplicate_signals.json

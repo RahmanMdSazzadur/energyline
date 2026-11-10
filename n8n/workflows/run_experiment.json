@@ -1,0 +1,107 @@
+{
+  "id": "energylineRunExperiment",
+  "name": "EnergyLine \u2014 run and record experiment",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "manual",
+      "name": "Run experiment",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        240,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "{\"scenario\": \"quality_rework\", \"operators\": 3, \"replications\": 30, \"seed\": 20261109, \"target\": 240}",
+        "options": {}
+      },
+      "id": "inputs",
+      "name": "Experiment inputs",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        460,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://energyline:8787/api/experiments",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ { ...$json, request_id: 'n8n-execution-' + $execution.id } }}",
+        "options": {
+          "timeout": 120000
+        }
+      },
+      "id": "api",
+      "name": "Simulate and save results",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        700,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "={{ JSON.stringify({ experiment_id: $json.id, scenario: $json.parameters.scenario, mean_good_units: $json.aggregate.mean_good_units, successful_shifts: $json.aggregate.successful_shifts, simulated_shifts: $json.aggregate.replications, attainment_interval: [$json.aggregate.wilson_95_lower, $json.aggregate.wilson_95_upper], dashboard: 'http://localhost:8787', input_source: $json.input_source }) }}",
+        "options": {}
+      },
+      "id": "summary",
+      "name": "Read experiment summary",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        960,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "Run experiment": {
+      "main": [
+        [
+          {
+            "node": "Experiment inputs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Experiment inputs": {
+      "main": [
+        [
+          {
+            "node": "Simulate and save results",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simulate and save results": {
+      "main": [
+        [
+          {
+            "node": "Read experiment summary",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "pinData": {}
+}

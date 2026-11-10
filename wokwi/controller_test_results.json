@@ -1,0 +1,33 @@
+{
+  "scope": "Native C++ tests of the exact Controller code in sketch.ino; Arduino GPIO adapter tested separately in Wokwi",
+  "passed": true,
+  "count": 26,
+  "checks": [
+    "boot output off",
+    "reject start without part",
+    "held start cannot trigger on part insertion",
+    "fresh start begins valid cycle",
+    "cycle stays on before deadline",
+    "cycle switches off at deadline",
+    "held start cannot repeat cycle",
+    "unload returns idle",
+    "permit loss faults immediately",
+    "restored inputs do not auto-restart",
+    "reset rejected while occupied",
+    "held reset cannot clear later",
+    "fresh reset after unload clears fault without output",
+    "cover loss faults immediately",
+    "restored inputs do not auto-restart",
+    "reset rejected while occupied",
+    "held reset cannot clear later",
+    "fresh reset after unload clears fault without output",
+    "part loss faults immediately",
+    "restored inputs do not auto-restart",
+    "reset rejected while occupied",
+    "held reset cannot clear later",
+    "fresh reset after unload clears fault without output",
+    "occupied startup faults even with START held",
+    "START held at boot requires release",
+    "timer works across millis rollover"
+  ]
+}

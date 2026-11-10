@@ -1,0 +1,23 @@
+{
+  "release": "1.1.0",
+  "review_date": "2026-11-10",
+  "scope": "Verification of the extracted combined release, without relying on the original working tree",
+  "software_reproduction": {
+    "successful": true,
+    "python_version": "3.13.7",
+    "commands_passed": 14,
+    "tests_passed": 97,
+    "commissioning_cases_passed": 11,
+    "economic_case_results_equal_to_packaged_evidence": true,
+    "parallel_and_integrated_results_equal_to_packaged_evidence": true
+  },
+  "wokwi_controller_core": {
+    "fresh_native_assertions_passed": 26,
+    "arduino_build_and_six_live_cases": "Previously verified in Wokwi; local logs retained"
+  },
+  "electrical": "Existing DRC/ERC/parity and 12-check SPICE reports inspected; electrical design and copper unchanged during release cleanup. No physical validation.",
+  "offline_index_links": "All local targets resolved from the extracted folder.",
+  "live_app": "Portfolio, case study, circuit report and combined download returned successfully; downloaded archive matched local bytes.",
+  "limitations": "Software reproduction does not rerun KiCad/ngspice, Wokwi compilation, physical assembly or certification.",
+  "external_verification": "The final ZIP SHA-256 and manifest verification are provided separately to avoid a self-referential archive digest."
+}

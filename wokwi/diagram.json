@@ -1,0 +1,309 @@
+{
+  "version": 1,
+  "author": "EnergyLine",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "uno",
+      "top": 80,
+      "left": 20,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-slide-switch",
+      "id": "part",
+      "left": 410,
+      "top": 70,
+      "attrs": {
+        "bounce": "0"
+      }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "partLabel",
+      "left": 390,
+      "top": 25,
+      "attrs": {
+        "text": "PART: right = present"
+      }
+    },
+    {
+      "type": "wokwi-slide-switch",
+      "id": "cover",
+      "left": 620,
+      "top": 70,
+      "attrs": {
+        "bounce": "0"
+      }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "coverLabel",
+      "left": 600,
+      "top": 25,
+      "attrs": {
+        "text": "COVER: right = closed"
+      }
+    },
+    {
+      "type": "wokwi-slide-switch",
+      "id": "permit",
+      "left": 830,
+      "top": 70,
+      "attrs": {
+        "bounce": "0"
+      }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "permitLabel",
+      "left": 810,
+      "top": 25,
+      "attrs": {
+        "text": "PERMIT: right = on"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "start",
+      "left": 430,
+      "top": 190,
+      "attrs": {
+        "color": "green",
+        "label": "START"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "reset",
+      "left": 640,
+      "top": 190,
+      "attrs": {
+        "color": "red",
+        "label": "RESET"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "clamp",
+      "left": 440,
+      "top": 330,
+      "attrs": {
+        "color": "red"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "clampR",
+      "left": 440,
+      "top": 400,
+      "attrs": {
+        "value": "680"
+      }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "clampLabel",
+      "left": 400,
+      "top": 290,
+      "attrs": {
+        "text": "CLAMP CMD / LED mock"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ready",
+      "left": 650,
+      "top": 330,
+      "attrs": {
+        "color": "green"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "readyR",
+      "left": 650,
+      "top": 400,
+      "attrs": {
+        "value": "680"
+      }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "readyLabel",
+      "left": 610,
+      "top": 290,
+      "attrs": {
+        "text": "READY"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "fault",
+      "left": 850,
+      "top": 330,
+      "attrs": {
+        "color": "orange"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "faultR",
+      "left": 850,
+      "top": 400,
+      "attrs": {
+        "value": "680"
+      }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "faultLabel",
+      "left": 810,
+      "top": 290,
+      "attrs": {
+        "text": "FAULT LATCHED"
+      }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "title",
+      "left": 20,
+      "top": -50,
+      "attrs": {
+        "text": "ENERGYLINE S3 | Arduino controller demonstration"
+      }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "limits",
+      "left": 400,
+      "top": 470,
+      "attrs": {
+        "text": "LED logic only. The transistor driver, fuse and RC networks remain in KiCad/ngspice."
+      }
+    }
+  ],
+  "connections": [
+    [
+      "part:2",
+      "uno:2",
+      "green",
+      []
+    ],
+    [
+      "part:3",
+      "uno:GND.1",
+      "black",
+      []
+    ],
+    [
+      "cover:2",
+      "uno:3",
+      "green",
+      []
+    ],
+    [
+      "cover:3",
+      "uno:GND.1",
+      "black",
+      []
+    ],
+    [
+      "permit:2",
+      "uno:4",
+      "green",
+      []
+    ],
+    [
+      "permit:1",
+      "uno:GND.1",
+      "black",
+      []
+    ],
+    [
+      "permit:3",
+      "uno:5V",
+      "red",
+      []
+    ],
+    [
+      "start:1.l",
+      "uno:5",
+      "blue",
+      []
+    ],
+    [
+      "start:2.l",
+      "uno:GND.1",
+      "black",
+      []
+    ],
+    [
+      "reset:1.l",
+      "uno:6",
+      "blue",
+      []
+    ],
+    [
+      "reset:2.l",
+      "uno:GND.1",
+      "black",
+      []
+    ],
+    [
+      "uno:8",
+      "clampR:1",
+      "red",
+      []
+    ],
+    [
+      "clampR:2",
+      "clamp:A",
+      "red",
+      []
+    ],
+    [
+      "clamp:C",
+      "uno:GND.1",
+      "black",
+      []
+    ],
+    [
+      "uno:10",
+      "readyR:1",
+      "red",
+      []
+    ],
+    [
+      "readyR:2",
+      "ready:A",
+      "red",
+      []
+    ],
+    [
+      "ready:C",
+      "uno:GND.1",
+      "black",
+      []
+    ],
+    [
+      "uno:11",
+      "faultR:1",
+      "red",
+      []
+    ],
+    [
+      "faultR:2",
+      "fault:A",
+      "red",
+      []
+    ],
+    [
+      "fault:C",
+      "uno:GND.1",
+      "black",
+      []
+    ]
+  ]
+}

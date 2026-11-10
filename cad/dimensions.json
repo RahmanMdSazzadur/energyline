@@ -1,0 +1,66 @@
+{
+  "units": "mm",
+  "tray": [
+    180,
+    120,
+    30
+  ],
+  "wall": 3,
+  "floor": 4,
+  "cover_thickness": 3,
+  "insert": [
+    30,
+    80,
+    20
+  ],
+  "insert_x": [
+    12,
+    54,
+    96,
+    138
+  ],
+  "insert_y": 20,
+  "fastener_centres": [
+    [
+      12,
+      12
+    ],
+    [
+      168,
+      12
+    ],
+    [
+      12,
+      108
+    ],
+    [
+      168,
+      108
+    ]
+  ],
+  "cover_hole_diameter": 5.0,
+  "fixture_base": [
+    240,
+    180,
+    12
+  ],
+  "tray_origin_on_fixture": [
+    30,
+    30
+  ],
+  "tolerance_assumptions": {
+    "tray_width_plus_minus": 0.5,
+    "cover_width_plus_minus": 0.3,
+    "tray_hole_position_plus_minus": 0.2,
+    "cover_hole_position_plus_minus": 0.2,
+    "locator_repeatability_plus_minus": 0.1,
+    "cover_hole_diameter_plus_minus": 0.15,
+    "mock_fastener_diameter": 3
+  },
+  "tolerance_stack": {
+    "per_axis_worst_case": 0.5,
+    "in_plane_worst_case": 0.7071067811865476,
+    "minimum_radial_clearance": 0.925,
+    "remaining_assumed_margin": 0.21789321881345247
+  }
+}

@@ -1,0 +1,8 @@
+*
+!src/
+!src/**
+!configs/
+!configs/**
+!web/
+!web/**
+**/__pycache__

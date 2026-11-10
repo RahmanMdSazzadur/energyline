@@ -1,0 +1,10 @@
+__pycache__/
+.venv/
+.env
+node_modules/
+.DS_Store
+n8n/data/
+results/experiments/
+work/
+release/
+electrical/runtime/

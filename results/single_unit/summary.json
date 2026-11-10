@@ -1,0 +1,19 @@
+{
+  "model": "deterministic_single_unit_reference",
+  "input_source": "synthetic_assumption",
+  "released_units": 1,
+  "accepted_units": 1,
+  "scrapped_units": 0,
+  "unfinished_units": 0,
+  "completion_time_s": 465,
+  "production_window_s": 25200,
+  "assumptions": [
+    "One unit only",
+    "Fixed processing times",
+    "Zero transfer time",
+    "Dedicated resource available at each station",
+    "No failures; all completed inspections pass",
+    "Planned nonproduction time removed into one contiguous window",
+    "No overtime; no production throughput prediction"
+  ]
+}

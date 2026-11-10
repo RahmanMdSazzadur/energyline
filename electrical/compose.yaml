@@ -1,0 +1,17 @@
+name: energyline-eda
+services:
+  kicad:
+    image: lscr.io/linuxserver/kicad:10.0.3
+    container_name: energyline-kicad
+    environment:
+      PUID: "1000"
+      PGID: "1000"
+      TZ: Europe/Helsinki
+    ports:
+      - "127.0.0.1:3090:3000"
+      - "127.0.0.1:3091:3001"
+    volumes:
+      - ./runtime:/config
+      - ./s3_interface:/project
+    shm_size: "1gb"
+    restart: unless-stopped

@@ -1,0 +1,4495 @@
+{
+  "model": "stochastic_shared_operators",
+  "input_source": "synthetic_assumption",
+  "run_id": "integrated_s3_001",
+  "model_version": "1.0.0-software",
+  "scenario": "integrated_s3",
+  "processing_time": {
+    "distribution": "triangular",
+    "relative_half_width": 0.2
+  },
+  "seed": 20263000,
+  "reliability_enabled": true,
+  "failure_clock": "processing_time_only",
+  "interruption_policy": "resume remaining work; release operator on fault; reacquire if attendance remains",
+  "reliability": {
+    "S1": null,
+    "S2": {
+      "mtbf_s": 1800,
+      "repair_mean_s": 180
+    },
+    "S3": null,
+    "S4": null,
+    "S5": null
+  },
+  "production_window_s": 25200,
+  "target_good_units": 240,
+  "released_units": 286,
+  "accepted_units": 271,
+  "scrapped_units": 7,
+  "unfinished_units": 8,
+  "demand_met": true,
+  "first_completion_s": 344.8789391026273,
+  "mean_accepted_lead_time_s": 897.7435520512829,
+  "time_weighted_mean_wip": 10.039369119568128,
+  "staffing_mode": "shared_pool",
+  "operator_count": 4,
+  "paid_labor_hours": 40.0,
+  "good_units_per_paid_labor_hour": 6.775,
+  "operators": [
+    {
+      "operator_id": 0,
+      "productive_time_s": 18248.485898554423,
+      "utilization_of_production_window": 0.7241462658156517
+    },
+    {
+      "operator_id": 1,
+      "productive_time_s": 23687.032074940733,
+      "utilization_of_production_window": 0.9399615902754259
+    },
+    {
+      "operator_id": 2,
+      "productive_time_s": 14259.755112051933,
+      "utilization_of_production_window": 0.565863298097299
+    },
+    {
+      "operator_id": 3,
+      "productive_time_s": 16957.9426958567,
+      "utilization_of_production_window": 0.6729342339625674
+    }
+  ],
+  "stations": [
+    {
+      "station_id": "S1",
+      "productive_time_s": 12868.039612186112,
+      "blocked_time_s": 5659.64208553806,
+      "starved_time_s": 0.0,
+      "waiting_for_operator_time_s": 6672.318302275828,
+      "fault_time_s": 0.0,
+      "failure_count": 0,
+      "utilization": 0.510636492547068,
+      "blocking_fraction": 0.22458897164833572
+    },
+    {
+      "station_id": "S2",
+      "productive_time_s": 18385.403513356876,
+      "blocked_time_s": 5264.947141739659,
+      "starved_time_s": 41.44890212827244,
+      "waiting_for_operator_time_s": 57.259933000882256,
+      "fault_time_s": 1450.940509774311,
+      "failure_count": 9,
+      "utilization": 0.7295795044982887,
+      "blocking_fraction": 0.2089264738785579
+    },
+    {
+      "station_id": "S3",
+      "productive_time_s": 19724.833529723677,
+      "blocked_time_s": 4687.6246591159115,
+      "starved_time_s": 617.4075692868539,
+      "waiting_for_operator_time_s": 170.13424187355787,
+      "fault_time_s": 0.0,
+      "failure_count": 0,
+      "utilization": 0.7827314892747491,
+      "blocking_fraction": 0.1860168515522187
+    },
+    {
+      "station_id": "S4",
+      "productive_time_s": 24844.907996160044,
+      "blocked_time_s": 0.0,
+      "starved_time_s": 269.7935339698682,
+      "waiting_for_operator_time_s": 85.2984698700854,
+      "fault_time_s": 0.0,
+      "failure_count": 0,
+      "utilization": 0.9859090474666684,
+      "blocking_fraction": 0.0
+    },
+    {
+      "station_id": "S5",
+      "productive_time_s": 16359.386786098552,
+      "blocked_time_s": 0.0,
+      "starved_time_s": 8653.620557137714,
+      "waiting_for_operator_time_s": 186.99265676373489,
+      "fault_time_s": 0.0,
+      "failure_count": 0,
+      "utilization": 0.6491820153213711,
+      "blocking_fraction": 0.0
+    }
+  ],
+  "cell_integration": {
+    "enabled": true,
+    "cycles": [
+      {
+        "unit_id": "UNIT-000001",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 70.21548147874685,
+        "time_scale": 16.919393127408878,
+        "line_started_s": 116.37164125691999
+      },
+      {
+        "unit_id": "UNIT-000002",
+        "demo": "failed_process",
+        "outcome": "fail",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 71.58358185887217,
+        "time_scale": 17.249055869607748,
+        "line_started_s": 189.37387189443365
+      },
+      {
+        "unit_id": "UNIT-000003",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 71.71492646267181,
+        "time_scale": 17.280705171728147,
+        "line_started_s": 260.9574537533058
+      },
+      {
+        "unit_id": "UNIT-000004",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 70.42293996592379,
+        "time_scale": 16.969383124318984,
+        "line_started_s": 344.8789391026273
+      },
+      {
+        "unit_id": "UNIT-000005",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 69.80947362313555,
+        "time_scale": 16.821559909189286,
+        "line_started_s": 415.3018790685511
+      },
+      {
+        "unit_id": "UNIT-000006",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 68.89648187316475,
+        "time_scale": 16.60156189714813,
+        "line_started_s": 493.9468514103902
+      },
+      {
+        "unit_id": "UNIT-000007",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 71.89237547365671,
+        "time_scale": 17.32346396955583,
+        "line_started_s": 564.9895564849918
+      },
+      {
+        "unit_id": "UNIT-000008",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 68.3580211308887,
+        "time_scale": 16.47181232069607,
+        "line_started_s": 637.1257956610145
+      },
+      {
+        "unit_id": "UNIT-000009",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 72.12528195687139,
+        "time_scale": 17.37958601370395,
+        "line_started_s": 710.1610260107825
+      },
+      {
+        "unit_id": "UNIT-000010",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 75.74597901104747,
+        "time_scale": 18.25204313519216,
+        "line_started_s": 782.2863079676539
+      },
+      {
+        "unit_id": "UNIT-000011",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 78.79394570040994,
+        "time_scale": 18.986492939857815,
+        "line_started_s": 858.0322869787013
+      },
+      {
+        "unit_id": "UNIT-000012",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 75.81022529865808,
+        "time_scale": 18.267524168351343,
+        "line_started_s": 946.4578286658
+      },
+      {
+        "unit_id": "UNIT-000013",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 75.47718552263292,
+        "time_scale": 18.187273619911547,
+        "line_started_s": 1030.5943110899323
+      },
+      {
+        "unit_id": "UNIT-000014",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 68.98657721719488,
+        "time_scale": 16.623271618601173,
+        "line_started_s": 1198.219539869871
+      },
+      {
+        "unit_id": "UNIT-000015",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 66.99872868187178,
+        "time_scale": 16.144271971535368,
+        "line_started_s": 1267.2061170870659
+      },
+      {
+        "unit_id": "UNIT-000016",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 75.1359458414119,
+        "time_scale": 18.10504719070166,
+        "line_started_s": 1363.0054689090705
+      },
+      {
+        "unit_id": "UNIT-000017",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 71.41124489642061,
+        "time_scale": 17.20752889070376,
+        "line_started_s": 1438.1414147504825
+      },
+      {
+        "unit_id": "UNIT-000018",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 70.71058739523657,
+        "time_scale": 17.03869575788833,
+        "line_started_s": 1509.552659646903
+      },
+      {
+        "unit_id": "UNIT-000019",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 68.85537795396382,
+        "time_scale": 16.591657338304536,
+        "line_started_s": 1589.227558576728
+      },
+      {
+        "unit_id": "UNIT-000020",
+        "demo": "failed_process",
+        "outcome": "fail",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 76.02492394732836,
+        "time_scale": 18.31925878248876,
+        "line_started_s": 1673.003977543267
+      },
+      {
+        "unit_id": "UNIT-000021",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 61.903200772079714,
+        "time_scale": 14.916433920983064,
+        "line_started_s": 1752.7366468289429
+      },
+      {
+        "unit_id": "UNIT-000022",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 77.58377326151226,
+        "time_scale": 18.694885123255965,
+        "line_started_s": 1839.625217931365
+      },
+      {
+        "unit_id": "UNIT-000023",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 83.60745613861788,
+        "time_scale": 20.14637497316093,
+        "line_started_s": 1926.0870764116332
+      },
+      {
+        "unit_id": "UNIT-000024",
+        "demo": "permit_removed",
+        "outcome": "quarantined",
+        "cell_duration_s": 3.2,
+        "line_duration_s": 53.40214934363065,
+        "time_scale": 16.688171669884575,
+        "line_started_s": 2018.6716693379963
+      },
+      {
+        "unit_id": "UNIT-000025",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 70.30629856826634,
+        "time_scale": 16.94127676343767,
+        "line_started_s": 2072.073818681627
+      },
+      {
+        "unit_id": "UNIT-000026",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 60.5674022063174,
+        "time_scale": 14.594554748510214,
+        "line_started_s": 2142.3801172498934
+      },
+      {
+        "unit_id": "UNIT-000027",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 75.377234243339,
+        "time_scale": 18.163188974298553,
+        "line_started_s": 2202.9475194562106
+      },
+      {
+        "unit_id": "UNIT-000028",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 71.12204241060812,
+        "time_scale": 17.137841544724846,
+        "line_started_s": 2284.619733644041
+      },
+      {
+        "unit_id": "UNIT-000029",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 81.09135632946695,
+        "time_scale": 19.540085862522155,
+        "line_started_s": 2360.9286097238924
+      },
+      {
+        "unit_id": "UNIT-000030",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 75.25647374609775,
+        "time_scale": 18.13409005930066,
+        "line_started_s": 2451.517064367502
+      },
+      {
+        "unit_id": "UNIT-000031",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 70.39744068789818,
+        "time_scale": 16.963238719975465,
+        "line_started_s": 2551.416859590596
+      },
+      {
+        "unit_id": "UNIT-000032",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 66.62953966507675,
+        "time_scale": 16.055310762669095,
+        "line_started_s": 2636.8832550210054
+      },
+      {
+        "unit_id": "UNIT-000033",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 69.69132606308771,
+        "time_scale": 16.793090617611497,
+        "line_started_s": 2728.2087051125723
+      },
+      {
+        "unit_id": "UNIT-000034",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 74.53874408111788,
+        "time_scale": 17.9611431520766,
+        "line_started_s": 2818.0890507152512
+      },
+      {
+        "unit_id": "UNIT-000035",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 80.36942801735721,
+        "time_scale": 19.36612723309812,
+        "line_started_s": 2909.520683233993
+      },
+      {
+        "unit_id": "UNIT-000036",
+        "demo": "permit_removed",
+        "outcome": "quarantined",
+        "cell_duration_s": 3.2,
+        "line_duration_s": 54.286777780845874,
+        "time_scale": 16.964618056514333,
+        "line_started_s": 3005.192840110752
+      },
+      {
+        "unit_id": "UNIT-000037",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 67.89668012757492,
+        "time_scale": 16.360645813873475,
+        "line_started_s": 3059.479617891598
+      },
+      {
+        "unit_id": "UNIT-000038",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 72.72463092703113,
+        "time_scale": 17.524007452296654,
+        "line_started_s": 3127.376298019173
+      },
+      {
+        "unit_id": "UNIT-000039",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 68.60730688397965,
+        "time_scale": 16.531881176862562,
+        "line_started_s": 3200.1009289462045
+      },
+      {
+        "unit_id": "UNIT-000040",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 72.69610765475223,
+        "time_scale": 17.517134374639088,
+        "line_started_s": 3270.7085215034604
+      },
+      {
+        "unit_id": "UNIT-000041",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 64.86100896569458,
+        "time_scale": 15.629158786914356,
+        "line_started_s": 3371.2287275998747
+      },
+      {
+        "unit_id": "UNIT-000042",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 66.28758518560197,
+        "time_scale": 15.972912092916136,
+        "line_started_s": 3458.433346013985
+      },
+      {
+        "unit_id": "UNIT-000043",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 78.59011039642766,
+        "time_scale": 18.937375999139196,
+        "line_started_s": 3546.1628644791354
+      },
+      {
+        "unit_id": "UNIT-000044",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 69.94009116864778,
+        "time_scale": 16.85303401654163,
+        "line_started_s": 3646.231849750501
+      },
+      {
+        "unit_id": "UNIT-000045",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 71.23586291822443,
+        "time_scale": 17.165268173066124,
+        "line_started_s": 3741.6139242884233
+      },
+      {
+        "unit_id": "UNIT-000046",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 75.92803753528693,
+        "time_scale": 18.295912659105284,
+        "line_started_s": 3844.881664608283
+      },
+      {
+        "unit_id": "UNIT-000047",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 69.12326797743755,
+        "time_scale": 16.65620915118977,
+        "line_started_s": 3940.109074055753
+      },
+      {
+        "unit_id": "UNIT-000048",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 81.18971327660661,
+        "time_scale": 19.563786331712436,
+        "line_started_s": 4033.6326473189965
+      },
+      {
+        "unit_id": "UNIT-000049",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 76.94775224921106,
+        "time_scale": 18.541627048002663,
+        "line_started_s": 4128.837868272171
+      },
+      {
+        "unit_id": "UNIT-000050",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 59.70623171990184,
+        "time_scale": 14.387043787928151,
+        "line_started_s": 4214.051934122144
+      },
+      {
+        "unit_id": "UNIT-000051",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 62.13385350168086,
+        "time_scale": 14.97201289197129,
+        "line_started_s": 4310.980082306402
+      },
+      {
+        "unit_id": "UNIT-000052",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 62.045684781106765,
+        "time_scale": 14.95076741713416,
+        "line_started_s": 4392.293881855084
+      },
+      {
+        "unit_id": "UNIT-000053",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 64.46717597841561,
+        "time_scale": 15.534259271907375,
+        "line_started_s": 4487.217648703088
+      },
+      {
+        "unit_id": "UNIT-000054",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 68.4749438608429,
+        "time_scale": 16.499986472492264,
+        "line_started_s": 4586.695307056196
+      },
+      {
+        "unit_id": "UNIT-000055",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 69.55810026570614,
+        "time_scale": 16.760988015832805,
+        "line_started_s": 4670.464538506461
+      },
+      {
+        "unit_id": "UNIT-000056",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 69.31506638572507,
+        "time_scale": 16.702425635114473,
+        "line_started_s": 4749.323535550557
+      },
+      {
+        "unit_id": "UNIT-000057",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 70.35398613411587,
+        "time_scale": 16.95276774316045,
+        "line_started_s": 4840.613060573141
+      },
+      {
+        "unit_id": "UNIT-000058",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 67.5657509601921,
+        "time_scale": 16.28090384582942,
+        "line_started_s": 4938.289973161147
+      },
+      {
+        "unit_id": "UNIT-000059",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 71.66989606639048,
+        "time_scale": 17.269854473829028,
+        "line_started_s": 5026.163292606126
+      },
+      {
+        "unit_id": "UNIT-000060",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 64.79799283421093,
+        "time_scale": 15.613974176918296,
+        "line_started_s": 5102.604180271346
+      },
+      {
+        "unit_id": "UNIT-000061",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 63.390986703013546,
+        "time_scale": 15.274936554943022,
+        "line_started_s": 5199.187154385275
+      },
+      {
+        "unit_id": "UNIT-000062",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 62.86649434769706,
+        "time_scale": 15.148552854866761,
+        "line_started_s": 5292.1541511726655
+      },
+      {
+        "unit_id": "UNIT-000063",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 66.30154805415019,
+        "time_scale": 15.97627663955426,
+        "line_started_s": 5395.176106972175
+      },
+      {
+        "unit_id": "UNIT-000064",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 62.02909841533625,
+        "time_scale": 14.946770702490662,
+        "line_started_s": 5485.713661856384
+      },
+      {
+        "unit_id": "UNIT-000065",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 64.20587267083766,
+        "time_scale": 15.471294619478954,
+        "line_started_s": 5569.581393156576
+      },
+      {
+        "unit_id": "UNIT-000066",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 73.84310858714996,
+        "time_scale": 17.793520141481917,
+        "line_started_s": 5660.454824578166
+      },
+      {
+        "unit_id": "UNIT-000067",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 62.81773292104803,
+        "time_scale": 15.136803113505549,
+        "line_started_s": 5760.107073159687
+      },
+      {
+        "unit_id": "UNIT-000068",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 61.57633374810601,
+        "time_scale": 14.837670782676145,
+        "line_started_s": 5857.653422623801
+      },
+      {
+        "unit_id": "UNIT-000069",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 69.76894172942383,
+        "time_scale": 16.81179318781297,
+        "line_started_s": 5950.723246254031
+      },
+      {
+        "unit_id": "UNIT-000070",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 67.14369720678803,
+        "time_scale": 16.179204146213984,
+        "line_started_s": 6056.357906617255
+      },
+      {
+        "unit_id": "UNIT-000071",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 70.46656357335408,
+        "time_scale": 16.979894836952788,
+        "line_started_s": 6145.511797881101
+      },
+      {
+        "unit_id": "UNIT-000072",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 80.56040601826355,
+        "time_scale": 19.41214602849724,
+        "line_started_s": 6240.059444560218
+      },
+      {
+        "unit_id": "UNIT-000073",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 63.36342957668926,
+        "time_scale": 15.268296283539579,
+        "line_started_s": 6324.691683528947
+      },
+      {
+        "unit_id": "UNIT-000074",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 65.22000175397389,
+        "time_scale": 15.715663073246718,
+        "line_started_s": 6410.662918278691
+      },
+      {
+        "unit_id": "UNIT-000075",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 64.97488897881206,
+        "time_scale": 15.656599753930616,
+        "line_started_s": 6488.768228386106
+      },
+      {
+        "unit_id": "UNIT-000076",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 70.40405786591296,
+        "time_scale": 16.964833220701916,
+        "line_started_s": 6579.042179343797
+      },
+      {
+        "unit_id": "UNIT-000077",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 74.06308722581186,
+        "time_scale": 17.8465270423643,
+        "line_started_s": 6673.325566139765
+      },
+      {
+        "unit_id": "UNIT-000078",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 68.627829654829,
+        "time_scale": 16.53682642285036,
+        "line_started_s": 6772.708830888521
+      },
+      {
+        "unit_id": "UNIT-000079",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 75.42481125373293,
+        "time_scale": 18.17465331415251,
+        "line_started_s": 6865.436889655202
+      },
+      {
+        "unit_id": "UNIT-000080",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 69.76680913761432,
+        "time_scale": 16.81127931026851,
+        "line_started_s": 6954.290393361896
+      },
+      {
+        "unit_id": "UNIT-000081",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 66.18554008595412,
+        "time_scale": 15.9483229122781,
+        "line_started_s": 7037.210373659429
+      },
+      {
+        "unit_id": "UNIT-000082",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 78.9944509368532,
+        "time_scale": 19.03480745466342,
+        "line_started_s": 7112.089342828974
+      },
+      {
+        "unit_id": "UNIT-000083",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 70.31652712074617,
+        "time_scale": 16.943741474878596,
+        "line_started_s": 7204.4536018688195
+      },
+      {
+        "unit_id": "UNIT-000084",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 62.92847424280931,
+        "time_scale": 15.163487769351638,
+        "line_started_s": 7307.945373032624
+      },
+      {
+        "unit_id": "UNIT-000085",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 70.23722753285702,
+        "time_scale": 16.924633140447472,
+        "line_started_s": 7413.160453566125
+      },
+      {
+        "unit_id": "UNIT-000086",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 76.03146454700523,
+        "time_scale": 18.32083483060367,
+        "line_started_s": 7500.065200188245
+      },
+      {
+        "unit_id": "UNIT-000087",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 64.90003427997866,
+        "time_scale": 15.638562477103289,
+        "line_started_s": 7590.810544794107
+      },
+      {
+        "unit_id": "UNIT-000088",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 71.1387969344422,
+        "time_scale": 17.14187877938366,
+        "line_started_s": 7684.443846617648
+      },
+      {
+        "unit_id": "UNIT-000089",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 71.02611488854674,
+        "time_scale": 17.11472647916789,
+        "line_started_s": 7765.504157058352
+      },
+      {
+        "unit_id": "UNIT-000090",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 70.8964569098606,
+        "time_scale": 17.083483592737494,
+        "line_started_s": 7852.62989401549
+      },
+      {
+        "unit_id": "UNIT-000091",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 60.71932713774156,
+        "time_scale": 14.631163165720857,
+        "line_started_s": 7949.645876695794
+      },
+      {
+        "unit_id": "UNIT-000092",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 67.054182356499,
+        "time_scale": 16.15763430277084,
+        "line_started_s": 8046.90863566423
+      },
+      {
+        "unit_id": "UNIT-000093",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 80.9505604132931,
+        "time_scale": 19.506159135733277,
+        "line_started_s": 8135.192585942216
+      },
+      {
+        "unit_id": "UNIT-000094",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 57.96148494483604,
+        "time_scale": 13.966622878273743,
+        "line_started_s": 8226.20269143844
+      },
+      {
+        "unit_id": "UNIT-000095",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 70.97556979108509,
+        "time_scale": 17.102546937610864,
+        "line_started_s": 8319.27691505722
+      },
+      {
+        "unit_id": "UNIT-000096",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 68.28339225572688,
+        "time_scale": 16.453829459211295,
+        "line_started_s": 8417.915412425313
+      },
+      {
+        "unit_id": "UNIT-000097",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 71.3305011410361,
+        "time_scale": 17.18807256410508,
+        "line_started_s": 8508.212578352282
+      },
+      {
+        "unit_id": "UNIT-000098",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 75.83648634311405,
+        "time_scale": 18.273852130870853,
+        "line_started_s": 8603.975217690844
+      },
+      {
+        "unit_id": "UNIT-000099",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 76.49425043455139,
+        "time_scale": 18.432349502301538,
+        "line_started_s": 8685.970531943836
+      },
+      {
+        "unit_id": "UNIT-000100",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 75.61401069969216,
+        "time_scale": 18.220243542094494,
+        "line_started_s": 8774.733599048943
+      },
+      {
+        "unit_id": "UNIT-000101",
+        "demo": "failed_process",
+        "outcome": "fail",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 65.68179493690894,
+        "time_scale": 15.826938539014202,
+        "line_started_s": 8850.347609748635
+      },
+      {
+        "unit_id": "UNIT-000102",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 71.58317169836094,
+        "time_scale": 17.248957035749623,
+        "line_started_s": 9007.482830767876
+      },
+      {
+        "unit_id": "UNIT-000103",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 66.83976322054767,
+        "time_scale": 16.105967041095823,
+        "line_started_s": 9321.481309258055
+      },
+      {
+        "unit_id": "UNIT-000104",
+        "demo": "failed_process",
+        "outcome": "fail",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 62.37467689982973,
+        "time_scale": 15.030042626464992,
+        "line_started_s": 9388.321072478602
+      },
+      {
+        "unit_id": "UNIT-000105",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 64.72001641722565,
+        "time_scale": 15.595184678849552,
+        "line_started_s": 9452.335001167881
+      },
+      {
+        "unit_id": "UNIT-000106",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 60.10188687150651,
+        "time_scale": 14.482382378676267,
+        "line_started_s": 9526.264974566271
+      },
+      {
+        "unit_id": "UNIT-000107",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 69.56960303924822,
+        "time_scale": 16.763759768493546,
+        "line_started_s": 9586.366861437778
+      },
+      {
+        "unit_id": "UNIT-000108",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 64.65544321896103,
+        "time_scale": 15.5796248720388,
+        "line_started_s": 9677.138676850536
+      },
+      {
+        "unit_id": "UNIT-000109",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 72.72291425664548,
+        "time_scale": 17.52359379678204,
+        "line_started_s": 9741.794120069497
+      },
+      {
+        "unit_id": "UNIT-000110",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 69.39613539539108,
+        "time_scale": 16.721960336238816,
+        "line_started_s": 9814.517034326142
+      },
+      {
+        "unit_id": "UNIT-000111",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 73.53060832288678,
+        "time_scale": 17.718218872984764,
+        "line_started_s": 9883.913169721533
+      },
+      {
+        "unit_id": "UNIT-000112",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 73.7479054450076,
+        "time_scale": 17.770579625303036,
+        "line_started_s": 9957.443778044419
+      },
+      {
+        "unit_id": "UNIT-000113",
+        "demo": "permit_removed",
+        "outcome": "quarantined",
+        "cell_duration_s": 3.2,
+        "line_duration_s": 58.91127961636909,
+        "time_scale": 18.40977488011534,
+        "line_started_s": 10031.191683489425
+      },
+      {
+        "unit_id": "UNIT-000114",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 74.38678689744168,
+        "time_scale": 17.924526963238957,
+        "line_started_s": 10090.102963105795
+      },
+      {
+        "unit_id": "UNIT-000115",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 74.92246353307846,
+        "time_scale": 18.053605670621312,
+        "line_started_s": 10164.489750003237
+      },
+      {
+        "unit_id": "UNIT-000116",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 65.82348146181081,
+        "time_scale": 15.861079870315857,
+        "line_started_s": 10268.532662272135
+      },
+      {
+        "unit_id": "UNIT-000117",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 75.30540544793092,
+        "time_scale": 18.145880830826727,
+        "line_started_s": 10338.150831601688
+      },
+      {
+        "unit_id": "UNIT-000118",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 75.00563599211992,
+        "time_scale": 18.073647227016846,
+        "line_started_s": 10413.456237049619
+      },
+      {
+        "unit_id": "UNIT-000119",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 67.78638756010092,
+        "time_scale": 16.33406929159058,
+        "line_started_s": 10488.461873041739
+      },
+      {
+        "unit_id": "UNIT-000120",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 70.89326673659849,
+        "time_scale": 17.08271487628879,
+        "line_started_s": 10556.24826060184
+      },
+      {
+        "unit_id": "UNIT-000121",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 70.88449681747733,
+        "time_scale": 17.080601642765618,
+        "line_started_s": 10658.027679452864
+      },
+      {
+        "unit_id": "UNIT-000122",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 63.41121544342783,
+        "time_scale": 15.279810950223572,
+        "line_started_s": 10751.030433316875
+      },
+      {
+        "unit_id": "UNIT-000123",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 66.36878971335452,
+        "time_scale": 15.992479449001086,
+        "line_started_s": 10829.525626139593
+      },
+      {
+        "unit_id": "UNIT-000124",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 75.92307472917965,
+        "time_scale": 18.294716802211962,
+        "line_started_s": 10913.585155750376
+      },
+      {
+        "unit_id": "UNIT-000125",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 72.629655140671,
+        "time_scale": 17.501121720643614,
+        "line_started_s": 10995.346280660155
+      },
+      {
+        "unit_id": "UNIT-000126",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 59.049785536581275,
+        "time_scale": 14.228863984718378,
+        "line_started_s": 11076.034419490647
+      },
+      {
+        "unit_id": "UNIT-000127",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 63.47935513105523,
+        "time_scale": 15.296230152061499,
+        "line_started_s": 11164.222170738602
+      },
+      {
+        "unit_id": "UNIT-000128",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 65.95746216402009,
+        "time_scale": 15.893364376872308,
+        "line_started_s": 11262.07973890333
+      },
+      {
+        "unit_id": "UNIT-000129",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 80.85894343959521,
+        "time_scale": 19.484082756528963,
+        "line_started_s": 11347.798566664422
+      },
+      {
+        "unit_id": "UNIT-000130",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 75.7152777343773,
+        "time_scale": 18.244645237199347,
+        "line_started_s": 11447.582495326458
+      },
+      {
+        "unit_id": "UNIT-000131",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 72.63699711609361,
+        "time_scale": 17.502890871347855,
+        "line_started_s": 11541.307899274723
+      },
+      {
+        "unit_id": "UNIT-000132",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 71.33507191745532,
+        "time_scale": 17.18917395601333,
+        "line_started_s": 11632.12697723178
+      },
+      {
+        "unit_id": "UNIT-000133",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 57.912986383555925,
+        "time_scale": 13.954936477965282,
+        "line_started_s": 11729.70592734833
+      },
+      {
+        "unit_id": "UNIT-000134",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 67.29105870044691,
+        "time_scale": 16.214712939866725,
+        "line_started_s": 11806.170682115362
+      },
+      {
+        "unit_id": "UNIT-000135",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 69.78015670990881,
+        "time_scale": 16.814495592749108,
+        "line_started_s": 11903.194598833486
+      },
+      {
+        "unit_id": "UNIT-000136",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 64.89547300032949,
+        "time_scale": 15.63746337357337,
+        "line_started_s": 11992.76260182768
+      },
+      {
+        "unit_id": "UNIT-000137",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 75.92938443587039,
+        "time_scale": 18.296237213462742,
+        "line_started_s": 12077.290694852938
+      },
+      {
+        "unit_id": "UNIT-000138",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 69.60037828171438,
+        "time_scale": 16.77117548956973,
+        "line_started_s": 12181.948690903826
+      },
+      {
+        "unit_id": "UNIT-000139",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 67.56663436932476,
+        "time_scale": 16.28111671549994,
+        "line_started_s": 12275.745200289499
+      },
+      {
+        "unit_id": "UNIT-000140",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 74.20975523670138,
+        "time_scale": 17.88186873173527,
+        "line_started_s": 12364.13535149852
+      },
+      {
+        "unit_id": "UNIT-000141",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 77.47606042186388,
+        "time_scale": 18.668930222135874,
+        "line_started_s": 12449.803773185882
+      },
+      {
+        "unit_id": "UNIT-000142",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 60.00893462493524,
+        "time_scale": 14.459984246972347,
+        "line_started_s": 12533.722895852014
+      },
+      {
+        "unit_id": "UNIT-000143",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 83.08696518548695,
+        "time_scale": 20.020955466382397,
+        "line_started_s": 12633.581882507668
+      },
+      {
+        "unit_id": "UNIT-000144",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 64.05581040992448,
+        "time_scale": 15.435135038536018,
+        "line_started_s": 12716.668847693154
+      },
+      {
+        "unit_id": "UNIT-000145",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 71.25343935965645,
+        "time_scale": 17.16950346015818,
+        "line_started_s": 12797.56138323389
+      },
+      {
+        "unit_id": "UNIT-000146",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 70.01067666295685,
+        "time_scale": 16.87004256938719,
+        "line_started_s": 12900.370454474352
+      },
+      {
+        "unit_id": "UNIT-000147",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 72.01312163362502,
+        "time_scale": 17.35255942978916,
+        "line_started_s": 12989.248211246573
+      },
+      {
+        "unit_id": "UNIT-000148",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 73.12777281133975,
+        "time_scale": 17.621150075021625,
+        "line_started_s": 13092.318480658065
+      },
+      {
+        "unit_id": "UNIT-000149",
+        "demo": "failed_process",
+        "outcome": "fail",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 68.7060480813656,
+        "time_scale": 16.555674236473635,
+        "line_started_s": 13190.571359501051
+      },
+      {
+        "unit_id": "UNIT-000150",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 82.12947974785997,
+        "time_scale": 19.79023608382168,
+        "line_started_s": 13275.523205452639
+      },
+      {
+        "unit_id": "UNIT-000151",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 70.34464808443903,
+        "time_scale": 16.9505176107082,
+        "line_started_s": 13376.615720817052
+      },
+      {
+        "unit_id": "UNIT-000152",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 62.600778071874124,
+        "time_scale": 15.084524836596175,
+        "line_started_s": 13459.944843912428
+      },
+      {
+        "unit_id": "UNIT-000153",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 67.48661729110863,
+        "time_scale": 16.261835491833402,
+        "line_started_s": 13544.952876292728
+      },
+      {
+        "unit_id": "UNIT-000154",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 61.73192875153823,
+        "time_scale": 14.875163554587523,
+        "line_started_s": 13649.80327991623
+      },
+      {
+        "unit_id": "UNIT-000155",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 65.47979736519481,
+        "time_scale": 15.778264425348146,
+        "line_started_s": 13733.072869986958
+      },
+      {
+        "unit_id": "UNIT-000156",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 75.47207454345434,
+        "time_scale": 18.186042058663695,
+        "line_started_s": 13826.057724966655
+      },
+      {
+        "unit_id": "UNIT-000157",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 64.14979276818002,
+        "time_scale": 15.457781389922895,
+        "line_started_s": 13911.567234428558
+      },
+      {
+        "unit_id": "UNIT-000158",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 71.05248258605111,
+        "time_scale": 17.121080141217135,
+        "line_started_s": 14000.310604273278
+      },
+      {
+        "unit_id": "UNIT-000159",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 58.20145854022981,
+        "time_scale": 14.02444784101923,
+        "line_started_s": 14076.54434119816
+      },
+      {
+        "unit_id": "UNIT-000160",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 75.35318336611758,
+        "time_scale": 18.157393582197006,
+        "line_started_s": 14164.062499655196
+      },
+      {
+        "unit_id": "UNIT-000161",
+        "demo": "permit_removed",
+        "outcome": "quarantined",
+        "cell_duration_s": 3.2,
+        "line_duration_s": 53.57402280734979,
+        "time_scale": 16.741882127296808,
+        "line_started_s": 14259.463935437518
+      },
+      {
+        "unit_id": "UNIT-000162",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 73.79984947063986,
+        "time_scale": 17.783096257985505,
+        "line_started_s": 14313.037958244868
+      },
+      {
+        "unit_id": "UNIT-000163",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 67.79212463344645,
+        "time_scale": 16.335451718902757,
+        "line_started_s": 14386.837807715507
+      },
+      {
+        "unit_id": "UNIT-000164",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 74.88742243267295,
+        "time_scale": 18.045162031969383,
+        "line_started_s": 14454.629932348953
+      },
+      {
+        "unit_id": "UNIT-000165",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 65.49957347720323,
+        "time_scale": 15.783029753542944,
+        "line_started_s": 14529.517354781627
+      },
+      {
+        "unit_id": "UNIT-000166",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 75.61692549869171,
+        "time_scale": 18.220945903299206,
+        "line_started_s": 14620.770155642329
+      },
+      {
+        "unit_id": "UNIT-000167",
+        "demo": "failed_process",
+        "outcome": "fail",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 77.40952080668445,
+        "time_scale": 18.652896579923965,
+        "line_started_s": 14704.855157026788
+      },
+      {
+        "unit_id": "UNIT-000168",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 68.5379806725229,
+        "time_scale": 16.515176065668168,
+        "line_started_s": 14792.581568349373
+      },
+      {
+        "unit_id": "UNIT-000169",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 74.91645321727894,
+        "time_scale": 18.05215740175396,
+        "line_started_s": 14877.035173933768
+      },
+      {
+        "unit_id": "UNIT-000170",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 65.4065189212225,
+        "time_scale": 15.760606968969276,
+        "line_started_s": 14964.722370169438
+      },
+      {
+        "unit_id": "UNIT-000171",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 73.84894792534014,
+        "time_scale": 17.794927210925334,
+        "line_started_s": 15061.24759704126
+      },
+      {
+        "unit_id": "UNIT-000172",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 67.14120317726764,
+        "time_scale": 16.178603175245215,
+        "line_started_s": 15146.830208754081
+      },
+      {
+        "unit_id": "UNIT-000173",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 76.59105678869152,
+        "time_scale": 18.45567633462446,
+        "line_started_s": 15232.358878627214
+      },
+      {
+        "unit_id": "UNIT-000174",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 77.5798535723586,
+        "time_scale": 18.693940619845446,
+        "line_started_s": 15318.986873367481
+      },
+      {
+        "unit_id": "UNIT-000175",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 78.16531623593755,
+        "time_scale": 18.83501596046688,
+        "line_started_s": 15415.14727586974
+      },
+      {
+        "unit_id": "UNIT-000176",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 72.83685074937534,
+        "time_scale": 17.551048373343455,
+        "line_started_s": 15493.312592105678
+      },
+      {
+        "unit_id": "UNIT-000177",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 68.23692576694867,
+        "time_scale": 16.442632714927388,
+        "line_started_s": 15584.414901481065
+      },
+      {
+        "unit_id": "UNIT-000178",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 62.55719958423978,
+        "time_scale": 15.074023996202358,
+        "line_started_s": 15673.880701872624
+      },
+      {
+        "unit_id": "UNIT-000179",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 64.59483420001611,
+        "time_scale": 15.565020289160508,
+        "line_started_s": 15754.765452476477
+      },
+      {
+        "unit_id": "UNIT-000180",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 63.041998108107514,
+        "time_scale": 15.190842917616267,
+        "line_started_s": 15850.451640002113
+      },
+      {
+        "unit_id": "UNIT-000181",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 65.96337705259737,
+        "time_scale": 15.89478965122828,
+        "line_started_s": 15949.21602365443
+      },
+      {
+        "unit_id": "UNIT-000182",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 72.57104025178076,
+        "time_scale": 17.486997651031505,
+        "line_started_s": 16046.034043008767
+      },
+      {
+        "unit_id": "UNIT-000183",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 68.34548883974415,
+        "time_scale": 16.46879249150461,
+        "line_started_s": 16119.703015093335
+      },
+      {
+        "unit_id": "UNIT-000184",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 72.7766803746582,
+        "time_scale": 17.536549487869443,
+        "line_started_s": 16216.405579521068
+      },
+      {
+        "unit_id": "UNIT-000185",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 64.69933642215689,
+        "time_scale": 15.590201547507682,
+        "line_started_s": 16311.278234659725
+      },
+      {
+        "unit_id": "UNIT-000186",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 70.17057284149864,
+        "time_scale": 16.908571769035817,
+        "line_started_s": 16413.79135247699
+      },
+      {
+        "unit_id": "UNIT-000187",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 67.27430199803771,
+        "time_scale": 16.21067518025005,
+        "line_started_s": 16507.54047401242
+      },
+      {
+        "unit_id": "UNIT-000188",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 66.17573986957866,
+        "time_scale": 15.945961414356303,
+        "line_started_s": 16594.912749835752
+      },
+      {
+        "unit_id": "UNIT-000189",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 63.73568737306958,
+        "time_scale": 15.357996957366163,
+        "line_started_s": 16688.095469634005
+      },
+      {
+        "unit_id": "UNIT-000190",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 61.92838096024803,
+        "time_scale": 14.922501436204342,
+        "line_started_s": 16782.763998383572
+      },
+      {
+        "unit_id": "UNIT-000191",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 73.23121112285816,
+        "time_scale": 17.646074969363408,
+        "line_started_s": 16882.551651586622
+      },
+      {
+        "unit_id": "UNIT-000192",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 72.06837142305265,
+        "time_scale": 17.365872632060878,
+        "line_started_s": 16957.192451294173
+      },
+      {
+        "unit_id": "UNIT-000193",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 73.43254296202511,
+        "time_scale": 17.694588665548217,
+        "line_started_s": 17050.380275514326
+      },
+      {
+        "unit_id": "UNIT-000194",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 61.01692828200257,
+        "time_scale": 14.702874284819895,
+        "line_started_s": 17134.457188294928
+      },
+      {
+        "unit_id": "UNIT-000195",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 64.61145440117879,
+        "time_scale": 15.56902515691055,
+        "line_started_s": 17216.809706297685
+      },
+      {
+        "unit_id": "UNIT-000196",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 79.55331284704327,
+        "time_scale": 19.169472975191148,
+        "line_started_s": 17307.02188278194
+      },
+      {
+        "unit_id": "UNIT-000197",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 67.01591671945607,
+        "time_scale": 16.14841366733881,
+        "line_started_s": 17388.75371438136
+      },
+      {
+        "unit_id": "UNIT-000198",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 71.38433075521213,
+        "time_scale": 17.2010435554728,
+        "line_started_s": 17480.528401979413
+      },
+      {
+        "unit_id": "UNIT-000199",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 67.37265669961246,
+        "time_scale": 16.234375108340352,
+        "line_started_s": 17580.522435870025
+      },
+      {
+        "unit_id": "UNIT-000200",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 75.59305258655799,
+        "time_scale": 18.21519339435132,
+        "line_started_s": 17673.322992620942
+      },
+      {
+        "unit_id": "UNIT-000201",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 70.9687541822607,
+        "time_scale": 17.100904622231493,
+        "line_started_s": 17757.163562755162
+      },
+      {
+        "unit_id": "UNIT-000202",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 74.3435732879828,
+        "time_scale": 17.91411404529706,
+        "line_started_s": 17851.761146080586
+      },
+      {
+        "unit_id": "UNIT-000203",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 64.02853642180824,
+        "time_scale": 15.428562993206803,
+        "line_started_s": 17953.645787678717
+      },
+      {
+        "unit_id": "UNIT-000204",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 75.592085236536,
+        "time_scale": 18.214960297960477,
+        "line_started_s": 18032.859148018513
+      },
+      {
+        "unit_id": "UNIT-000205",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 63.85992982701483,
+        "time_scale": 15.38793489807586,
+        "line_started_s": 18129.62659650653
+      },
+      {
+        "unit_id": "UNIT-000206",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 69.60443480661608,
+        "time_scale": 16.772152965449656,
+        "line_started_s": 18218.110887304276
+      },
+      {
+        "unit_id": "UNIT-000207",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 63.65576058448344,
+        "time_scale": 15.338737490236971,
+        "line_started_s": 18320.163823808598
+      },
+      {
+        "unit_id": "UNIT-000208",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 68.62978528453758,
+        "time_scale": 16.537297658924714,
+        "line_started_s": 18411.746788874087
+      },
+      {
+        "unit_id": "UNIT-000209",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 68.4055259902499,
+        "time_scale": 16.48325927475901,
+        "line_started_s": 18510.4663325334
+      },
+      {
+        "unit_id": "UNIT-000210",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 70.09109452709545,
+        "time_scale": 16.889420367974807,
+        "line_started_s": 18615.611844731655
+      },
+      {
+        "unit_id": "UNIT-000211",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 69.77385857142589,
+        "time_scale": 16.812977969018284,
+        "line_started_s": 18702.11377174982
+      },
+      {
+        "unit_id": "UNIT-000212",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 75.28662703323533,
+        "time_scale": 18.14135591162297,
+        "line_started_s": 18789.554919089413
+      },
+      {
+        "unit_id": "UNIT-000213",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 76.82353665375479,
+        "time_scale": 18.51169557921802,
+        "line_started_s": 18878.4619610935
+      },
+      {
+        "unit_id": "UNIT-000214",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 72.12226021460958,
+        "time_scale": 17.378857883038453,
+        "line_started_s": 18974.459432160766
+      },
+      {
+        "unit_id": "UNIT-000215",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 80.88717580835493,
+        "time_scale": 19.490885736952993,
+        "line_started_s": 19066.43142115894
+      },
+      {
+        "unit_id": "UNIT-000216",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 68.68791633215967,
+        "time_scale": 16.55130514027944,
+        "line_started_s": 19165.765459512324
+      },
+      {
+        "unit_id": "UNIT-000217",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 73.8732908559507,
+        "time_scale": 17.800792977337515,
+        "line_started_s": 19247.097094985307
+      },
+      {
+        "unit_id": "UNIT-000218",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 73.78097052389035,
+        "time_scale": 17.77854711419044,
+        "line_started_s": 19336.848923738788
+      },
+      {
+        "unit_id": "UNIT-000219",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 75.75480224132497,
+        "time_scale": 18.2541692147771,
+        "line_started_s": 19420.69352968682
+      },
+      {
+        "unit_id": "UNIT-000220",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 77.92087633918828,
+        "time_scale": 18.776114780527294,
+        "line_started_s": 19505.693631200415
+      },
+      {
+        "unit_id": "UNIT-000221",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 76.71959649156659,
+        "time_scale": 18.486649757003995,
+        "line_started_s": 19597.025820622897
+      },
+      {
+        "unit_id": "UNIT-000222",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 76.85945471660436,
+        "time_scale": 18.52035053412153,
+        "line_started_s": 19680.643857728635
+      },
+      {
+        "unit_id": "UNIT-000223",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 68.60837728170667,
+        "time_scale": 16.532139104025703,
+        "line_started_s": 19770.32440513004
+      },
+      {
+        "unit_id": "UNIT-000224",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 69.35401162959458,
+        "time_scale": 16.711810031227607,
+        "line_started_s": 19872.806554881463
+      },
+      {
+        "unit_id": "UNIT-000225",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 80.82022290796097,
+        "time_scale": 19.4747525079424,
+        "line_started_s": 19962.608977764277
+      },
+      {
+        "unit_id": "UNIT-000226",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 76.65771659930351,
+        "time_scale": 18.471738939591205,
+        "line_started_s": 20062.07764066021
+      },
+      {
+        "unit_id": "UNIT-000227",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 65.75385278275444,
+        "time_scale": 15.844301875362513,
+        "line_started_s": 20151.593270047877
+      },
+      {
+        "unit_id": "UNIT-000228",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 67.45742398419944,
+        "time_scale": 16.254800960048055,
+        "line_started_s": 20253.310928565486
+      },
+      {
+        "unit_id": "UNIT-000229",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 72.13988242005834,
+        "time_scale": 17.383104197604418,
+        "line_started_s": 20331.765173983353
+      },
+      {
+        "unit_id": "UNIT-000230",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 68.56458952516716,
+        "time_scale": 16.521587837389678,
+        "line_started_s": 20416.386836667923
+      },
+      {
+        "unit_id": "UNIT-000231",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 63.66506815973803,
+        "time_scale": 15.340980279454946,
+        "line_started_s": 20501.582827908336
+      },
+      {
+        "unit_id": "UNIT-000232",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 65.65908270703423,
+        "time_scale": 15.821465712538368,
+        "line_started_s": 20593.484570786255
+      },
+      {
+        "unit_id": "UNIT-000233",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 66.67102378301477,
+        "time_scale": 16.06530693566621,
+        "line_started_s": 20705.441276330894
+      },
+      {
+        "unit_id": "UNIT-000234",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 75.94224178335949,
+        "time_scale": 18.299335369484215,
+        "line_started_s": 20795.373631453498
+      },
+      {
+        "unit_id": "UNIT-000235",
+        "demo": "failed_process",
+        "outcome": "fail",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 80.23085145092847,
+        "time_scale": 19.332735289380352,
+        "line_started_s": 20888.917995659885
+      },
+      {
+        "unit_id": "UNIT-000236",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 74.22449270657002,
+        "time_scale": 17.885419929293978,
+        "line_started_s": 20979.160003023288
+      },
+      {
+        "unit_id": "UNIT-000237",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 56.12902793417591,
+        "time_scale": 13.52506697209058,
+        "line_started_s": 21075.565311359256
+      },
+      {
+        "unit_id": "UNIT-000238",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 70.25852354543747,
+        "time_scale": 16.929764709743967,
+        "line_started_s": 21164.547477177643
+      },
+      {
+        "unit_id": "UNIT-000239",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 68.37215386157132,
+        "time_scale": 16.47521779796899,
+        "line_started_s": 21242.698346295107
+      },
+      {
+        "unit_id": "UNIT-000240",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 72.37030316483731,
+        "time_scale": 17.438627268635496,
+        "line_started_s": 21346.123337226778
+      },
+      {
+        "unit_id": "UNIT-000241",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 63.268092080795086,
+        "time_scale": 15.24532339296267,
+        "line_started_s": 21428.02268601244
+      },
+      {
+        "unit_id": "UNIT-000242",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 64.43657062857257,
+        "time_scale": 15.526884488812666,
+        "line_started_s": 21515.789988721346
+      },
+      {
+        "unit_id": "UNIT-000243",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 65.53179292208395,
+        "time_scale": 15.790793475200951,
+        "line_started_s": 21612.236198482922
+      },
+      {
+        "unit_id": "UNIT-000244",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 66.63867611918025,
+        "time_scale": 16.057512317874757,
+        "line_started_s": 21698.399268121677
+      },
+      {
+        "unit_id": "UNIT-000245",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 73.82634309462259,
+        "time_scale": 17.789480263764478,
+        "line_started_s": 21803.785092549857
+      },
+      {
+        "unit_id": "UNIT-000246",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 60.648316981005294,
+        "time_scale": 14.614052284579587,
+        "line_started_s": 21885.243556255693
+      },
+      {
+        "unit_id": "UNIT-000247",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 72.45871953348392,
+        "time_scale": 17.459932417706966,
+        "line_started_s": 21965.69519795491
+      },
+      {
+        "unit_id": "UNIT-000248",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 61.402677474268984,
+        "time_scale": 14.795825897414211,
+        "line_started_s": 22044.01182216253
+      },
+      {
+        "unit_id": "UNIT-000249",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 71.78917279591963,
+        "time_scale": 17.298595854438464,
+        "line_started_s": 22224.698078866346
+      },
+      {
+        "unit_id": "UNIT-000250",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 76.96901578914411,
+        "time_scale": 18.546750792564843,
+        "line_started_s": 22296.487251662267
+      },
+      {
+        "unit_id": "UNIT-000251",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 78.29330332455376,
+        "time_scale": 18.865856222784036,
+        "line_started_s": 22373.456267451413
+      },
+      {
+        "unit_id": "UNIT-000252",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 77.67076249422959,
+        "time_scale": 18.715846384151707,
+        "line_started_s": 22451.749570775966
+      },
+      {
+        "unit_id": "UNIT-000253",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 63.399955165650084,
+        "time_scale": 15.277097630277128,
+        "line_started_s": 22529.420333270195
+      },
+      {
+        "unit_id": "UNIT-000254",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 73.05511598738074,
+        "time_scale": 17.603642406597768,
+        "line_started_s": 22592.820288435843
+      },
+      {
+        "unit_id": "UNIT-000255",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 61.7569783797498,
+        "time_scale": 14.881199609578262,
+        "line_started_s": 22675.18404620993
+      },
+      {
+        "unit_id": "UNIT-000256",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 60.46160885984615,
+        "time_scale": 14.569062375866542,
+        "line_started_s": 22771.251789166326
+      },
+      {
+        "unit_id": "UNIT-000257",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 69.0889459583023,
+        "time_scale": 16.647938785133086,
+        "line_started_s": 22842.53838618662
+      },
+      {
+        "unit_id": "UNIT-000258",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 68.77785597925875,
+        "time_scale": 16.572977344399696,
+        "line_started_s": 22942.217094429318
+      },
+      {
+        "unit_id": "UNIT-000259",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 67.677168612337,
+        "time_scale": 16.30775147285229,
+        "line_started_s": 23027.24593852928
+      },
+      {
+        "unit_id": "UNIT-000260",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 65.82993795947402,
+        "time_scale": 15.862635652885306,
+        "line_started_s": 23127.814629105094
+      },
+      {
+        "unit_id": "UNIT-000261",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 63.43149902005864,
+        "time_scale": 15.284698559050273,
+        "line_started_s": 23224.850089118834
+      },
+      {
+        "unit_id": "UNIT-000262",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 76.32437902389682,
+        "time_scale": 18.391416632264292,
+        "line_started_s": 23314.120440373714
+      },
+      {
+        "unit_id": "UNIT-000263",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 78.08364331844402,
+        "time_scale": 18.8153357393841,
+        "line_started_s": 23396.466114203624
+      },
+      {
+        "unit_id": "UNIT-000264",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 66.3717023711561,
+        "time_scale": 15.993181294254482,
+        "line_started_s": 23478.73895820959
+      },
+      {
+        "unit_id": "UNIT-000265",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 76.09277843470463,
+        "time_scale": 18.335609261374607,
+        "line_started_s": 23572.47710160532
+      },
+      {
+        "unit_id": "UNIT-000266",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 61.83059386602079,
+        "time_scale": 14.898938280968864,
+        "line_started_s": 23656.95119510572
+      },
+      {
+        "unit_id": "UNIT-000267",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 68.22535093367182,
+        "time_scale": 16.439843598475136,
+        "line_started_s": 23752.014087549393
+      },
+      {
+        "unit_id": "UNIT-000268",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 73.97004258392322,
+        "time_scale": 17.824106646728485,
+        "line_started_s": 23838.237623463046
+      },
+      {
+        "unit_id": "UNIT-000269",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 62.86713408125533,
+        "time_scale": 15.148707007531403,
+        "line_started_s": 23921.218078562306
+      },
+      {
+        "unit_id": "UNIT-000270",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 64.23608929944231,
+        "time_scale": 15.478575734805375,
+        "line_started_s": 24006.45581618274
+      },
+      {
+        "unit_id": "UNIT-000271",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 73.92320907940118,
+        "time_scale": 17.812821464915945,
+        "line_started_s": 24097.803121725803
+      },
+      {
+        "unit_id": "UNIT-000272",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 75.6362333207829,
+        "time_scale": 18.225598390550097,
+        "line_started_s": 24185.51749280042
+      },
+      {
+        "unit_id": "UNIT-000273",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 74.47998351558245,
+        "time_scale": 17.94698397965842,
+        "line_started_s": 24274.388252271816
+      },
+      {
+        "unit_id": "UNIT-000274",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 70.3634889418315,
+        "time_scale": 16.955057576344938,
+        "line_started_s": 24368.20855500919
+      },
+      {
+        "unit_id": "UNIT-000275",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 71.68466931003192,
+        "time_scale": 17.273414291573957,
+        "line_started_s": 24455.983087207595
+      },
+      {
+        "unit_id": "UNIT-000276",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 68.18182531689779,
+        "time_scale": 16.42935549804766,
+        "line_started_s": 24546.03452047391
+      },
+      {
+        "unit_id": "UNIT-000277",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 69.09252917526017,
+        "time_scale": 16.648802210906062,
+        "line_started_s": 24640.1397118718
+      },
+      {
+        "unit_id": "UNIT-000278",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 66.64144466949968,
+        "time_scale": 16.058179438433655,
+        "line_started_s": 24735.732454759833
+      },
+      {
+        "unit_id": "UNIT-000279",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 70.30336838932621,
+        "time_scale": 16.940570696223183,
+        "line_started_s": 24825.157930396283
+      },
+      {
+        "unit_id": "UNIT-000280",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 63.69940924587819,
+        "time_scale": 15.349255239970645,
+        "line_started_s": 24901.430443920028
+      },
+      {
+        "unit_id": "UNIT-000281",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 76.35442624292676,
+        "time_scale": 18.398656926006446,
+        "line_started_s": 24995.193666447558
+      },
+      {
+        "unit_id": "UNIT-000282",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 79.74923198293675,
+        "time_scale": 19.216682405526925,
+        "line_started_s": 25085.718536207485
+      },
+      {
+        "unit_id": "UNIT-000283",
+        "demo": "normal",
+        "outcome": "pass",
+        "cell_duration_s": 4.15,
+        "line_duration_s": 71.9244425459957,
+        "time_scale": 17.33119097493872,
+        "line_started_s": 25174.237134581206
+      }
+    ],
+    "interpretation": "Independent per-unit cell execution; explicitly scaled cycle duration; not a real-time PLC connection"
+  },
+  "quality": {
+    "inspection_station": "S4",
+    "defect_probabilities": {
+      "S2": 0.02
+    },
+    "rework": {
+      "duration_s": 180,
+      "success_probability": 0.8
+    }
+  },
+  "first_inspections": 275,
+  "first_pass_units": 263,
+  "first_pass_yield": 0.9563636363636364,
+  "rework_started_units": 12,
+  "rework_passed_units": 9,
+  "accepted_after_rework": 9,
+  "rework_resource": {
+    "dedicated_operators": 1,
+    "processing_time_s": 2160.0,
+    "blocked_time_s": 0.0,
+    "queued_at_shift_end": 0,
+    "unit_at_shift_end": null
+  },
+  "unit_records": [
+    {
+      "unit_id": "UNIT-000001",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000002",
+      "defect_origins": [
+        "S3"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000003",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000004",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000005",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000006",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000007",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000008",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000009",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000010",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000011",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000012",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000013",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000014",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000015",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000016",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000017",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000018",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000019",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000020",
+      "defect_origins": [
+        "S3"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000021",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000022",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000023",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000024",
+      "defect_origins": [
+        "S3"
+      ],
+      "rework_count": 0,
+      "disposition": "scrapped"
+    },
+    {
+      "unit_id": "UNIT-000025",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000026",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000027",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000028",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000029",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000030",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000031",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000032",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000033",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000034",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000035",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000036",
+      "defect_origins": [
+        "S3"
+      ],
+      "rework_count": 0,
+      "disposition": "scrapped"
+    },
+    {
+      "unit_id": "UNIT-000037",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000038",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000039",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000040",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000041",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000042",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000043",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000044",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000045",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000046",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000047",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000048",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000049",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000050",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000051",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000052",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000053",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000054",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000055",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000056",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000057",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000058",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000059",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000060",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000061",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000062",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000063",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000064",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000065",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000066",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000067",
+      "defect_origins": [
+        "S2"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000068",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000069",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000070",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000071",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000072",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000073",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000074",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000075",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000076",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000077",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000078",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000079",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000080",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000081",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000082",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000083",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000084",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000085",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000086",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000087",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000088",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000089",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000090",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000091",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000092",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000093",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000094",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000095",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000096",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000097",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000098",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000099",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000100",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000101",
+      "defect_origins": [
+        "S3"
+      ],
+      "rework_count": 1,
+      "disposition": "scrapped"
+    },
+    {
+      "unit_id": "UNIT-000102",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000103",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000104",
+      "defect_origins": [
+        "S3"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000105",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000106",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000107",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000108",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000109",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000110",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000111",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000112",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000113",
+      "defect_origins": [
+        "S3"
+      ],
+      "rework_count": 0,
+      "disposition": "scrapped"
+    },
+    {
+      "unit_id": "UNIT-000114",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000115",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000116",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000117",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000118",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000119",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000120",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000121",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000122",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000123",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000124",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000125",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000126",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000127",
+      "defect_origins": [
+        "S2"
+      ],
+      "rework_count": 1,
+      "disposition": "scrapped"
+    },
+    {
+      "unit_id": "UNIT-000128",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000129",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000130",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000131",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000132",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000133",
+      "defect_origins": [
+        "S2"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000134",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000135",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000136",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000137",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000138",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000139",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000140",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000141",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000142",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000143",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000144",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000145",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000146",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000147",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000148",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000149",
+      "defect_origins": [
+        "S3"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000150",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000151",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000152",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000153",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000154",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000155",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000156",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000157",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000158",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000159",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000160",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000161",
+      "defect_origins": [
+        "S3"
+      ],
+      "rework_count": 0,
+      "disposition": "scrapped"
+    },
+    {
+      "unit_id": "UNIT-000162",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000163",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000164",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000165",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000166",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000167",
+      "defect_origins": [
+        "S3"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000168",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000169",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000170",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000171",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000172",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000173",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000174",
+      "defect_origins": [
+        "S2"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000175",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000176",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000177",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000178",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000179",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000180",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000181",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000182",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000183",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000184",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000185",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000186",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000187",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000188",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000189",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000190",
+      "defect_origins": [
+        "S2"
+      ],
+      "rework_count": 1,
+      "disposition": "scrapped"
+    },
+    {
+      "unit_id": "UNIT-000191",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000192",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000193",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000194",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000195",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000196",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000197",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000198",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000199",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000200",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000201",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000202",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000203",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000204",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000205",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000206",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000207",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000208",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000209",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000210",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000211",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000212",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000213",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000214",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000215",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000216",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000217",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000218",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000219",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000220",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000221",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000222",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000223",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000224",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000225",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000226",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000227",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000228",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000229",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000230",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000231",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000232",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000233",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000234",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000235",
+      "defect_origins": [
+        "S3"
+      ],
+      "rework_count": 1,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000236",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000237",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000238",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000239",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000240",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000241",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000242",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000243",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000244",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000245",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000246",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000247",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000248",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000249",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000250",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000251",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000252",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000253",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000254",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000255",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000256",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000257",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000258",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000259",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000260",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000261",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000262",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000263",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000264",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000265",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000266",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000267",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000268",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000269",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000270",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000271",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000272",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000273",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000274",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000275",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000276",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000277",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000278",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "accepted"
+    },
+    {
+      "unit_id": "UNIT-000279",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "unfinished"
+    },
+    {
+      "unit_id": "UNIT-000280",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "unfinished"
+    },
+    {
+      "unit_id": "UNIT-000281",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "unfinished"
+    },
+    {
+      "unit_id": "UNIT-000282",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "unfinished"
+    },
+    {
+      "unit_id": "UNIT-000283",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "unfinished"
+    },
+    {
+      "unit_id": "UNIT-000284",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "unfinished"
+    },
+    {
+      "unit_id": "UNIT-000285",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "unfinished"
+    },
+    {
+      "unit_id": "UNIT-000286",
+      "defect_origins": [],
+      "rework_count": 0,
+      "disposition": "unfinished"
+    }
+  ],
+  "buffers": [
+    {
+      "from_station": "S1",
+      "to_station": "S2",
+      "capacity": 2,
+      "peak_waiting_units": 2,
+      "final_waiting_units": 2,
+      "time_weighted_mean_waiting_units": 1.9829263888355013
+    },
+    {
+      "from_station": "S2",
+      "to_station": "S3",
+      "capacity": 2,
+      "peak_waiting_units": 2,
+      "final_waiting_units": 0,
+      "time_weighted_mean_waiting_units": 1.7185316509993693
+    },
+    {
+      "from_station": "S3",
+      "to_station": "S4",
+      "capacity": 2,
+      "peak_waiting_units": 2,
+      "final_waiting_units": 2,
+      "time_weighted_mean_waiting_units": 1.8802824394156934
+    },
+    {
+      "from_station": "S4",
+      "to_station": "S5",
+      "capacity": 2,
+      "peak_waiting_units": 1,
+      "final_waiting_units": 0,
+      "time_weighted_mean_waiting_units": 0.03676650405990399
+    }
+  ],
+  "assumptions": [
+    "Synthetic symmetric triangular times around assumed means",
+    "Empty start; no overtime",
+    "FIFO finite buffers exclude units held at stations",
+    "Blocking after service; zero transfer time",
+    "Zero capacity means direct handoff; completed unit stays upstream until downstream ready",
+    "Shared operator pool; downstream-first nonpreemptive allocation",
+    "Operator attends initial configured fraction of each cycle; remainder is unattended",
+    "No separate unload or transfer labor; operator released before blocking",
+    "All operators skilled at all tasks; no walking or transfer labor",
+    "Unlimited input supply; release only when S1 is free",
+    "Synthetic processing-time failure clocks; independent repairs; no repair labor resource",
+    "Perfect inspection at penultimate station; one offline rework attempt; successful units rejoin final labeling",
+    "When enabled, rework uses one separate paid operator and an unlimited FIFO input queue",
+    "Breaks removed into one contiguous production window",
+    "Completions at shift end count; no new operation starts at shift end"
+  ]
+}

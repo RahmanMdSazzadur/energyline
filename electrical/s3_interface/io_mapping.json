@@ -1,0 +1,17 @@
+{
+  "controller_header": {
+    "1": "+5V",
+    "2": "GND",
+    "3": "CLAMP_CMD",
+    "4": "PART_N",
+    "5": "COVER_N",
+    "6": "PERMIT_OK"
+  },
+  "active_low_inputs": [
+    "PART_N",
+    "COVER_N"
+  ],
+  "output_load": "LED only",
+  "supply_v": 5,
+  "safety_function": false
+}

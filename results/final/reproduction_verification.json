@@ -1,0 +1,110 @@
+{
+  "python_version": "3.13.7",
+  "successful": true,
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "scripts/build_designs.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-q"
+      ],
+      "exit_code": 0,
+      "test_output": "----------------------------------------------------------------------\nRan 97 tests in 3.116s\n\nOK"
+    },
+    {
+      "command": [
+        "python3",
+        "src/simulation/single_unit.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "src/simulation/multi_unit.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "src/simulation/finite_buffers.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "src/analysis/staffing_comparison.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "src/analysis/variability_experiments.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "src/analysis/scenario_comparison.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "src/analysis/attendance_comparison.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "src/analysis/reliability_experiments.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "src/analysis/quality_experiments.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "src/analysis/cost_comparison.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "src/analysis/final_experiments.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "src/cell/s3_demo.py"
+      ],
+      "exit_code": 0
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "start_s": 0,
+    "end_s": 15,
+    "title": "Define the system"
+  },
+  {
+    "start_s": 15,
+    "end_s": 30,
+    "title": "Find the constraint"
+  },
+  {
+    "start_s": 30,
+    "end_s": 48,
+    "title": "Compare alternatives"
+  },
+  {
+    "start_s": 48,
+    "end_s": 65,
+    "title": "Commission a normal cycle"
+  },
+  {
+    "start_s": 65,
+    "end_s": 90,
+    "title": "Fault, reset and recovery"
+  },
+  {
+    "start_s": 90,
+    "end_s": 108,
+    "title": "Balance cost and reliability"
+  },
+  {
+    "start_s": 108,
+    "end_s": 120,
+    "title": "State the evidence boundary"
+  }
+]

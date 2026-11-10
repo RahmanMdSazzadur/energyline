@@ -1,0 +1,36 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: s3 5v mock clamp and dry-contact input test
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vin                                          5
+v5                                      4.9995
+permit_ok                                4.999
+led_anode                                4.999
+cmd                                          0
+base                               1.77488e-08
+part_n                                  4.9995
+cover_n                                 4.9995
+collector                              3.94382
+permit_ctrl                                  5
+part_ctrl                                    0
+cover_ctrl                                   0
+vcover#branch                                0
+vpart#branch                                 0
+vpermit#branch                               0
+vcmd#branch                        3.77633e-12
+vin#branch                          -0.0004999
+
+
+No. of Data Rows : 20201
+ngspice-46 done

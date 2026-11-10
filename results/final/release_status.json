@@ -1,0 +1,20 @@
+{
+  "release": "1.1.0",
+  "scope": "Assembly simulation, PCB engineering prototype and standalone Wokwi demonstration",
+  "pcb_revision": "A",
+  "wokwi_controller_assertions": 26,
+  "circuit_checks_passed": 12,
+  "tests_passed": 97,
+  "commissioning_cases_passed": 11,
+  "economic_configurations": 6,
+  "economic_shift_replications": 1200,
+  "integrated_shifts": 200,
+  "integrated_target_successes": 200,
+  "process_inputs_measured": false,
+  "hardware_validated": false,
+  "links": {
+    "case_study": "/case-study",
+    "video": "/media/demo.mp4",
+    "release": "/downloads/release.zip"
+  }
+}

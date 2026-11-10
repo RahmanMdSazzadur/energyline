@@ -1,0 +1,181 @@
+{
+  "model": "stochastic_shared_operators",
+  "input_source": "synthetic_assumption",
+  "run_id": "no_failures_ops_3_rep_001",
+  "model_version": "0.1.6",
+  "scenario": "no_failures_ops_3",
+  "processing_time": {
+    "distribution": "triangular",
+    "relative_half_width": 0.2
+  },
+  "seed": 20261209,
+  "reliability_enabled": false,
+  "failure_clock": "processing_time_only",
+  "interruption_policy": "resume remaining work; release operator on fault; reacquire if attendance remains",
+  "reliability": {
+    "S1": null,
+    "S2": null,
+    "S3": null,
+    "S4": null,
+    "S5": null
+  },
+  "production_window_s": 25200,
+  "target_good_units": 240,
+  "released_units": 283,
+  "accepted_units": 273,
+  "scrapped_units": 0,
+  "unfinished_units": 10,
+  "demand_met": true,
+  "first_completion_s": 337.1209117355794,
+  "mean_accepted_lead_time_s": 804.8885577630591,
+  "time_weighted_mean_wip": 8.910883863254652,
+  "staffing_mode": "shared_pool",
+  "operator_count": 3,
+  "paid_labor_hours": 24.0,
+  "good_units_per_paid_labor_hour": 11.375,
+  "operators": [
+    {
+      "operator_id": 0,
+      "productive_time_s": 24023.85408448473,
+      "utilization_of_production_window": 0.9533275430351084
+    },
+    {
+      "operator_id": 1,
+      "productive_time_s": 24134.32601023009,
+      "utilization_of_production_window": 0.9577113496123051
+    },
+    {
+      "operator_id": 2,
+      "productive_time_s": 24508.5949826319,
+      "utilization_of_production_window": 0.9725632929615834
+    }
+  ],
+  "stations": [
+    {
+      "station_id": "S1",
+      "productive_time_s": 12742.923045558586,
+      "blocked_time_s": 7979.287870351402,
+      "starved_time_s": 0.0,
+      "waiting_for_operator_time_s": 4477.789084090011,
+      "fault_time_s": 0.0,
+      "failure_count": 0,
+      "utilization": 0.505671549426928,
+      "blocking_fraction": 0.31663840755362704
+    },
+    {
+      "station_id": "S2",
+      "productive_time_s": 18254.73094313716,
+      "blocked_time_s": 124.0781581868905,
+      "starved_time_s": 64.83941810432589,
+      "waiting_for_operator_time_s": 6756.351480571625,
+      "fault_time_s": 0.0,
+      "failure_count": 0,
+      "utilization": 0.7243940850451255,
+      "blocking_fraction": 0.004923736435987719
+    },
+    {
+      "station_id": "S3",
+      "productive_time_s": 19575.502388809142,
+      "blocked_time_s": 2076.8342205871945,
+      "starved_time_s": 112.2575857064221,
+      "waiting_for_operator_time_s": 3435.4058048972392,
+      "fault_time_s": 0.0,
+      "failure_count": 0,
+      "utilization": 0.7768056503495692,
+      "blocking_fraction": 0.08241405637250772
+    },
+    {
+      "station_id": "S4",
+      "productive_time_s": 24678.239311628662,
+      "blocked_time_s": 0.0,
+      "starved_time_s": 195.75093312612114,
+      "waiting_for_operator_time_s": 326.00975524521834,
+      "fault_time_s": 0.0,
+      "failure_count": 0,
+      "utilization": 0.9792952107789151,
+      "blocking_fraction": 0.0
+    },
+    {
+      "station_id": "S5",
+      "productive_time_s": 16321.43050121715,
+      "blocked_time_s": 0.0,
+      "starved_time_s": 8878.56949878285,
+      "waiting_for_operator_time_s": 0.0,
+      "fault_time_s": 0.0,
+      "failure_count": 0,
+      "utilization": 0.6476758135403631,
+      "blocking_fraction": 0.0
+    }
+  ],
+  "cell_integration": {
+    "enabled": false,
+    "cycles": [],
+    "interpretation": "Independent per-unit cell execution; explicitly scaled cycle duration; not a real-time PLC connection"
+  },
+  "quality": null,
+  "first_inspections": 0,
+  "first_pass_units": 0,
+  "first_pass_yield": null,
+  "rework_started_units": 0,
+  "rework_passed_units": 0,
+  "accepted_after_rework": 0,
+  "rework_resource": {
+    "dedicated_operators": 0,
+    "processing_time_s": 0.0,
+    "blocked_time_s": 0.0,
+    "queued_at_shift_end": 0,
+    "unit_at_shift_end": null
+  },
+  "unit_records": [],
+  "buffers": [
+    {
+      "from_station": "S1",
+      "to_station": "S2",
+      "capacity": 2,
+      "peak_waiting_units": 2,
+      "final_waiting_units": 2,
+      "time_weighted_mean_waiting_units": 1.7968036132315444
+    },
+    {
+      "from_station": "S2",
+      "to_station": "S3",
+      "capacity": 2,
+      "peak_waiting_units": 2,
+      "final_waiting_units": 2,
+      "time_weighted_mean_waiting_units": 1.1567608962816813
+    },
+    {
+      "from_station": "S3",
+      "to_station": "S4",
+      "capacity": 2,
+      "peak_waiting_units": 2,
+      "final_waiting_units": 2,
+      "time_weighted_mean_waiting_units": 1.9195008442384087
+    },
+    {
+      "from_station": "S4",
+      "to_station": "S5",
+      "capacity": 2,
+      "peak_waiting_units": 0,
+      "final_waiting_units": 0,
+      "time_weighted_mean_waiting_units": 0.0
+    }
+  ],
+  "assumptions": [
+    "Synthetic symmetric triangular times around assumed means",
+    "Empty start; no overtime",
+    "FIFO finite buffers exclude units held at stations",
+    "Blocking after service; zero transfer time",
+    "Zero capacity means direct handoff; completed unit stays upstream until downstream ready",
+    "Shared operator pool; downstream-first nonpreemptive allocation",
+    "Operator attends initial configured fraction of each cycle; remainder is unattended",
+    "No separate unload or transfer labor; operator released before blocking",
+    "All operators skilled at all tasks; no walking or transfer labor",
+    "Unlimited input supply; release only when S1 is free",
+    "No failures",
+    "No scrap or rework; all inspections pass",
+    "When enabled, rework uses one separate paid operator and an unlimited FIFO input queue",
+    "Breaks removed into one contiguous production window",
+    "Completions at shift end count; no new operation starts at shift end"
+  ]
+}

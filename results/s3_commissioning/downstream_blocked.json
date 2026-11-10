@@ -1,0 +1,5463 @@
+{
+  "demo": "downstream_blocked",
+  "label": "Downstream unavailable",
+  "model_version": "0.2.0",
+  "input_source": "synthetic_equipment_model",
+  "dt_s": 0.05,
+  "duration_s": 7.3,
+  "expected_fault": null,
+  "checks": {
+    "expected_fault": true,
+    "no_duplicate_completion": true,
+    "correct_completion_count": true,
+    "returned_to_idle": true,
+    "single_process_command": true,
+    "fault_outputs_inhibited": true,
+    "reset_did_not_restart_motion": true,
+    "failed_result_routed_to_rework": true,
+    "downstream_result_retained": true
+  },
+  "passed": true,
+  "timeline": [
+    {
+      "timestamp_s": 0.0,
+      "controller_state": "IDLE",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": null,
+        "part_present": false,
+        "cover_present": false,
+        "clamp_closed": false,
+        "clamp_open": true,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": true,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": false,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": true,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": false,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 0.0,
+        "process_fraction": 0.0,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 0.05,
+      "controller_state": "IDLE",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": null,
+        "part_present": false,
+        "cover_present": false,
+        "clamp_closed": false,
+        "clamp_open": true,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": true,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": false,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": true,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": false,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 0.0,
+        "process_fraction": 0.0,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 0.1,
+      "controller_state": "IDLE",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": false,
+        "clamp_open": true,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": false,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": false,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 0.0,
+        "process_fraction": 0.0,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 0.15,
+      "controller_state": "CLAMPING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": false,
+        "clamp_open": true,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 0.0,
+        "process_fraction": 0.0,
+        "process_running": false
+      },
+      "commands": {
+        "start_request": true
+      }
+    },
+    {
+      "timestamp_s": 0.2,
+      "controller_state": "CLAMPING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": false,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 0.0833,
+        "process_fraction": 0.0,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 0.25,
+      "controller_state": "CLAMPING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": false,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 0.1667,
+        "process_fraction": 0.0,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 0.3,
+      "controller_state": "CLAMPING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": false,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 0.25,
+        "process_fraction": 0.0,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 0.35,
+      "controller_state": "CLAMPING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": false,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 0.3333,
+        "process_fraction": 0.0,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 0.4,
+      "controller_state": "CLAMPING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": false,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 0.4167,
+        "process_fraction": 0.0,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 0.45,
+      "controller_state": "CLAMPING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": false,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 0.5,
+        "process_fraction": 0.0,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 0.5,
+      "controller_state": "CLAMPING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": false,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 0.5833,
+        "process_fraction": 0.0,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 0.55,
+      "controller_state": "CLAMPING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": false,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 0.6667,
+        "process_fraction": 0.0,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 0.6,
+      "controller_state": "CLAMPING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": false,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 0.75,
+        "process_fraction": 0.0,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 0.65,
+      "controller_state": "CLAMPING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": false,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 0.8333,
+        "process_fraction": 0.0,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 0.7,
+      "controller_state": "CLAMPING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": false,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 0.9167,
+        "process_fraction": 0.0,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 0.75,
+      "controller_state": "PROCESSING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": true,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": true
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 0.0,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 0.8,
+      "controller_state": "PROCESSING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": true
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 0.025,
+        "process_running": true
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 0.85,
+      "controller_state": "PROCESSING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": true
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 0.05,
+        "process_running": true
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 0.9,
+      "controller_state": "PROCESSING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": true
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 0.075,
+        "process_running": true
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 0.95,
+      "controller_state": "PROCESSING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": true
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 0.1,
+        "process_running": true
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 1.0,
+      "controller_state": "PROCESSING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": true
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 0.125,
+        "process_running": true
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 1.05,
+      "controller_state": "PROCESSING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": true
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 0.15,
+        "process_running": true
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 1.1,
+      "controller_state": "PROCESSING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": true
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 0.175,
+        "process_running": true
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 1.15,
+      "controller_state": "PROCESSING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": true
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 0.2,
+        "process_running": true
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 1.2,
+      "controller_state": "PROCESSING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": true
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 0.225,
+        "process_running": true
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 1.25,
+      "controller_state": "PROCESSING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": true
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 0.25,
+        "process_running": true
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 1.3,
+      "controller_state": "PROCESSING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": true
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 0.275,
+        "process_running": true
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 1.35,
+      "controller_state": "PROCESSING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": true
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 0.3,
+        "process_running": true
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 1.4,
+      "controller_state": "PROCESSING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": true
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 0.325,
+        "process_running": true
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 1.45,
+      "controller_state": "PROCESSING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": true
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 0.35,
+        "process_running": true
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 1.5,
+      "controller_state": "PROCESSING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": true
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 0.375,
+        "process_running": true
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 1.55,
+      "controller_state": "PROCESSING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": true
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 0.4,
+        "process_running": true
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 1.6,
+      "controller_state": "PROCESSING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": true
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 0.425,
+        "process_running": true
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 1.65,
+      "controller_state": "PROCESSING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": true
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 0.45,
+        "process_running": true
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 1.7,
+      "controller_state": "PROCESSING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": true
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 0.475,
+        "process_running": true
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 1.75,
+      "controller_state": "PROCESSING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": true
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 0.5,
+        "process_running": true
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 1.8,
+      "controller_state": "PROCESSING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": true
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 0.525,
+        "process_running": true
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 1.85,
+      "controller_state": "PROCESSING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": true
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 0.55,
+        "process_running": true
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 1.9,
+      "controller_state": "PROCESSING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": true
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 0.575,
+        "process_running": true
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 1.95,
+      "controller_state": "PROCESSING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": true
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 0.6,
+        "process_running": true
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 2.0,
+      "controller_state": "PROCESSING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": true
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 0.625,
+        "process_running": true
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 2.05,
+      "controller_state": "PROCESSING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": true
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 0.65,
+        "process_running": true
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 2.1,
+      "controller_state": "PROCESSING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": true
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 0.675,
+        "process_running": true
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 2.15,
+      "controller_state": "PROCESSING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": true
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 0.7,
+        "process_running": true
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 2.2,
+      "controller_state": "PROCESSING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": true
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 0.725,
+        "process_running": true
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 2.25,
+      "controller_state": "PROCESSING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": true
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 0.75,
+        "process_running": true
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 2.3,
+      "controller_state": "PROCESSING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": true
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 0.775,
+        "process_running": true
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 2.35,
+      "controller_state": "PROCESSING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": true
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 0.8,
+        "process_running": true
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 2.4,
+      "controller_state": "PROCESSING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": true
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 0.825,
+        "process_running": true
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 2.45,
+      "controller_state": "PROCESSING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": true
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 0.85,
+        "process_running": true
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 2.5,
+      "controller_state": "PROCESSING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": true
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 0.875,
+        "process_running": true
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 2.55,
+      "controller_state": "PROCESSING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": true
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 0.9,
+        "process_running": true
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 2.6,
+      "controller_state": "PROCESSING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": true
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 0.925,
+        "process_running": true
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 2.65,
+      "controller_state": "PROCESSING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": true
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 0.95,
+        "process_running": true
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 2.7,
+      "controller_state": "PROCESSING",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": false,
+        "process_pass": null,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": true
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 0.975,
+        "process_running": true
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 2.75,
+      "controller_state": "CHECK_RESULT",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "pending",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 2.8,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 2.85,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 2.9,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 2.95,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 3.0,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 3.05,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 3.1,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 3.15,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 3.2,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 3.25,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 3.3,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 3.35,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 3.4,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 3.45,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 3.5,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 3.55,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 3.6,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 3.65,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 3.7,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 3.75,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 3.8,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 3.85,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 3.9,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 3.95,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 4.0,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 4.05,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 4.1,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 4.15,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 4.2,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 4.25,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 4.3,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 4.35,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 4.4,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 4.45,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 4.5,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 4.55,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 4.6,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 4.65,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 4.7,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 4.75,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 4.8,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 4.85,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 4.9,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 4.95,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 5.0,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 5.05,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 5.1,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 5.15,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 5.2,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 5.25,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 5.3,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 5.35,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 5.4,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 5.45,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 5.5,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 5.55,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 5.6,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 5.65,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 5.7,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 5.75,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 5.8,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 5.85,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 5.9,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 5.95,
+      "controller_state": "WAIT_TRANSFER",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": false,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": true,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 6.0,
+      "controller_state": "RELEASE",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": true,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": true,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": false,
+        "process_start": false,
+        "transfer_request": true,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 1,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 6.05,
+      "controller_state": "RELEASE",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": false,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": true,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": false,
+        "process_start": false,
+        "transfer_request": true,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 0.9167,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 6.1,
+      "controller_state": "RELEASE",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": false,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": true,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": false,
+        "process_start": false,
+        "transfer_request": true,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 0.8333,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 6.15,
+      "controller_state": "RELEASE",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": false,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": true,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": false,
+        "process_start": false,
+        "transfer_request": true,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 0.75,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 6.2,
+      "controller_state": "RELEASE",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": false,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": true,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": false,
+        "process_start": false,
+        "transfer_request": true,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 0.6667,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 6.25,
+      "controller_state": "RELEASE",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": false,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": true,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": false,
+        "process_start": false,
+        "transfer_request": true,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 0.5833,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 6.3,
+      "controller_state": "RELEASE",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": false,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": true,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": false,
+        "process_start": false,
+        "transfer_request": true,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 0.5,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 6.35,
+      "controller_state": "RELEASE",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": false,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": true,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": false,
+        "process_start": false,
+        "transfer_request": true,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 0.4167,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 6.4,
+      "controller_state": "RELEASE",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": false,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": true,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": false,
+        "process_start": false,
+        "transfer_request": true,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 0.3333,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 6.45,
+      "controller_state": "RELEASE",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": false,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": true,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": false,
+        "process_start": false,
+        "transfer_request": true,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 0.25,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 6.5,
+      "controller_state": "RELEASE",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": false,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": true,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": false,
+        "process_start": false,
+        "transfer_request": true,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 0.1667,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 6.55,
+      "controller_state": "RELEASE",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": false,
+        "clamp_open": false,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": true,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": false,
+        "process_start": false,
+        "transfer_request": true,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 0.0833,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 6.6,
+      "controller_state": "RELEASE",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": false,
+        "clamp_open": true,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": true,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": false,
+        "process_start": false,
+        "transfer_request": true,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 0,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 6.65,
+      "controller_state": "RELEASE",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": false,
+        "clamp_open": true,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": true,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": false,
+        "process_start": false,
+        "transfer_request": true,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 0,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 6.7,
+      "controller_state": "RELEASE",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": false,
+        "clamp_open": true,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": true,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": false,
+        "process_start": false,
+        "transfer_request": true,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 0,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 6.75,
+      "controller_state": "RELEASE",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": false,
+        "clamp_open": true,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": true,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": false,
+        "process_start": false,
+        "transfer_request": true,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 0,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 6.8,
+      "controller_state": "RELEASE",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": false,
+        "clamp_open": true,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": true,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": false,
+        "process_start": false,
+        "transfer_request": true,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 0,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 6.85,
+      "controller_state": "RELEASE",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": false,
+        "clamp_open": true,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": true,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": false,
+        "process_start": false,
+        "transfer_request": true,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 0,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 6.9,
+      "controller_state": "RELEASE",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": false,
+        "clamp_open": true,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": true,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": false,
+        "process_start": false,
+        "transfer_request": true,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 0,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 6.95,
+      "controller_state": "RELEASE",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": false,
+        "clamp_open": true,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": true,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": false,
+        "process_start": false,
+        "transfer_request": true,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 0,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 7.0,
+      "controller_state": "RELEASE",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": false,
+        "clamp_open": true,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": true,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": false,
+        "process_start": false,
+        "transfer_request": true,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 0,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 7.05,
+      "controller_state": "RELEASE",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": false,
+        "clamp_open": true,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": true,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": false,
+        "process_start": false,
+        "transfer_request": true,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 0,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 7.1,
+      "controller_state": "RELEASE",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": false,
+        "clamp_open": true,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": true,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": false,
+        "process_start": false,
+        "transfer_request": true,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 0,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 7.15,
+      "controller_state": "RELEASE",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": false,
+        "clamp_open": true,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": true,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": false,
+        "process_start": false,
+        "transfer_request": true,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 0,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 7.2,
+      "controller_state": "RELEASE",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": "S3-DEMO-0001",
+        "part_present": true,
+        "cover_present": true,
+        "clamp_closed": false,
+        "clamp_open": true,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": true,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": false,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": false,
+        "process_start": false,
+        "transfer_request": true,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 0,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 7.25,
+      "controller_state": "COMPLETE",
+      "fault_code": "",
+      "result": "pass",
+      "signals": {
+        "unit_id": null,
+        "part_present": false,
+        "cover_present": false,
+        "clamp_closed": false,
+        "clamp_open": true,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": true,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": true,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": false,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": false,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": true,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 0,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    },
+    {
+      "timestamp_s": 7.3,
+      "controller_state": "IDLE",
+      "fault_code": "",
+      "result": "pending",
+      "signals": {
+        "unit_id": null,
+        "part_present": false,
+        "cover_present": false,
+        "clamp_closed": false,
+        "clamp_open": true,
+        "process_done": true,
+        "process_pass": true,
+        "downstream_ready": true,
+        "safety_permit": true,
+        "communication_ok": true,
+        "transfer_confirmed": true,
+        "fault_cause_active": false
+      },
+      "outputs": {
+        "clamp_command": false,
+        "process_start": false,
+        "transfer_request": false,
+        "station_ready": true,
+        "station_fault": false,
+        "transfer_route": "accepted",
+        "motion_enable": false,
+        "process_enable": false
+      },
+      "equipment": {
+        "clamp_position": 0,
+        "process_fraction": 1,
+        "process_running": false
+      },
+      "commands": {}
+    }
+  ],
+  "events": [
+    {
+      "timestamp_s": 0.15,
+      "station_id": "S3",
+      "unit_id": "S3-DEMO-0001",
+      "cycle_number": 1,
+      "event_type": "state_changed",
+      "state": "CLAMPING",
+      "result": "pending",
+      "fault_code": ""
+    },
+    {
+      "timestamp_s": 0.75,
+      "station_id": "S3",
+      "unit_id": "S3-DEMO-0001",
+      "cycle_number": 1,
+      "event_type": "state_changed",
+      "state": "PROCESSING",
+      "result": "pending",
+      "fault_code": ""
+    },
+    {
+      "timestamp_s": 0.75,
+      "station_id": "S3",
+      "unit_id": "S3-DEMO-0001",
+      "cycle_number": 1,
+      "event_type": "process_command",
+      "state": "PROCESSING",
+      "result": "pending",
+      "fault_code": ""
+    },
+    {
+      "timestamp_s": 2.75,
+      "station_id": "S3",
+      "unit_id": "S3-DEMO-0001",
+      "cycle_number": 1,
+      "event_type": "state_changed",
+      "state": "CHECK_RESULT",
+      "result": "pending",
+      "fault_code": ""
+    },
+    {
+      "timestamp_s": 2.8,
+      "station_id": "S3",
+      "unit_id": "S3-DEMO-0001",
+      "cycle_number": 1,
+      "event_type": "result_latched",
+      "state": "CHECK_RESULT",
+      "result": "pass",
+      "fault_code": ""
+    },
+    {
+      "timestamp_s": 2.8,
+      "station_id": "S3",
+      "unit_id": "S3-DEMO-0001",
+      "cycle_number": 1,
+      "event_type": "state_changed",
+      "state": "WAIT_TRANSFER",
+      "result": "pass",
+      "fault_code": ""
+    },
+    {
+      "timestamp_s": 6.0,
+      "station_id": "S3",
+      "unit_id": "S3-DEMO-0001",
+      "cycle_number": 1,
+      "event_type": "state_changed",
+      "state": "RELEASE",
+      "result": "pass",
+      "fault_code": ""
+    },
+    {
+      "timestamp_s": 7.25,
+      "station_id": "S3",
+      "unit_id": "S3-DEMO-0001",
+      "cycle_number": 1,
+      "event_type": "state_changed",
+      "state": "COMPLETE",
+      "result": "pass",
+      "fault_code": ""
+    },
+    {
+      "timestamp_s": 7.3,
+      "station_id": "S3",
+      "unit_id": "S3-DEMO-0001",
+      "cycle_number": 1,
+      "event_type": "completed",
+      "state": "COMPLETE",
+      "result": "pass",
+      "fault_code": "",
+      "route": "accepted"
+    },
+    {
+      "timestamp_s": 7.3,
+      "station_id": "S3",
+      "unit_id": null,
+      "cycle_number": 1,
+      "event_type": "state_changed",
+      "state": "IDLE",
+      "result": "pending",
+      "fault_code": ""
+    }
+  ],
+  "external_actions": [
+    {
+      "timestamp_s": 0.1,
+      "event_type": "operator_loaded_unit"
+    }
+  ],
+  "journal": {
+    "cycle_number": 1,
+    "units": {
+      "S3-DEMO-0001": {
+        "disposition": "completed",
+        "result": "pass",
+        "cycle_number": 1,
+        "route": "accepted"
+      }
+    }
+  },
+  "transfers": [
+    {
+      "unit_id": "S3-DEMO-0001",
+      "route": "accepted"
+    }
+  ],
+  "process_starts": 1,
+  "states": [
+    "IDLE",
+    "CLAMPING",
+    "PROCESSING",
+    "CHECK_RESULT",
+    "WAIT_TRANSFER",
+    "RELEASE",
+    "COMPLETE",
+    "FAULT",
+    "RECOVERY",
+    "RECOVERY_RELEASE"
+  ],
+  "limitations": [
+    "Accelerated illustrative equipment timings; not the 70-second production estimate",
+    "Simulated permit only; no certified safety function or real hardware",
+    "Scripted fault injection and recovery; browser shows recorded simulation playback",
+    "Restart reloads a serialized software journal; not power-loss hardware validation",
+    "All faulted in-process units quarantined; reset never resumes uncertain processing"
+  ]
+}

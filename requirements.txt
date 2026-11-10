@@ -1,0 +1,2 @@
+# Simulation, API, tests and design generation use only the Python standard library.
+# Tested with Python 3.13.7. No pip packages are required to run the project.

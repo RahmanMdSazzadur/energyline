@@ -1,0 +1,60 @@
+{
+  "model": "deterministic_multi_unit_infinite_buffers",
+  "input_source": "synthetic_assumption",
+  "production_window_s": 25200,
+  "target_good_units": 240,
+  "released_units": 560,
+  "accepted_units": 165,
+  "scrapped_units": 0,
+  "unfinished_units": 395,
+  "demand_met": false,
+  "first_completion_s": 465.0,
+  "mean_accepted_lead_time_s": 9075.0,
+  "time_weighted_mean_wip": 199.08035714285714,
+  "stations": [
+    {
+      "station_id": "S1",
+      "productive_time_s": 25200.0,
+      "utilization": 1.0,
+      "peak_waiting_units": 0,
+      "time_weighted_mean_waiting_units": 0.0
+    },
+    {
+      "station_id": "S2",
+      "productive_time_s": 25155.0,
+      "utilization": 0.9982142857142857,
+      "peak_waiting_units": 349,
+      "time_weighted_mean_waiting_units": 174.375
+    },
+    {
+      "station_id": "S3",
+      "productive_time_s": 25035.0,
+      "utilization": 0.993452380952381,
+      "peak_waiting_units": 42,
+      "time_weighted_mean_waiting_units": 20.726190476190474
+    },
+    {
+      "station_id": "S4",
+      "productive_time_s": 14940.0,
+      "utilization": 0.5928571428571429,
+      "peak_waiting_units": 0,
+      "time_weighted_mean_waiting_units": 0.0
+    },
+    {
+      "station_id": "S5",
+      "productive_time_s": 9945.0,
+      "utilization": 0.39464285714285713,
+      "peak_waiting_units": 0,
+      "time_weighted_mean_waiting_units": 0.0
+    }
+  ],
+  "assumptions": [
+    "Synthetic fixed station times",
+    "Empty start; no overtime",
+    "Unlimited FIFO buffers; zero transfer time",
+    "One dedicated resource per station; no shared operators",
+    "Unlimited material supply; release when S1 available",
+    "No failures, scrap or rework; all inspections pass",
+    "Breaks removed into one contiguous production window"
+  ]
+}

@@ -1,0 +1,5 @@
+operator_count,accepted_units,unfinished_units,paid_labor_hours,good_units_per_paid_labor_hour,demand_met
+1,54,1,8.0,6.75,False
+2,107,2,16.0,6.6875,False
+3,160,7,24.0,6.666666666666667,False
+5,165,8,40.0,4.125,False

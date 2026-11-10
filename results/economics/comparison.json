@@ -1,0 +1,1173 @@
+{
+  "model_version": "0.2.1",
+  "input_source": "synthetic_planning_assumptions",
+  "currency": "EUR",
+  "assumptions": {
+    "currency": "EUR",
+    "input_source": "synthetic_planning_assumptions",
+    "useful_life_years": 5,
+    "operating_days_per_year": 250,
+    "shifts_per_day": 2,
+    "maintenance_fraction_of_equipment_per_year": 0.04,
+    "consumables_per_released_unit_eur": 0.25,
+    "rework_consumables_per_attempt_eur": 0.15,
+    "incremental_material_loss_per_scrapped_unit_eur": 4.0,
+    "contingency_fraction": 0.15,
+    "cost_cases": {
+      "low": {
+        "labor_rate_eur_per_hour": 20,
+        "capital_multiplier": 0.7,
+        "electricity_eur_per_kwh": 0.15
+      },
+      "base": {
+        "labor_rate_eur_per_hour": 25,
+        "capital_multiplier": 1.0,
+        "electricity_eur_per_kwh": 0.2
+      },
+      "high": {
+        "labor_rate_eur_per_hour": 35,
+        "capital_multiplier": 1.4,
+        "electricity_eur_per_kwh": 0.3
+      }
+    },
+    "exclusions": [
+      "Good-unit bill of materials",
+      "Building, rent and general overhead",
+      "Taxes, financing and discounting",
+      "Revenue and capacity sale value"
+    ],
+    "replications_per_scenario": 200,
+    "starting_seed": 20262000
+  },
+  "cases": [
+    {
+      "id": "manual",
+      "label": "Manual line",
+      "production_operators": 3,
+      "rework_operators": 1,
+      "paid_labor_hours": 32.0,
+      "replications": 200,
+      "mean_good_units": 155.825,
+      "minimum": 149,
+      "maximum": 159,
+      "mean_scrapped_units": 1.71,
+      "demand_attainment": {
+        "160": {
+          "successful_shifts": 0,
+          "replications": 200,
+          "observed_probability": 0.0,
+          "wilson_95_lower": 0,
+          "wilson_95_upper": 0.01884532637726656
+        },
+        "240": {
+          "successful_shifts": 0,
+          "replications": 200,
+          "observed_probability": 0.0,
+          "wilson_95_lower": 0,
+          "wilson_95_upper": 0.01884532637726656
+        },
+        "320": {
+          "successful_shifts": 0,
+          "replications": 200,
+          "observed_probability": 0.0,
+          "wilson_95_lower": 0,
+          "wilson_95_upper": 0.01884532637726656
+        }
+      },
+      "cost_sensitivity": {
+        "low": {
+          "mean_shift_cost_eur": 690.6958500000001,
+          "pooled_conversion_cost_per_good_unit_eur": 4.432509866837799,
+          "mean_breakdown_eur": {
+            "paid_labor": 640.0,
+            "energy": 1.05,
+            "consumables": 42.22625,
+            "maintenance_allocation": 0.0,
+            "deployment_allocation": 0.5796,
+            "incremental_scrap_material_loss": 6.84
+          },
+          "deployment_total_eur": 1449.0,
+          "deployment_direct_eur": 1260.0,
+          "deployment_contingency_eur": 189.0,
+          "demand_capped_cost_per_unit_eur": {
+            "160": 4.432509866837799,
+            "240": 4.432509866837799,
+            "320": 4.432509866837799
+          }
+        },
+        "base": {
+          "mean_shift_cost_eur": 851.29425,
+          "pooled_conversion_cost_per_good_unit_eur": 5.463142948820793,
+          "mean_breakdown_eur": {
+            "paid_labor": 800.0,
+            "energy": 1.4000000000000001,
+            "consumables": 42.22625,
+            "maintenance_allocation": 0.0,
+            "deployment_allocation": 0.828,
+            "incremental_scrap_material_loss": 6.84
+          },
+          "deployment_total_eur": 2070.0,
+          "deployment_direct_eur": 1800.0,
+          "deployment_contingency_eur": 270.0,
+          "demand_capped_cost_per_unit_eur": {
+            "160": 5.463142948820793,
+            "240": 5.463142948820793,
+            "320": 5.463142948820793
+          }
+        },
+        "high": {
+          "mean_shift_cost_eur": 1172.32545,
+          "pooled_conversion_cost_per_good_unit_eur": 7.523346382159474,
+          "mean_breakdown_eur": {
+            "paid_labor": 1120.0,
+            "energy": 2.1,
+            "consumables": 42.22625,
+            "maintenance_allocation": 0.0,
+            "deployment_allocation": 1.1592,
+            "incremental_scrap_material_loss": 6.84
+          },
+          "deployment_total_eur": 2898.0,
+          "deployment_direct_eur": 2520.0,
+          "deployment_contingency_eur": 378.0,
+          "demand_capped_cost_per_unit_eur": {
+            "160": 7.523346382159474,
+            "240": 7.523346382159474,
+            "320": 7.523346382159474
+          }
+        }
+      },
+      "payback_years": null,
+      "payback_reason": "No substantiated annual cash benefit or contribution margin supplied; extra output is not assumed sold"
+    },
+    {
+      "id": "fixture",
+      "label": "Improved S3 fixture",
+      "production_operators": 3,
+      "rework_operators": 1,
+      "paid_labor_hours": 32.0,
+      "replications": 200,
+      "mean_good_units": 172.975,
+      "minimum": 167,
+      "maximum": 176,
+      "mean_scrapped_units": 1.95,
+      "demand_attainment": {
+        "160": {
+          "successful_shifts": 200,
+          "replications": 200,
+          "observed_probability": 1.0,
+          "wilson_95_lower": 0.9811546736227335,
+          "wilson_95_upper": 1
+        },
+        "240": {
+          "successful_shifts": 0,
+          "replications": 200,
+          "observed_probability": 0.0,
+          "wilson_95_lower": 0,
+          "wilson_95_upper": 0.01884532637726656
+        },
+        "320": {
+          "successful_shifts": 0,
+          "replications": 200,
+          "observed_probability": 0.0,
+          "wilson_95_lower": 0,
+          "wilson_95_upper": 0.01884532637726656
+        }
+      },
+      "cost_sensitivity": {
+        "low": {
+          "mean_shift_cost_eur": 697.2501,
+          "pooled_conversion_cost_per_good_unit_eur": 4.030929903165197,
+          "mean_breakdown_eur": {
+            "paid_labor": 640.0,
+            "energy": 1.26,
+            "consumables": 46.1615,
+            "maintenance_allocation": 0.0,
+            "deployment_allocation": 2.0286,
+            "incremental_scrap_material_loss": 7.8
+          },
+          "deployment_total_eur": 5071.5,
+          "deployment_direct_eur": 4410.0,
+          "deployment_contingency_eur": 661.5,
+          "demand_capped_cost_per_unit_eur": {
+            "160": 4.357813125,
+            "240": 4.030929903165197,
+            "320": 4.030929903165197
+          }
+        },
+        "base": {
+          "mean_shift_cost_eur": 858.5395,
+          "pooled_conversion_cost_per_good_unit_eur": 4.963373319843908,
+          "mean_breakdown_eur": {
+            "paid_labor": 800.0,
+            "energy": 1.6800000000000002,
+            "consumables": 46.1615,
+            "maintenance_allocation": 0.0,
+            "deployment_allocation": 2.898,
+            "incremental_scrap_material_loss": 7.8
+          },
+          "deployment_total_eur": 7245.0,
+          "deployment_direct_eur": 6300.0,
+          "deployment_contingency_eur": 945.0,
+          "demand_capped_cost_per_unit_eur": {
+            "160": 5.365871875,
+            "240": 4.963373319843908,
+            "320": 4.963373319843908
+          }
+        },
+        "high": {
+          "mean_shift_cost_eur": 1180.5387,
+          "pooled_conversion_cost_per_good_unit_eur": 6.8249093799682035,
+          "mean_breakdown_eur": {
+            "paid_labor": 1120.0,
+            "energy": 2.52,
+            "consumables": 46.1615,
+            "maintenance_allocation": 0.0,
+            "deployment_allocation": 4.0572,
+            "incremental_scrap_material_loss": 7.8
+          },
+          "deployment_total_eur": 10143.0,
+          "deployment_direct_eur": 8820.0,
+          "deployment_contingency_eur": 1323.0,
+          "demand_capped_cost_per_unit_eur": {
+            "160": 7.378366874999999,
+            "240": 6.8249093799682035,
+            "320": 6.8249093799682035
+          }
+        }
+      },
+      "payback_years": null,
+      "payback_reason": "No substantiated annual cash benefit or contribution margin supplied; extra output is not assumed sold"
+    },
+    {
+      "id": "parallel_s3",
+      "label": "Two manual S3 fixtures",
+      "production_operators": 4,
+      "rework_operators": 1,
+      "paid_labor_hours": 40.0,
+      "replications": 200,
+      "mean_good_units": 200.505,
+      "minimum": 193,
+      "maximum": 205,
+      "mean_scrapped_units": 2.23,
+      "demand_attainment": {
+        "160": {
+          "successful_shifts": 200,
+          "replications": 200,
+          "observed_probability": 1.0,
+          "wilson_95_lower": 0.9811546736227335,
+          "wilson_95_upper": 1
+        },
+        "240": {
+          "successful_shifts": 0,
+          "replications": 200,
+          "observed_probability": 0.0,
+          "wilson_95_lower": 0,
+          "wilson_95_upper": 0.01884532637726656
+        },
+        "320": {
+          "successful_shifts": 0,
+          "replications": 200,
+          "observed_probability": 0.0,
+          "wilson_95_lower": 0,
+          "wilson_95_upper": 0.01884532637726656
+        }
+      },
+      "cost_sensitivity": {
+        "low": {
+          "mean_shift_cost_eur": 865.4064500000001,
+          "pooled_conversion_cost_per_good_unit_eur": 4.316134011620658,
+          "mean_breakdown_eur": {
+            "paid_labor": 800.0,
+            "energy": 1.4699999999999998,
+            "consumables": 53.77675,
+            "maintenance_allocation": 0.0,
+            "deployment_allocation": 1.2397,
+            "incremental_scrap_material_loss": 8.92
+          },
+          "deployment_total_eur": 3099.25,
+          "deployment_direct_eur": 2695.0,
+          "deployment_contingency_eur": 404.25,
+          "demand_capped_cost_per_unit_eur": {
+            "160": 5.4087903125,
+            "240": 4.316134011620658,
+            "320": 4.316134011620658
+          }
+        },
+        "base": {
+          "mean_shift_cost_eur": 1066.4277499999998,
+          "pooled_conversion_cost_per_good_unit_eur": 5.31870900975038,
+          "mean_breakdown_eur": {
+            "paid_labor": 1000.0,
+            "energy": 1.96,
+            "consumables": 53.77675,
+            "maintenance_allocation": 0.0,
+            "deployment_allocation": 1.771,
+            "incremental_scrap_material_loss": 8.92
+          },
+          "deployment_total_eur": 4427.5,
+          "deployment_direct_eur": 3850.0,
+          "deployment_contingency_eur": 577.5,
+          "demand_capped_cost_per_unit_eur": {
+            "160": 6.6651734375,
+            "240": 5.31870900975038,
+            "320": 5.31870900975038
+          }
+        },
+        "high": {
+          "mean_shift_cost_eur": 1468.1161499999998,
+          "pooled_conversion_cost_per_good_unit_eur": 7.322092466522031,
+          "mean_breakdown_eur": {
+            "paid_labor": 1400.0,
+            "energy": 2.9399999999999995,
+            "consumables": 53.77675,
+            "maintenance_allocation": 0.0,
+            "deployment_allocation": 2.4794,
+            "incremental_scrap_material_loss": 8.92
+          },
+          "deployment_total_eur": 6198.5,
+          "deployment_direct_eur": 5390.0,
+          "deployment_contingency_eur": 808.5,
+          "demand_capped_cost_per_unit_eur": {
+            "160": 9.1757259375,
+            "240": 7.322092466522031,
+            "320": 7.322092466522031
+          }
+        }
+      },
+      "payback_years": null,
+      "payback_reason": "No substantiated annual cash benefit or contribution margin supplied; extra output is not assumed sold"
+    },
+    {
+      "id": "s3",
+      "label": "Faster S3",
+      "production_operators": 3,
+      "rework_operators": 1,
+      "paid_labor_hours": 32.0,
+      "replications": 200,
+      "mean_good_units": 195.505,
+      "minimum": 182,
+      "maximum": 202,
+      "mean_scrapped_units": 2.19,
+      "demand_attainment": {
+        "160": {
+          "successful_shifts": 200,
+          "replications": 200,
+          "observed_probability": 1.0,
+          "wilson_95_lower": 0.9811546736227335,
+          "wilson_95_upper": 1
+        },
+        "240": {
+          "successful_shifts": 0,
+          "replications": 200,
+          "observed_probability": 0.0,
+          "wilson_95_lower": 0,
+          "wilson_95_upper": 0.01884532637726656
+        },
+        "320": {
+          "successful_shifts": 0,
+          "replications": 200,
+          "observed_probability": 0.0,
+          "wilson_95_lower": 0,
+          "wilson_95_upper": 0.01884532637726656
+        }
+      },
+      "cost_sensitivity": {
+        "low": {
+          "mean_shift_cost_eur": 715.50605,
+          "pooled_conversion_cost_per_good_unit_eur": 3.6597838929950637,
+          "mean_breakdown_eur": {
+            "paid_labor": 640.0,
+            "energy": 3.15,
+            "consumables": 52.47725,
+            "maintenance_allocation": 1.008,
+            "deployment_allocation": 10.1108,
+            "incremental_scrap_material_loss": 8.76
+          },
+          "deployment_total_eur": 25277.0,
+          "deployment_direct_eur": 21980.0,
+          "deployment_contingency_eur": 3297.0,
+          "demand_capped_cost_per_unit_eur": {
+            "160": 4.471912812499999,
+            "240": 3.6597838929950637,
+            "320": 3.6597838929950637
+          }
+        },
+        "base": {
+          "mean_shift_cost_eur": 881.32125,
+          "pooled_conversion_cost_per_good_unit_eur": 4.507921792281527,
+          "mean_breakdown_eur": {
+            "paid_labor": 800.0,
+            "energy": 4.2,
+            "consumables": 52.47725,
+            "maintenance_allocation": 1.44,
+            "deployment_allocation": 14.444,
+            "incremental_scrap_material_loss": 8.76
+          },
+          "deployment_total_eur": 36110.0,
+          "deployment_direct_eur": 31400.0,
+          "deployment_contingency_eur": 4710.0,
+          "demand_capped_cost_per_unit_eur": {
+            "160": 5.5082578125,
+            "240": 4.507921792281527,
+            "320": 4.507921792281527
+          }
+        },
+        "high": {
+          "mean_shift_cost_eur": 1209.77485,
+          "pooled_conversion_cost_per_good_unit_eur": 6.18794839006675,
+          "mean_breakdown_eur": {
+            "paid_labor": 1120.0,
+            "energy": 6.3,
+            "consumables": 52.47725,
+            "maintenance_allocation": 2.016,
+            "deployment_allocation": 20.2216,
+            "incremental_scrap_material_loss": 8.76
+          },
+          "deployment_total_eur": 50554.0,
+          "deployment_direct_eur": 43960.0,
+          "deployment_contingency_eur": 6594.0,
+          "demand_capped_cost_per_unit_eur": {
+            "160": 7.5610928125,
+            "240": 6.18794839006675,
+            "320": 6.18794839006675
+          }
+        }
+      },
+      "payback_years": null,
+      "payback_reason": "No substantiated annual cash benefit or contribution margin supplied; extra output is not assumed sold"
+    },
+    {
+      "id": "s2_s3_3",
+      "label": "Faster S2/S3 \u00b7 3 operators",
+      "production_operators": 3,
+      "rework_operators": 1,
+      "paid_labor_hours": 32.0,
+      "replications": 200,
+      "mean_good_units": 251.93,
+      "minimum": 223,
+      "maximum": 266,
+      "mean_scrapped_units": 2.805,
+      "demand_attainment": {
+        "160": {
+          "successful_shifts": 200,
+          "replications": 200,
+          "observed_probability": 1.0,
+          "wilson_95_lower": 0.9811546736227335,
+          "wilson_95_upper": 1
+        },
+        "240": {
+          "successful_shifts": 183,
+          "replications": 200,
+          "observed_probability": 0.915,
+          "wilson_95_lower": 0.8681041292843443,
+          "wilson_95_upper": 0.9462542498225244
+        },
+        "320": {
+          "successful_shifts": 0,
+          "replications": 200,
+          "observed_probability": 0.0,
+          "wilson_95_lower": 0,
+          "wilson_95_upper": 0.01884532637726656
+        }
+      },
+      "cost_sensitivity": {
+        "low": {
+          "mean_shift_cost_eur": 749.68165,
+          "pooled_conversion_cost_per_good_unit_eur": 2.97575378081213,
+          "mean_breakdown_eur": {
+            "paid_labor": 640.0,
+            "energy": 5.25,
+            "consumables": 67.82125,
+            "maintenance_allocation": 2.4639999999999995,
+            "deployment_allocation": 22.9264,
+            "incremental_scrap_material_loss": 11.22
+          },
+          "deployment_total_eur": 57316.0,
+          "deployment_direct_eur": 49840.0,
+          "deployment_contingency_eur": 7476.0,
+          "demand_capped_cost_per_unit_eur": {
+            "160": 4.6855103125,
+            "240": 3.129998747468843,
+            "320": 2.97575378081213
+          }
+        },
+        "base": {
+          "mean_shift_cost_eur": 922.3132499999999,
+          "pooled_conversion_cost_per_good_unit_eur": 3.6609901559957128,
+          "mean_breakdown_eur": {
+            "paid_labor": 800.0,
+            "energy": 7.0,
+            "consumables": 67.82125,
+            "maintenance_allocation": 3.52,
+            "deployment_allocation": 32.752,
+            "incremental_scrap_material_loss": 11.22
+          },
+          "deployment_total_eur": 81880.0,
+          "deployment_direct_eur": 71200.0,
+          "deployment_contingency_eur": 10680.0,
+          "demand_capped_cost_per_unit_eur": {
+            "160": 5.7644578125,
+            "240": 3.8507536062459553,
+            "320": 3.6609901559957128
+          }
+        },
+        "high": {
+          "mean_shift_cost_eur": 1260.32205,
+          "pooled_conversion_cost_per_good_unit_eur": 5.002667606081054,
+          "mean_breakdown_eur": {
+            "paid_labor": 1120.0,
+            "energy": 10.5,
+            "consumables": 67.82125,
+            "maintenance_allocation": 4.927999999999999,
+            "deployment_allocation": 45.8528,
+            "incremental_scrap_material_loss": 11.22
+          },
+          "deployment_total_eur": 114632.0,
+          "deployment_direct_eur": 99680.0,
+          "deployment_contingency_eur": 14952.0,
+          "demand_capped_cost_per_unit_eur": {
+            "160": 7.8770128125,
+            "240": 5.261975450389328,
+            "320": 5.002667606081054
+          }
+        }
+      },
+      "payback_years": null,
+      "payback_reason": "No substantiated annual cash benefit or contribution margin supplied; extra output is not assumed sold"
+    },
+    {
+      "id": "s2_s3_4",
+      "label": "Faster S2/S3 \u00b7 4 operators",
+      "production_operators": 4,
+      "rework_operators": 1,
+      "paid_labor_hours": 40.0,
+      "replications": 200,
+      "mean_good_units": 260.905,
+      "minimum": 235,
+      "maximum": 275,
+      "mean_scrapped_units": 2.885,
+      "demand_attainment": {
+        "160": {
+          "successful_shifts": 200,
+          "replications": 200,
+          "observed_probability": 1.0,
+          "wilson_95_lower": 0.9811546736227335,
+          "wilson_95_upper": 1
+        },
+        "240": {
+          "successful_shifts": 198,
+          "replications": 200,
+          "observed_probability": 0.99,
+          "wilson_95_lower": 0.9642782382838231,
+          "wilson_95_upper": 0.9972533418664555
+        },
+        "320": {
+          "successful_shifts": 0,
+          "replications": 200,
+          "observed_probability": 0.0,
+          "wilson_95_lower": 0,
+          "wilson_95_upper": 0.01884532637726656
+        }
+      },
+      "cost_sensitivity": {
+        "low": {
+          "mean_shift_cost_eur": 912.6156500000001,
+          "pooled_conversion_cost_per_good_unit_eur": 3.4978848623062033,
+          "mean_breakdown_eur": {
+            "paid_labor": 800.0,
+            "energy": 5.25,
+            "consumables": 70.43525,
+            "maintenance_allocation": 2.4639999999999995,
+            "deployment_allocation": 22.9264,
+            "incremental_scrap_material_loss": 11.54
+          },
+          "deployment_total_eur": 57316.0,
+          "deployment_direct_eur": 49840.0,
+          "deployment_contingency_eur": 7476.0,
+          "demand_capped_cost_per_unit_eur": {
+            "160": 5.7038478125,
+            "240": 3.8032783230188993,
+            "320": 3.4978848623062033
+          }
+        },
+        "base": {
+          "mean_shift_cost_eur": 1125.24725,
+          "pooled_conversion_cost_per_good_unit_eur": 4.312861961250263,
+          "mean_breakdown_eur": {
+            "paid_labor": 1000.0,
+            "energy": 7.0,
+            "consumables": 70.43525,
+            "maintenance_allocation": 3.52,
+            "deployment_allocation": 32.752,
+            "incremental_scrap_material_loss": 11.54
+          },
+          "deployment_total_eur": 81880.0,
+          "deployment_direct_eur": 71200.0,
+          "deployment_contingency_eur": 10680.0,
+          "demand_capped_cost_per_unit_eur": {
+            "160": 7.032795312499999,
+            "240": 4.689409472609447,
+            "320": 4.312861961250263
+          }
+        },
+        "high": {
+          "mean_shift_cost_eur": 1543.2560500000002,
+          "pooled_conversion_cost_per_good_unit_eur": 5.915011402617812,
+          "mean_breakdown_eur": {
+            "paid_labor": 1400.0,
+            "energy": 10.5,
+            "consumables": 70.43525,
+            "maintenance_allocation": 4.927999999999999,
+            "deployment_allocation": 45.8528,
+            "incremental_scrap_material_loss": 11.54
+          },
+          "deployment_total_eur": 114632.0,
+          "deployment_direct_eur": 99680.0,
+          "deployment_contingency_eur": 14952.0,
+          "demand_capped_cost_per_unit_eur": {
+            "160": 9.645350312500002,
+            "240": 6.431439436561022,
+            "320": 5.915011402617812
+          }
+        }
+      },
+      "payback_years": null,
+      "payback_reason": "No substantiated annual cash benefit or contribution margin supplied; extra output is not assumed sold"
+    }
+  ],
+  "model_cases": [
+    {
+      "id": "manual",
+      "label": "Manual line",
+      "config": {
+        "model_version": "0.2.1",
+        "scenario": "manual",
+        "input_source": "synthetic_assumption",
+        "shift_duration_s": 28800,
+        "planned_nonproduction_s": 3600,
+        "target_good_units": 240,
+        "start_condition": "empty",
+        "count_overtime": false,
+        "stations": [
+          {
+            "id": "S1",
+            "operation": "Identify and load tray",
+            "mean_process_s": 45
+          },
+          {
+            "id": "S2",
+            "operation": "Load four inserts",
+            "mean_process_s": 120
+          },
+          {
+            "id": "S3",
+            "operation": "Fit cover and fasten",
+            "mean_process_s": 150
+          },
+          {
+            "id": "S4",
+            "operation": "Inspect and mock test",
+            "mean_process_s": 90
+          },
+          {
+            "id": "S5",
+            "operation": "Label and release",
+            "mean_process_s": 60
+          }
+        ],
+        "buffer_capacities": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "operator_count": 3,
+        "seed": 20261109,
+        "processing_time": {
+          "distribution": "triangular",
+          "relative_half_width": 0.2
+        },
+        "scenario_description": "Estimated faster S2 and S3; S4 unchanged",
+        "timing_evidence": "Unvalidated synthetic estimates; no supplier or measured evidence",
+        "quality": {
+          "inspection_station": "S4",
+          "defect_probabilities": {
+            "S2": 0.02,
+            "S3": 0.03
+          },
+          "rework": {
+            "duration_s": 180,
+            "success_probability": 0.8
+          }
+        }
+      },
+      "deployment": {
+        "components_eur": {
+          "equipment": 0,
+          "fixtures": 1500,
+          "controls": 0,
+          "integration": 0,
+          "commissioning": 200,
+          "training": 100,
+          "installation": 0
+        },
+        "power_kw": 1
+      }
+    },
+    {
+      "id": "fixture",
+      "label": "Improved S3 fixture",
+      "config": {
+        "model_version": "0.2.1",
+        "scenario": "fixture",
+        "input_source": "synthetic_assumption",
+        "shift_duration_s": 28800,
+        "planned_nonproduction_s": 3600,
+        "target_good_units": 240,
+        "start_condition": "empty",
+        "count_overtime": false,
+        "stations": [
+          {
+            "id": "S1",
+            "operation": "Identify and load tray",
+            "mean_process_s": 45
+          },
+          {
+            "id": "S2",
+            "operation": "Load four inserts",
+            "mean_process_s": 120
+          },
+          {
+            "id": "S3",
+            "operation": "Fit cover and fasten",
+            "mean_process_s": 110
+          },
+          {
+            "id": "S4",
+            "operation": "Inspect and mock test",
+            "mean_process_s": 90
+          },
+          {
+            "id": "S5",
+            "operation": "Label and release",
+            "mean_process_s": 60
+          }
+        ],
+        "buffer_capacities": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "operator_count": 3,
+        "seed": 20261109,
+        "processing_time": {
+          "distribution": "triangular",
+          "relative_half_width": 0.2
+        },
+        "scenario_description": "Estimated faster S2 and S3; S4 unchanged",
+        "timing_evidence": "Unvalidated synthetic estimates; no supplier or measured evidence",
+        "quality": {
+          "inspection_station": "S4",
+          "defect_probabilities": {
+            "S2": 0.02,
+            "S3": 0.03
+          },
+          "rework": {
+            "duration_s": 180,
+            "success_probability": 0.8
+          }
+        }
+      },
+      "deployment": {
+        "components_eur": {
+          "equipment": 0,
+          "fixtures": 5000,
+          "controls": 0,
+          "integration": 500,
+          "commissioning": 400,
+          "training": 200,
+          "installation": 200
+        },
+        "power_kw": 1.2
+      }
+    },
+    {
+      "id": "parallel_s3",
+      "label": "Two manual S3 fixtures",
+      "config": {
+        "model_version": "0.2.1",
+        "scenario": "parallel_s3",
+        "input_source": "synthetic_assumption",
+        "shift_duration_s": 28800,
+        "planned_nonproduction_s": 3600,
+        "target_good_units": 240,
+        "start_condition": "empty",
+        "count_overtime": false,
+        "stations": [
+          {
+            "id": "S1",
+            "operation": "Identify and load tray",
+            "mean_process_s": 45
+          },
+          {
+            "id": "S2",
+            "operation": "Load four inserts",
+            "mean_process_s": 120
+          },
+          {
+            "id": "S3",
+            "operation": "Fit cover and fasten",
+            "mean_process_s": 150
+          },
+          {
+            "id": "S4",
+            "operation": "Inspect and mock test",
+            "mean_process_s": 90
+          },
+          {
+            "id": "S5",
+            "operation": "Label and release",
+            "mean_process_s": 60
+          }
+        ],
+        "buffer_capacities": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "operator_count": 4,
+        "seed": 20261109,
+        "processing_time": {
+          "distribution": "triangular",
+          "relative_half_width": 0.2
+        },
+        "scenario_description": "Estimated faster S2 and S3; S4 unchanged",
+        "timing_evidence": "Unvalidated synthetic estimates; no supplier or measured evidence",
+        "quality": {
+          "inspection_station": "S4",
+          "defect_probabilities": {
+            "S2": 0.02,
+            "S3": 0.03
+          },
+          "rework": {
+            "duration_s": 180,
+            "success_probability": 0.8
+          }
+        },
+        "parallel_servers": [
+          1,
+          1,
+          2,
+          1,
+          1
+        ]
+      },
+      "deployment": {
+        "components_eur": {
+          "equipment": 0,
+          "fixtures": 3000,
+          "controls": 0,
+          "integration": 200,
+          "commissioning": 300,
+          "training": 150,
+          "installation": 200
+        },
+        "power_kw": 1.4
+      }
+    },
+    {
+      "id": "s3",
+      "label": "Faster S3",
+      "config": {
+        "model_version": "0.2.1",
+        "scenario": "s3",
+        "input_source": "synthetic_assumption",
+        "shift_duration_s": 28800,
+        "planned_nonproduction_s": 3600,
+        "target_good_units": 240,
+        "start_condition": "empty",
+        "count_overtime": false,
+        "stations": [
+          {
+            "id": "S1",
+            "operation": "Identify and load tray",
+            "mean_process_s": 45
+          },
+          {
+            "id": "S2",
+            "operation": "Load four inserts",
+            "mean_process_s": 120
+          },
+          {
+            "id": "S3",
+            "operation": "Fit cover and fasten",
+            "mean_process_s": 70,
+            "operator_attended_fraction": 0.5,
+            "reliability": {
+              "mtbf_s": 1800,
+              "repair_mean_s": 180
+            }
+          },
+          {
+            "id": "S4",
+            "operation": "Inspect and mock test",
+            "mean_process_s": 90
+          },
+          {
+            "id": "S5",
+            "operation": "Label and release",
+            "mean_process_s": 60
+          }
+        ],
+        "buffer_capacities": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "operator_count": 3,
+        "seed": 20261109,
+        "processing_time": {
+          "distribution": "triangular",
+          "relative_half_width": 0.2
+        },
+        "scenario_description": "Estimated faster S2 and S3; S4 unchanged",
+        "timing_evidence": "Unvalidated synthetic estimates; no supplier or measured evidence",
+        "quality": {
+          "inspection_station": "S4",
+          "defect_probabilities": {
+            "S2": 0.02,
+            "S3": 0.03
+          },
+          "rework": {
+            "duration_s": 180,
+            "success_probability": 0.8
+          }
+        }
+      },
+      "deployment": {
+        "components_eur": {
+          "equipment": 18000,
+          "fixtures": 2500,
+          "controls": 3000,
+          "integration": 4000,
+          "commissioning": 2000,
+          "training": 700,
+          "installation": 1200
+        },
+        "power_kw": 3
+      }
+    },
+    {
+      "id": "s2_s3_3",
+      "label": "Faster S2/S3 \u00b7 3 operators",
+      "config": {
+        "model_version": "0.2.1",
+        "scenario": "s2_s3_3",
+        "input_source": "synthetic_assumption",
+        "shift_duration_s": 28800,
+        "planned_nonproduction_s": 3600,
+        "target_good_units": 240,
+        "start_condition": "empty",
+        "count_overtime": false,
+        "stations": [
+          {
+            "id": "S1",
+            "operation": "Identify and load tray",
+            "mean_process_s": 45
+          },
+          {
+            "id": "S2",
+            "operation": "Load four inserts",
+            "mean_process_s": 65,
+            "operator_attended_fraction": 0.5,
+            "reliability": {
+              "mtbf_s": 1800,
+              "repair_mean_s": 180
+            }
+          },
+          {
+            "id": "S3",
+            "operation": "Fit cover and fasten",
+            "mean_process_s": 70,
+            "operator_attended_fraction": 0.5,
+            "reliability": {
+              "mtbf_s": 1800,
+              "repair_mean_s": 180
+            }
+          },
+          {
+            "id": "S4",
+            "operation": "Inspect and mock test",
+            "mean_process_s": 90
+          },
+          {
+            "id": "S5",
+            "operation": "Label and release",
+            "mean_process_s": 60
+          }
+        ],
+        "buffer_capacities": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "operator_count": 3,
+        "seed": 20261109,
+        "processing_time": {
+          "distribution": "triangular",
+          "relative_half_width": 0.2
+        },
+        "scenario_description": "Estimated faster S2 and S3; S4 unchanged",
+        "timing_evidence": "Unvalidated synthetic estimates; no supplier or measured evidence",
+        "quality": {
+          "inspection_station": "S4",
+          "defect_probabilities": {
+            "S2": 0.02,
+            "S3": 0.03
+          },
+          "rework": {
+            "duration_s": 180,
+            "success_probability": 0.8
+          }
+        }
+      },
+      "deployment": {
+        "components_eur": {
+          "equipment": 44000,
+          "fixtures": 4500,
+          "controls": 6000,
+          "integration": 9000,
+          "commissioning": 4000,
+          "training": 1200,
+          "installation": 2500
+        },
+        "power_kw": 5
+      }
+    },
+    {
+      "id": "s2_s3_4",
+      "label": "Faster S2/S3 \u00b7 4 operators",
+      "config": {
+        "model_version": "0.2.1",
+        "scenario": "s2_s3_4",
+        "input_source": "synthetic_assumption",
+        "shift_duration_s": 28800,
+        "planned_nonproduction_s": 3600,
+        "target_good_units": 240,
+        "start_condition": "empty",
+        "count_overtime": false,
+        "stations": [
+          {
+            "id": "S1",
+            "operation": "Identify and load tray",
+            "mean_process_s": 45
+          },
+          {
+            "id": "S2",
+            "operation": "Load four inserts",
+            "mean_process_s": 65,
+            "operator_attended_fraction": 0.5,
+            "reliability": {
+              "mtbf_s": 1800,
+              "repair_mean_s": 180
+            }
+          },
+          {
+            "id": "S3",
+            "operation": "Fit cover and fasten",
+            "mean_process_s": 70,
+            "operator_attended_fraction": 0.5,
+            "reliability": {
+              "mtbf_s": 1800,
+              "repair_mean_s": 180
+            }
+          },
+          {
+            "id": "S4",
+            "operation": "Inspect and mock test",
+            "mean_process_s": 90
+          },
+          {
+            "id": "S5",
+            "operation": "Label and release",
+            "mean_process_s": 60
+          }
+        ],
+        "buffer_capacities": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "operator_count": 4,
+        "seed": 20261109,
+        "processing_time": {
+          "distribution": "triangular",
+          "relative_half_width": 0.2
+        },
+        "scenario_description": "Estimated faster S2 and S3; S4 unchanged",
+        "timing_evidence": "Unvalidated synthetic estimates; no supplier or measured evidence",
+        "quality": {
+          "inspection_station": "S4",
+          "defect_probabilities": {
+            "S2": 0.02,
+            "S3": 0.03
+          },
+          "rework": {
+            "duration_s": 180,
+            "success_probability": 0.8
+          }
+        }
+      },
+      "deployment": {
+        "components_eur": {
+          "equipment": 44000,
+          "fixtures": 4500,
+          "controls": 6000,
+          "integration": 9000,
+          "commissioning": 4000,
+          "training": 1200,
+          "installation": 2500
+        },
+        "power_kw": 5
+      }
+    }
+  ],
+  "total_simulated_shifts": 1200,
+  "python_version": "3.13.7",
+  "source_sha256": {
+    "src/simulation/cell_adapter.py": "c98f4fe553918cb5f0bbd618c1976b9d52ce3c9d68c1f64ca54b1cd5581e35cc",
+    "src/simulation/finite_buffers.py": "efd9edca7c36110055ff797a663cf14ccaae714f4088dd4ac5253fb78f764c71",
+    "src/simulation/multi_unit.py": "78a43ff857c816f49d02dc11b133285897e3c339d964564b6df3e266d7e0afb3",
+    "src/simulation/parallel_manual.py": "1589ecdc85f8869f270e14d97c5184c73d84c5436214dc95be3113334e963585",
+    "src/simulation/process_times.py": "9b8243f59742f0d6ccfe271d17e852436cda5b507115cb5bcca7931f2a616438",
+    "src/simulation/quality.py": "8128f613d14b390b09ee5ba81fcbc715107e8370fbe2bf5924d0725cf9e361fe",
+    "src/simulation/reliability.py": "422f9811761f0dbcf67e79e9b557b0d5ce2b3f3985223404d0e304b489b1d11f",
+    "src/simulation/single_unit.py": "2fce0eda235201c6b6fac71ffae25b24343c874027f5c1bfbd2c69bcc872262d",
+    "src/analysis/attendance_comparison.py": "d9ba20c9e4cc83d7d201930494fd6df8b666c8f2d62d84b6a79e8b558e8ee12c",
+    "src/analysis/capacity_check.py": "48408923799b4e246bef310a63da30d0d4c1bf57933fd83eee1879383df1c743",
+    "src/analysis/cost_comparison.py": "a1c8473249bbb80287a947b7957ebee772ad153d9d67a069d05f5066ee566032",
+    "src/analysis/economics.py": "ec063e6c6e0e9f75901a633e36c0e6214a54383d1f2acd336e54625cc69e3fa9",
+    "src/analysis/final_experiments.py": "c53c9021728742ade145fec446b5dfd9c5bb4f836eb545db46890f4113258aa7",
+    "src/analysis/quality_experiments.py": "99b5fb3a91b4013d0a5bb2c5db97a7f5972a6d4c01eecf17391ae55c7581b37d",
+    "src/analysis/reliability_experiments.py": "c57a4a436eca033a6e17ba1169c43c7ce74fe4d7d6a8f8ca8adc37bfca11bc82",
+    "src/analysis/scenario_comparison.py": "2d9fd690d4cf1defbe503930e8a690c8cdfc8b94987bda281cbc62f3d149d4b6",
+    "src/analysis/staffing_comparison.py": "785e45593c69b0962cb16b0836b2e0090cd7b430caec5aa347c1430549564672",
+    "src/analysis/variability_experiments.py": "395257c139da8166205ff629cf1fa5f002cdce5e9b9b13b7281f03ec63e631a3"
+  },
+  "limitations": [
+    "All prices, station times, attendance, reliability and quality inputs are assumed, not quotes or measurements",
+    "Conversion cost excludes good-unit BOM, buildings, overhead, taxes and finance",
+    "All cases include one dedicated paid rework operator in addition to stated production staffing",
+    "Manual stations have no modeled equipment failures; only proposed machine stations can fail",
+    "Energy uses constant assumed draw throughout scheduled production; not measured energy consumption",
+    "Demand-capped calculation charges full simulated shift cost but values no output beyond demand; production is not rescheduled",
+    "Low/base/high cost cases reuse identical simulated output; they are not confidence intervals",
+    "Capital is allocated straight-line; no discounted cash-flow analysis or unsupported payback claim",
+    "Timing and quality sensitivity from earlier experiments remains necessary before a real investment decision"
+  ]
+}

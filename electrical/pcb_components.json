@@ -1,0 +1,20 @@
+{
+ "J1":{"footprint":"Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical","x":10,"y":16,"angle":0,"spec":"2.54 mm 1x2 header; pin 1 +5V IN, pin 2 GND"},
+ "F1":{"footprint":"Fuse:Fuse_Littelfuse_372_D8.50mm","x":24,"y":17,"angle":0,"spec":"Littelfuse 37201000001, 100 mA time-lag radial, 5.08 mm pitch"},
+ "C1":{"footprint":"Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm","x":37,"y":17,"angle":0,"spec":"100 nF ceramic, >=25 V, 5.00 mm pitch, <=5 mm body diameter"},
+ "SW1":{"footprint":"Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical","x":58,"y":16,"angle":0,"spec":"2.54 mm 1x2 header to external SPST permit switch; not a safety interlock"},
+ "R6":{"footprint":"Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal","x":63,"y":25,"angle":0,"spec":"10 kohm, 1%, 0.25 W, axial DIN0207, formed to 7.62 mm"},
+ "J2":{"footprint":"Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical","x":10,"y":38,"angle":0,"spec":"2.54 mm 1x6 header: +5V, GND, CMD, PART_N, COVER_N, PERMIT_OK"},
+ "R4":{"footprint":"Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal","x":27,"y":35,"angle":0,"spec":"10 kohm, 1%, 0.25 W, axial DIN0207, 7.62 mm pitch"},
+ "C2":{"footprint":"Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm","x":41,"y":36,"angle":0,"spec":"10 nF ceramic, >=25 V, 5.00 mm pitch, <=5 mm body diameter"},
+ "J3":{"footprint":"Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical","x":54,"y":35,"angle":0,"spec":"2.54 mm 1x2 header: PART_N, GND; external dry contact"},
+ "R5":{"footprint":"Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal","x":27,"y":47,"angle":0,"spec":"10 kohm, 1%, 0.25 W, axial DIN0207, 7.62 mm pitch"},
+ "C3":{"footprint":"Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm","x":41,"y":48,"angle":0,"spec":"10 nF ceramic, >=25 V, 5.00 mm pitch, <=5 mm body diameter"},
+ "J4":{"footprint":"Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical","x":54,"y":47,"angle":0,"spec":"2.54 mm 1x2 header: COVER_N, GND; external dry contact"},
+ "R1":{"footprint":"Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal","x":63,"y":35,"angle":0,"spec":"680 ohm, 1%, 0.25 W, axial DIN0207, 7.62 mm pitch"},
+ "D1":{"footprint":"LED_THT:LED_D3.0mm","x":68,"y":45,"angle":0,"spec":"Red LED, 3 mm round, 2.54 mm pitch; standard pin 1 cathode, pin 2 anode"},
+ "Q1":{"footprint":"Package_TO_SOT_THT:TO-92_Inline_Wide","x":62,"y":56,"angle":0,"spec":"onsemi BC547B TO-92, 1=C 2=B 3=E; form leads to 2.54 mm pitch"},
+ "R2":{"footprint":"Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal","x":27,"y":59,"angle":0,"spec":"4.7 kohm, 1%, 0.25 W, axial DIN0207, 7.62 mm pitch"},
+ "R3":{"footprint":"Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal","x":43,"y":59,"angle":0,"spec":"100 kohm, 1%, 0.25 W, axial DIN0207, 7.62 mm pitch"},
+ "TP1":{"footprint":"TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm","x":73,"y":57,"angle":0,"spec":"Collector probe pad, 1.0 mm hole; no fitted component"}
+}
