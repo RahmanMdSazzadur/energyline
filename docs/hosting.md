@@ -2,6 +2,12 @@
 
 The GitHub Pages site is static. A Render web service runs the actual Python API, experiment studio, virtual S3 cell, costs and portfolio without requiring visitors to install Python. The repository includes `render.yaml` with an explicitly Free plan; no paid database, disk or other resource is defined.
 
+## Verified public service
+
+Live app: https://energyline-demo.onrender.com/
+
+The service is Python 3.13.7 on the Free compute plan in Frankfurt. Twelve public HTTPS smoke checks passed, covering health, five pages, a real line experiment, CSV export, an S3 demo/trace, costs, video byte ranges and the release redirect. A browser-run two-shift manual experiment also completed and displayed its results. These checks establish basic deployment function, not production load capacity.
+
 ## Deploy
 
 1. Sign in to Render. Use its free workspace and do not add a payment method for this no-spend demo.

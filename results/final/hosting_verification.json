@@ -5,7 +5,7 @@
   "hosting_tests": 6,
   "provider": "Render",
   "plan": "free",
-  "deployment_status": "prepared; requires Render account sign-in",
+  "deployment_status": "live and verified",
   "checks": [
     "configured runtime storage directory",
     "public shared/temporary notice",
@@ -13,5 +13,16 @@
     "canonical release redirect",
     "single active compute job with HTTP 429 retry response",
     "compute slot released after malformed input"
-  ]
+  ],
+  "public_url": "https://energyline-demo.onrender.com/",
+  "region": "Frankfurt",
+  "compute": "Free: 0.1 CPU, 512 MB RAM",
+  "public_https_checks": 12,
+  "browser_experiment": {
+    "scenario": "manual",
+    "replications": 2,
+    "mean_good_units": 157.5,
+    "status": "completed and displayed"
+  },
+  "render_service_id": "srv-dbpg1us9v7es73bq28hg"
 }

@@ -8,6 +8,7 @@ EnergyLine studies how a five-station mock energy-module assembly line could mee
 
 ## Access and reuse
 
+- Run the full Python app online: https://energyline-demo.onrender.com/
 - Public repository: https://github.com/RahmanMdSazzadur/energyline
 - Online project overview: https://rahmanmdsazzadur.github.io/energyline/
 - Download the reviewed package: https://github.com/RahmanMdSazzadur/energyline/releases/tag/v1.1.1
@@ -21,7 +22,7 @@ cd energyline
 python3 src/api/server.py
 ```
 
-Free Python hosting configuration is provided in `render.yaml`; see `docs/hosting.md`. Deployment requires a Render account and the Free compute plan. No live Python URL is claimed until deployment is verified.
+The full Python app is live on Render Free at https://energyline-demo.onrender.com/. Visitors do not need an account or local Python setup. Free hosting sleeps when idle and stores shared, temporary runs. `render.yaml` and `docs/hosting.md` describe deployment and limits. The tagged v1.1.1 ZIP is the reviewed local-prototype release; the main branch also includes the hosted-demo additions.
 
 Original project work is available under the MIT license. See `LICENSE`, `THIRD_PARTY_NOTICES.md` and `CONTRIBUTING.md`.
 

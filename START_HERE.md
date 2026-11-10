@@ -6,6 +6,8 @@ This package combines the assembly-line study, virtual S3 cell, n8n workflow def
 
 ## Online access
 
+Run the full Python app without local setup: https://energyline-demo.onrender.com/. Free hosting can take around a minute to wake, and shared runs are temporary.
+
 - Repository and source: https://github.com/RahmanMdSazzadur/energyline
 - Static project overview: https://rahmanmdsazzadur.github.io/energyline/
 - Versioned download: https://github.com/RahmanMdSazzadur/energyline/releases/tag/v1.1.1
@@ -66,4 +68,4 @@ The two-minute video covers the software study, not a physical build or the late
 
 ## Optional hosted Python app
 
-The repository includes `render.yaml` for a Render Free Python web service. See `docs/hosting.md` for configuration, shared temporary storage behavior, sleeping and usage limits. Render account sign-in is needed before deployment. The GitHub Pages site remains static.
+The repository includes `render.yaml` for a Render Free Python web service. See `docs/hosting.md` for configuration, shared temporary storage behavior, sleeping and usage limits. The live service is verified at https://energyline-demo.onrender.com/. Visitors need no Render account. Creating your own deployment requires a Render account. The GitHub Pages site remains a separate static overview.

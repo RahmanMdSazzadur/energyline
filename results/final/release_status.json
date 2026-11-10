@@ -15,6 +15,7 @@
   "links": {
     "case_study": "/case-study",
     "video": "/media/demo.mp4",
-    "release": "/downloads/release.zip"
+    "release": "/downloads/release.zip",
+    "live_app": "https://energyline-demo.onrender.com/"
   }
 }
