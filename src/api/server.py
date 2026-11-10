@@ -1,4 +1,4 @@
-"""Local EnergyLine experiment API and browser dashboard. Standard library only."""
+"""EnergyLine experiment API and browser dashboard. Standard library only."""
 
 import argparse
 from contextlib import closing
@@ -6,6 +6,7 @@ import copy
 import csv
 import hashlib
 import json
+import os
 import platform
 import re
 import sqlite3
@@ -48,7 +49,7 @@ class ConflictError(ValueError):
 
 class ExperimentService:
     def __init__(self, directory=None):
-        self.directory = Path(directory) if directory else ROOT / "results/experiments"
+        self.directory = Path(directory or os.environ.get("ENERGYLINE_DATA_DIR") or ROOT / "results/experiments")
         self.directory.mkdir(parents=True, exist_ok=True)
         self.database = self.directory / "experiments.sqlite3"
         self.lock = threading.Lock()
@@ -399,9 +400,16 @@ def byte_range(header, size):
 
 
 def handler_for(service):
+    public_demo = os.environ.get("ENERGYLINE_PUBLIC_DEMO") == "1"
+    release_url = os.environ.get("ENERGYLINE_RELEASE_URL", "")
+    job_slot = threading.BoundedSemaphore(1)
+
     class Handler(BaseHTTPRequestHandler):
         def send_data(self, status, value, mime="application/json"):
             data = json.dumps(value).encode() if mime == "application/json" else value
+            if public_demo and mime.startswith("text/html"):
+                notice = b'<aside role="note" style="padding:12px 24px;background:#fff3d1;color:#453817;font:14px/1.5 system-ui">Public demo: experiments are shared and temporary. Saved runs may disappear when the free service sleeps or restarts. Download results you want to keep.</aside>'
+                data = data.replace(b"<body>", b"<body>" + notice, 1)
             self.send_response(status)
             self.send_header("Content-Type", mime)
             self.send_header("Content-Length", str(len(data)))
@@ -440,6 +448,12 @@ def handler_for(service):
 
         def do_GET(self):
             path = urlparse(self.path).path
+            if path == "/downloads/release.zip" and public_demo and release_url:
+                self.send_response(302)
+                self.send_header("Location", release_url)
+                self.send_header("Content-Length", "0")
+                self.end_headers()
+                return
             artifacts = {
                 "/media/demo.mp4": ("media/EnergyLine_demo.mp4", "video/mp4"),
                 "/media/demo.srt": ("media/demo.srt", "text/plain; charset=utf-8"),
@@ -473,7 +487,7 @@ def handler_for(service):
                 file, mime = artifacts[path]
                 return self.send_file(ROOT / file, mime)
             if path == "/api/health":
-                return self.send_data(200, {"status": "ok", "service": "EnergyLine"})
+                return self.send_data(200, {"status": "ok", "service": "EnergyLine", "public_demo": public_demo})
             if path == "/api/costs":
                 report = ROOT / "results/economics/comparison.json"
                 if not report.exists():
@@ -558,6 +572,8 @@ def handler_for(service):
                 )
             if self.headers.get("Content-Type", "").split(";")[0] != "application/json":
                 return self.send_data(415, {"error": "Send application/json"})
+            if public_demo and not job_slot.acquire(blocking=False):
+                return self.send_data(429, {"error": "The public demo is running another job. Please try again shortly."})
             try:
                 length = int(self.headers.get("Content-Length", "0"))
                 if not 0 < length <= 4096:
@@ -589,6 +605,9 @@ def handler_for(service):
             except Exception:
                 self.log_error("Experiment failed")
                 self.send_data(500, {"error": "Experiment failed; inspect server logs"})
+            finally:
+                if public_demo:
+                    job_slot.release()
 
     return Handler
 
@@ -596,12 +615,12 @@ def handler_for(service):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--host", default="127.0.0.1")
-    parser.add_argument("--port", type=int, default=8787)
+    parser.add_argument("--port", type=int, default=int(os.environ.get("PORT", "8787")))
     args = parser.parse_args()
     server = ThreadingHTTPServer(
         (args.host, args.port), handler_for(ExperimentService())
     )
-    print(f"EnergyLine dashboard: http://localhost:{args.port}", flush=True)
+    print(f"EnergyLine dashboard listening on {args.host}:{server.server_address[1]}", flush=True)
     try:
         server.serve_forever()
     except KeyboardInterrupt:

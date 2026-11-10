@@ -63,7 +63,7 @@ Accelerated cell seconds are scaled to an assumed 70-second nominal line cycle. 
 
 ## Verification and use
 
-The repository has 97 passing tests. Numerical studies can be regenerated with `python3 scripts/reproduce.py`. Each study records its configuration, seeds and source checksums. The browser application exposes the experiment studio, cell trace playback and cost comparison.
+The repository has 103 passing tests. Numerical studies can be regenerated with `python3 scripts/reproduce.py`. Each study records its configuration, seeds and source checksums. The browser application exposes the experiment studio, cell trace playback and cost comparison.
 
 Two n8n workflows run line experiments and the commissioning suite. A separate expected-failure test checks the commissioning error branch. The workflows are manual and inactive; n8n coordinates tests and records rather than machine motion.
 

@@ -6,7 +6,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 INCLUDE = {".github", "src", "scripts", "tests", "configs", "docs", "cad", "data", "web", "n8n", "media", "results", "electrical", "wokwi"}
-ROOT_FILES = {"LICENSE", "THIRD_PARTY_NOTICES.md", "CONTRIBUTING.md", "index.html", ".nojekyll", "README.md", "START_HERE.md", "RELEASE_INDEX.html", "release_config.json", "requirements.txt", "requirements-media.txt", ".python-version", ".gitignore", ".dockerignore", "compose.yaml", "Dockerfile"}
+ROOT_FILES = {"render.yaml", "LICENSE", "THIRD_PARTY_NOTICES.md", "CONTRIBUTING.md", "index.html", ".nojekyll", "README.md", "START_HERE.md", "RELEASE_INDEX.html", "release_config.json", "requirements.txt", "requirements-media.txt", ".python-version", ".gitignore", ".dockerignore", "compose.yaml", "Dockerfile"}
 OMIT = {"docs/development_history.md", "docs/original_specification.md", "docs/setup_status.md", "results/final/archive_roundtrip_verification.json", "results/final/live_scenario_verification.json", "results/final/unified_release_verification.json", "electrical/build_pcb.py", "electrical/s3_interface/S3_placement_draft.kicad_pcb", "electrical/s3_interface/exports/S3_placement_draft.svg", "electrical/s3_interface/simulation/waveforms.txt"}
 
 

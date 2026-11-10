@@ -1,0 +1,17 @@
+{
+  "successful": true,
+  "tests_passed": 103,
+  "existing_software_tests": 97,
+  "hosting_tests": 6,
+  "provider": "Render",
+  "plan": "free",
+  "deployment_status": "prepared; requires Render account sign-in",
+  "checks": [
+    "configured runtime storage directory",
+    "public shared/temporary notice",
+    "unchanged local page behavior",
+    "canonical release redirect",
+    "single active compute job with HTTP 429 retry response",
+    "compute slot released after malformed input"
+  ]
+}

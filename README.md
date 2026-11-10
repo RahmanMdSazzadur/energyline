@@ -21,6 +21,8 @@ cd energyline
 python3 src/api/server.py
 ```
 
+Free Python hosting configuration is provided in `render.yaml`; see `docs/hosting.md`. Deployment requires a Render account and the Free compute plan. No live Python URL is claimed until deployment is verified.
+
 Original project work is available under the MIT license. See `LICENSE`, `THIRD_PARTY_NOTICES.md` and `CONTRIBUTING.md`.
 
 ## Main result
@@ -48,7 +50,7 @@ For Docker and n8n setup, see `n8n/README.md`. n8n coordinates experiments and c
 - Optional video rendering: `python3 scripts/build_demo.py` (requires `requirements-media.txt` and ffmpeg).
 - Build the source archive: `python3 scripts/package_release.py`
 
-The reviewed version has 97 passing tests and 11 recorded commissioning cases. Six cost configurations each use 200 replications. Separate studies cover staffing, timing variation, failures, quality, parallel S3 resources and the per-unit controller adapter. Seeds, configurations and checksums are saved with the results.
+The reviewed version has 103 passing tests and 11 recorded commissioning cases. Six cost configurations each use 200 replications. Separate studies cover staffing, timing variation, failures, quality, parallel S3 resources and the per-unit controller adapter. Seeds, configurations and checksums are saved with the results.
 
 ## Project structure
 

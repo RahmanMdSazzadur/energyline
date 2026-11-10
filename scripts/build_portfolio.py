@@ -79,6 +79,11 @@ def main():
         if "test_output" in item
     )
     test_count = int(re.search(r"Ran (\d+) tests", test_log).group(1))
+    hosting_report = ROOT / "results/final/hosting_verification.json"
+    if hosting_report.exists():
+        hosting = json.loads(hosting_report.read_text())
+        if hosting.get("successful"):
+            test_count = hosting["tests_passed"]
     case_rows = "\n".join(
         f"| {case['label']} | {case['production_operators']} + 1 | {case['mean_good_units']:.1f} | "
         f"{case['demand_attainment']['240']['successful_shifts']}/200 | "
@@ -107,6 +112,8 @@ git clone https://github.com/RahmanMdSazzadur/energyline.git
 cd energyline
 python3 src/api/server.py
 ```
+
+Free Python hosting configuration is provided in `render.yaml`; see `docs/hosting.md`. Deployment requires a Render account and the Free compute plan. No live Python URL is claimed until deployment is verified.
 
 Original project work is available under the MIT license. See `LICENSE`, `THIRD_PARTY_NOTICES.md` and `CONTRIBUTING.md`.
 

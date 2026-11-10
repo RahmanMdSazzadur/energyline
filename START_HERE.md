@@ -48,7 +48,7 @@ The main Docker compose setup expects an existing `n8n_default` network. Running
 
 ## What is verified
 
-- 97 software tests and 11 recorded virtual-cell commissioning cases.
+- 103 software tests (97 existing plus six hosted-demo checks) and 11 recorded virtual-cell commissioning cases.
 - 12 generic-model ngspice circuit checks.
 - Zero reported configured PCB DRC violations, unconnected items, schematic parity issues and ERC violations.
 - 26 Arduino controller-core assertions and six recorded live Wokwi scenarios.
@@ -63,3 +63,7 @@ The PCB has not been manufactured, assembled or measured. Component and enclosur
 The Python virtual cell, Wokwi sketch and electrical bench interface have related signals but are not one connected physical system. Wokwi is a standalone LED demonstration with reduced behavior; n8n coordinates software experiments, not machine motion. No real actuator, certified safety function, EMC/ESD validation or measured production performance is included.
 
 The two-minute video covers the software study, not a physical build or the later PCB/Wokwi extension. Timings, quality, reliability, attendance and prices in the line study remain assumptions. Keep these qualifications when presenting the project.
+
+## Optional hosted Python app
+
+The repository includes `render.yaml` for a Render Free Python web service. See `docs/hosting.md` for configuration, shared temporary storage behavior, sleeping and usage limits. Render account sign-in is needed before deployment. The GitHub Pages site remains static.

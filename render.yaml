@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: energyline-demo
+    runtime: python
+    plan: free
+    branch: main
+    autoDeployTrigger: checksPass
+    buildCommand: python3 -m compileall -q src
+    startCommand: python3 src/api/server.py --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: '3.13.7'
+      - key: ENERGYLINE_PUBLIC_DEMO
+        value: '1'
+      - key: ENERGYLINE_DATA_DIR
+        value: /tmp/energyline-demo-runs
+      - key: ENERGYLINE_RELEASE_URL
+        value: https://github.com/RahmanMdSazzadur/energyline/releases/download/v1.1.1/EnergyLine-v1.1.1-final.zip
